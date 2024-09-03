@@ -1,0 +1,76 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Hamid Financials</title>
+            <link rel="stylesheet" href="style1.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>  
+        </head>
+        <body>
+                <section class="header">
+                    <div class="top-bar">
+                        <a>Contact us at: <a href="tel:+1 (714) 443-9818">(714) 443-9818</a> </a>
+                    </div>
+                <nav>
+                    <a href="home1.html"><img src="images/logo3.png"></a>
+                    <div class="nav-links" id="navLinks">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="home1.html">HOME</a></li>
+                            <li><a href="course.html">SERVICES</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">GET STARTED</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="text-box">
+                    <h1>Get Started!</h1>
+                    <p>Fill out the brief form with your contact information and any inquiries
+                        and our trusted staff would love to reach out to you! </p>
+                    </div>
+        </section>
+                    <section>
+                    <div class="container">
+                        <form onsubmit="send(); reset(); return false;">
+                            <input placeholder="Full Name" required id="full-name"><br>
+                            <input placeholder="Reason for Contact" required id="body-name"><br>
+                            <input placeholder="Email Address" required id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+                            <button>Submit</button>
+                        </form>
+                        </div>
+                        <script src="https://smtpjs.com/v3/smtp.js"></script>
+                        <script src="https://smtpjs.com/v3/smtp.js"></script>
+                        <script>
+                        var send = function() {
+                            Email.send({
+                            Host : "smtp.elasticemail.com",
+                            Username : "irfanaddinhamid@gmail.com",
+                            Password : "A232EB0D520AA073950B62A482FB744E546C",
+                            To : document.getElementById("email").value, //'hamidfinancials@gmail.com',
+                            From : 'hamidfinancials@gmail.com',
+                            Subject : "New Signup!!!",
+                            Body : "And this is the body",
+                            ReplyTo : document.getElementById("email").value
+                        }).then(
+                          message => alert(message)
+                        );
+                        };
+                            </script>
+                    </section>
+    </body>
+        <!-------footer------->
+        <section class="footer">
+            <h4>Find Us On Social Media Sites</h4>
+            <p>Website developed and designed by IH WebDevs</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+        </section>
+            </body>
+        </html>
