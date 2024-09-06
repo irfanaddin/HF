@@ -663,11 +663,14 @@ form button:hover{
 
 .scroll-arrow {
     position: absolute;
-    bottom: 170px; /* Move the arrow higher by changing the bottom value */
+    bottom: -165px; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 36px;
-    color: white;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    background-image: url('images/arrow.png'); /* Path to the arrow image */
+    background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
     opacity: 1;
     transition: opacity 1.0s ease;
@@ -676,6 +679,7 @@ form button:hover{
 .scroll-arrow.hide {
     opacity: 0;
 }
+
 /*-------client login--------*/
 .client-login-btn {
     margin-left: 20px;
