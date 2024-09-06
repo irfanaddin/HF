@@ -7,29 +7,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
 </head>
 <body>
 <section class="header">
     <div class="top-bar">
-        <a>Contact us at: <a href="tel:+1 (714) 443-9818">(714) 443-9818</a> </a>
+        <a>Contact us at: <a href="tel:+1 (714) 443-9818">(714) 443-9818</a></a>
+        <a class="client-login-btn">Client Login</a>
     </div>
     <nav>
-        <a href="index.html"><img src="images/logo3.png"></a>
+        <a href="index.html"><img src="images/logo2.png"></a>
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="course.html">SERVICES</a></li>
+                <li class="dropdown">
+                    <a href="course.html">SERVICES</a>
+                    <ul class="dropdown-content">
+                        <li><a href="course.html#tax-preparation">Tax Preparation</a></li>
+                        <li><a href="course.html#payroll">Payroll</a></li>
+                        <li><a href="course.html#accounting-services">Accounting Services</a></li>
+                        <li><a href="course.html#representation">Representation</a></li>
+                        <li><a href="course.html#tax-resolution">Tax Resolution</a></li>
+                    </ul>
+                </li>
                 <li><a href="about.html">ABOUT</a></li>
+                <li><a href="tools.html">TOOLS</a></li>
                 <li><a href="contact.html">GET STARTED</a></li>
             </ul>
         </div>
     </nav>
+    
     <div class="text-box">
         <h1>Welcome to Hamid Financials</h1>
         <p>Quality financial advice and services to help you meet your personal and business financial goals.</p>
         <a href="about.html" class="hero-btn">Get To Know Us</a>
     </div>
+    <div class="scroll-arrow" onclick="scrollToNextSection()">
+        &#x2193;
+    </div>    
 </section>
 <!----- Call to action ----->
 <section class="cta">
@@ -47,5 +64,26 @@
         <i class="fa fa-linkedin"></i>
     </div>
 </section>
+
+<script>
+    // Function to scroll to the next section
+    function scrollToNextSection() {
+        window.scroll({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
+    }
+
+    // Function to handle arrow fade out on scroll
+    window.onscroll = function () {
+        var scrollArrow = document.querySelector('.scroll-arrow');
+        if (window.scrollY > 50) {
+            scrollArrow.classList.add('hide');
+        } else {
+            scrollArrow.classList.remove('hide');
+        }
+    };
+</script>
+
 </body>
 </html>
