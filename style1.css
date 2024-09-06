@@ -26,7 +26,7 @@ nav {
 
 
 nav img {
-    width: 250px;
+    width: 350px;
 }
 
 .nav-links {
@@ -60,6 +60,44 @@ nav img {
 .nav-links ul li:hover::after {
     width: 100%;
 }
+
+/* Dropdown Menu for Services */
+.nav-links ul li {
+    position: relative; /* Necessary for the dropdown positioning */
+}
+
+.nav-links .dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #f7f9fc; /* Light background for the dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+}
+
+.nav-links .dropdown-content li {
+    text-align: left;
+    padding: 10px;
+    width: 200px;
+}
+
+.nav-links .dropdown-content li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-links .dropdown-content li a:hover {
+    background-color: rgba(154, 206, 93, 0.8); /* Hover effect for dropdown links */
+}
+
+.nav-links li:hover .dropdown-content {
+    display: block; /* Show the dropdown when hovering over Services */
+}
+
 
 .text-box {
     width: 90%;
@@ -383,6 +421,16 @@ details.service-col:hover {
     margin-left: -20px; /* Adjust to align with text */
 }
 
+.about-us .core-values p {
+    font-size: 16px;
+    line-height: 1.8; /* Improved readability */
+    margin-bottom: 12px;
+    color: #333; /* Trustworthy and professional color */
+}
+
+.about-us .core-values p strong {
+    color: #123a52; /* Aligning with the primary color for trust */
+}
 
 /*-------brothers------*/
 .brothers {
@@ -407,6 +455,7 @@ details.service-col:hover {
 }
 
 .brothers-col {
+	cursor: pointer;
     flex-basis: 31%;
     background: #f7f9fc;
     border-radius: 10px;
@@ -415,6 +464,18 @@ details.service-col:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
+
+.description {
+    display: none;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.brothers-col.active .description {
+    display: block;
+}
+
 
 .brothers-col img {
     width: 100%;
@@ -596,4 +657,93 @@ form button:hover{
 	border: 1px solid #fff;
 	background: rgba(154, 206, 93, 0.8);
 	transition: .5s;
+}
+
+/*----------scroll arrow-------*/
+
+.scroll-arrow {
+    position: absolute;
+    bottom: 170px; /* Move the arrow higher by changing the bottom value */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 1.0s ease;
+}
+
+.scroll-arrow.hide {
+    opacity: 0;
+}
+/*-------client login--------*/
+.client-login-btn {
+    margin-left: 20px;
+    padding: 5px 15px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.client-login-btn:hover {
+    background-color: rgba(154, 206, 93, 0.8);
+    transition: 0.3s;
+}
+
+/*--------popup---------*/
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    overflow: auto; /* Allow scrolling if content is too large */
+}
+
+/* Popup content */
+.popup-content {
+    position: relative;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh; /* Restrict height to 80% of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling for long content */
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.popup-img {
+    width: 150px; /* Adjust this size as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto 20px; /* Center the image and add space below */
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
