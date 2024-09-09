@@ -257,6 +257,249 @@ ul {
     list-style-position: inside;
 }
 
+
+
+
+/*--------tax prep page----------*/
+/* Update for the Tax Prep Section */
+
+/* Section: Tax Preparation */
+.eservices {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    background-color: #f7f9fc; /* Light background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.eservices h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.eservices p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.erow {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.eservice-col {
+    background-color: rgba(61, 158, 26, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.eservice-col:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.eservice-col summary h2 {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.eservice-col ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.eservice-col ul li {
+    font-size: 16px;
+    padding: 8px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .eservice-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .eservices h1 {
+        font-size: 28px;
+    }
+
+    .eservices p {
+        font-size: 14px;
+    }
+}
+
+
+/* Section: Tax Preparation */
+.eservices {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    background-color: #f7f9fc; /* Light background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.eservices h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.eservices p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.eservice-col {
+    background-color: rgba(61, 158, 26, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.eservice-col:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.epopup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    overflow: auto;
+}
+
+.epopup-content {
+    position: relative;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.eclose {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+.erow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.eservice-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+
+
+.eservice-img {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.eservice-img img {
+    max-width: 400px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .erow {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .eservice-text {
+        padding-right: 0;
+    }
+    
+    .eservice-img {
+        margin-top: 20px;
+    }
+}
+
+
+
+.epopup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    overflow: auto;
+}
+
+.epopup-content {
+    position: relative;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.eclose {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 /* Style for <details> and <summary> */
 details.service-col {
     background: rgba(61, 158, 26, 0.5);
@@ -592,71 +835,70 @@ details.service-col:hover {
 
 }
 /*-------contact form-------*/
-.contact-text-box{
-	width: 90%;
-	color: #fff;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-}
-.contact-text-box h1{
-	font-size: 62px;
-}
-.contact-text-box p{
-	margin: 10px 0 40px;
-	font-size: 14px;
-	color: #fff;
-}
-.container{
-	width: 100%;
-	height: 100vh;
-	background-image: linear-gradient(rgba(3,9,30,0.7),rgba(3,9,30,0.7)),url(images/buildings2.png);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-form{
-	background: none;
-	display: flex;
-	flex-direction: column;
-	padding: 2vw 4vw;
-	width: 90%;
-	max-width: 600px;
-	border-radius: 10px;
-}
-form h3{
-	color: #fff;
-	font-weight: 800;
-	margin-bottom: 20px;
-}
-form input, form textarea{
-	border: 0;
-	margin: 10px 0;
-	padding: 20px;
-	outline: none;
-	background: #fff;
-	font-size: 16px;
-}
-form button{
-	padding: 15px;
-	background: transparent;
-	color: white;
-	font-size: 18px;
-	border: 1px solid #fff;	
-	outline: #0c171e;
-	cursor: pointer;
-	width: 350px;
-	margin: 20px auto 0;
-	border-radius: 30px;
 
-
+.cbody {
+    font-family: Arial, sans-serif;
+    background-color: rgb(51, 39, 69);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-form button:hover{
-	border: 1px solid #fff;
-	background: rgba(154, 206, 93, 0.8);
-	transition: .5s;
+
+.ccontact-form {
+    background-color: white;
+    padding: 91px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.cform-group {
+    margin-bottom: 15px;
+}
+
+.cform-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cform-group input,
+.cform-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #67aa67;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #50c450;
+}
+
+#status {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
 }
 
 /*----------scroll arrow-------*/
