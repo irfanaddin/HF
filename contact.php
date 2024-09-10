@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Set the recipient email address.
-    $recipient = "hamidfinancials@gmail.com"; // Update with your email
+    $recipient = "contact@hamidfinancials.com"; // Update with your email
 
     // Set the email subject.
     $subject = "New contact from $name";
