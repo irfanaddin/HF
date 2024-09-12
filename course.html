@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamid Financials</title>
+    <title>Hamid Financials | Services</title>
     <link rel="stylesheet" href="style1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
     <link rel="icon" href="images/favicon.png" type="image/png">
-
 </head>
 <body>
+
 <section class="header">
     <div class="top-bar">
         <a>Contact us at: <a href="tel:+1 (714) 443-9818">(714) 443-9818</a></a>
@@ -25,11 +25,10 @@
                 <li class="dropdown">
                     <a href="course.html">SERVICES</a>
                     <ul class="dropdown-content">
-                        <li><a href="course.html#tax-preparation">Tax Preparation</a></li>
-                        <li><a href="course.html#payroll">Payroll</a></li>
-                        <li><a href="course.html#accounting-services">Accounting Services</a></li>
-                        <li><a href="course.html#representation">Representation</a></li>
-                        <li><a href="course.html#tax-resolution">Tax Resolution</a></li>
+                        <li><a href="tax-prep.html">Tax Preparation</a></li>
+                        <li><a href="accservices.html">Accounting Services</a></li>
+                        <li><a href="tax-res.html">Tax Resolution</a></li>
+                        <li><a href="represent.html">Representation</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">ABOUT</a></li>
@@ -38,86 +37,93 @@
             </ul>
         </div>
     </nav>
-    
     <div class="text-box">
-        <h1>Services We Offer</h1>
-        <p>Quality financial advice and services to help you meet your personal and business financial goals.</p>
+        <h1>Our Services</h1>
+        <p>Discover how our services can help you achieve your financial goals.</p>
         <div class="scroll-arrow" onclick="scrollToNextSection()"></div>   
-</section>
-
-<!------------- Our Services --------------->
-<section class="services">
-    <h1>OUR SERVICES</h1>
-    <p>At Hamid Financials, our clients receive personalized attention with the experience and know-how of a large CPA firm.</p>
-    
-    <details class="service-col" id="tax-preparation">
-        <summary><h2>Tax Preparation</h2></summary>
-        <p>The tax preparation process at Hamid Financials focuses on accuracy, efficiency, and timeliness. Whether you have a simple individual return or a complex business tax return, our goal is to ensure your return is prepared accurately, capturing every valuable deduction while abiding by the ever-changing rules of the IRS and other tax authorities.</p>
-        <ul>
-            <li>Private Clients Services</li>
-            <li>U.S. Individual Tax Preparation</li>
-            <li>International Tax Preparation</li>
-            <ul>
-                <li>U.S. Nonresident Alien Income Tax Return (1040-NR)</li>
-                <li>Dual-Status Returns</li>
-                <li>Passive Foreign Investment Company (PFIC) analysis and reporting</li>
-                <li>Voluntary Disclosure Programs</li>
-                <li>Delinquent FBAR reports</li>
-            </ul>
-            <li>Business Services</li>
-            <ul>
-                <li>U.S. Income Tax Return for a S Corporation (Form 1120S)</li>
-                <li>U.S. Return of Partnership Income (Form 1065)</li>
-            </ul>
-        </ul>
-        </details>
-    
-    <details class="service-col" id="payroll">
-        <summary><h2>Payroll</h2></summary>
-        <p>Our payroll services make managing employee compensation straightforward, ensuring accuracy and efficiency. We provide complete payroll solutions that alleviate your administrative workload and ensure compliance with all applicable rules and regulations.</p>
-    </details>
-    
-    <details class="service-col" id="accounting-services">
-        <summary><h2>Accounting Services</h2></summary>
-        <p>We offer top-notch bookkeeping solutions for small to mid-size businesses, ensuring precise financial records and compliance with tax regulations.</p>
-        <ul>
-            <li>Bookkeeping</li>
-            <li>Financial Statement Preparation</li>
-            <li>Financial Statement Analysis</li>
-        </ul>
-    </details>
-    
-    <details class="service-col" id="representation">
-        <summary><h2>Representation</h2></summary>
-        <p>Being audited by the IRS is a stressful proposition, and professional representation can be vital. We are experienced and qualified to act as your audit representative, ensuring your audit is resolved quickly and fairly.</p>
-    </details>
-    
-    <details class="service-col" id="tax-resolution">
-        <summary><h2>Tax Resolution</h2></summary>
-        <p>Owing back taxes can be overwhelming. We will analyze your situation and recommend solutions to help satisfy your taxes as quickly and painlessly as possible.</p>
-        <ul>
-            <li>Tax Return Amendments</li>
-            <li>Installment Agreement</li>
-            <li>Offer In Compromise (OIC)</li>
-            <li>Penalty abatements</li>
-            <li>Innocent Spouse Relief</li>
-            <li>Currently Not Collectible Status (CNC)</li>
-        </ul>
-        </details>
-
-</section>
-
-<!------- Footer ------->
-<section class="footer">
-    <h4>Find Us On Social Media Sites</h4>
-    <p>Website developed and designed by IH WebDevs</p>
-    <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-linkedin"></i>
     </div>
 </section>
+
+<!-- Services Section -->
+<section class="services">
+    <h1>Explore Our Services</h1>
+    <div class="row">
+        <!-- Service 1: Tax Preparation -->
+        <div class="service-col">
+            <img src="images/bookk.png" alt="Tax Preparation" onclick="openPopup('popup1')">
+            <h3>Tax Preparation</h3>
+        </div>
+
+        <!-- Service 2: Accounting Services -->
+        <div class="service-col">
+            <img src="images/consult.png" alt="Accounting Services" onclick="openPopup('popup2')">
+            <h3>Accounting Services</h3>
+        </div>
+
+        <!-- Service 3: Tax Resolution -->
+        <div class="service-col">
+            <img src="images/resol.png" alt="Tax Resolution" onclick="openPopup('popup3')">
+            <h3>Tax Resolution</h3>
+        </div>
+
+        <!-- Service 4: Representation -->
+        <div class="service-col">
+            <img src="images/fedtaxes.png" alt="Representation" onclick="openPopup('popup4')">
+            <h3>Representation</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Popups -->
+<div id="popup1" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup1')">&times;</span>
+        <img class="popup-img" src="images/bookk.png" alt="Tax Preparation">
+        <h2>Tax Preparation</h2>
+        <p>We provide accurate and efficient tax preparation services to help you stay compliant and save on taxes.</p>
+        <a href="tax-prep.html" class="hero-btn">Read More</a>
+    </div>
+</div>
+
+<div id="popup2" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <img class="popup-img" src="images/consult.png" alt="Accounting Services">
+        <h2>Accounting Services</h2>
+        <p>Our accounting services ensure accurate financial reporting and compliance with regulations, helping you grow your business.</p>
+        <a href="accservices.html" class="hero-btn">Read More</a>
+    </div>
+</div>
+
+<div id="popup3" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup3')">&times;</span>
+        <img class="popup-img" src="images/resol.png" alt="Tax Resolution">
+        <h2>Tax Resolution</h2>
+        <p>We offer tax resolution services to help settle tax debts and disputes with the IRS.</p>
+        <a href="tax-res.html" class="hero-btn">Read More</a>
+    </div>
+</div>
+
+<div id="popup4" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup4')">&times;</span>
+        <img class="popup-img" src="images/fedtaxes.png" alt="Representation">
+        <h2>Representation</h2>
+        <p>We provide representation services to ensure you are supported and represented in front of the IRS or other authorities.</p>
+        <a href="represent.html" class="hero-btn">Read More</a>
+    </div>
+</div>
+
+<script>
+    function openPopup(popupId) {
+        document.getElementById(popupId).style.display = 'block';
+    }
+
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+    }
+</script>
 
 <script>
     // Function to scroll to the next section
