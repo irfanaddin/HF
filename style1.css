@@ -958,6 +958,9 @@ button:hover {
 }
 
 /*--------popup---------*/
+
+
+
 .popup {
     display: none;
     position: fixed;
@@ -1011,3 +1014,5 @@ button:hover {
     margin: 0 auto 20px; /* Center the image and add space below */
     border-radius: 10px; /* Optional: Add rounded corners */
 }
+
+
