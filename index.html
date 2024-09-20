@@ -14,7 +14,7 @@
 <section class="header">
     <div class="top-bar">
         <a>Contact us at: <a href="tel:+1 (714) 443-9818">(714) 443-9818 |</a></a>
-        <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login</a> 
+        <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login    </a> 
     </div>
     <nav>
         <a href="index.html"><img src="images/logo2.png"></a>
@@ -22,6 +22,7 @@
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
                 <li class="dropdown">
                     <a href="course.html">SERVICES</a>
                     <ul class="dropdown-content">
@@ -31,7 +32,6 @@
                         <li><a href="represent.html">Representation</a></li>
                     </ul>
                 </li>
-                <li><a href="about.html">ABOUT</a></li>
                 <li><a href="tools.html">TOOLS</a></li>
                 <li><a href="contact.html">GET STARTED</a></li>
             </ul>
@@ -45,6 +45,113 @@
         <div class="scroll-arrow" onclick="scrollToNextSection()"></div>  
     </div> 
 </section>
+
+<section>    
+
+<!-- Services Section -->
+<section class="services">
+    <h1>Explore Our Services</h1>
+    <div class="row">
+        <!-- Service 1: Tax Preparation -->
+        <div class="service-col">
+            <img src="images/bookk.png" alt="Tax Preparation" onclick="openPopup('popup1')">
+            <h3>Tax Preparation</h3>
+        </div>
+
+        <!-- Service 2: Accounting Services -->
+        <div class="service-col">
+            <img src="images/consult.png" alt="Accounting Services" onclick="openPopup('popup2')">
+            <h3>Accounting Services</h3>
+        </div>
+
+        <!-- Service 3: Tax Resolution -->
+        <div class="service-col">
+            <img src="images/resol.png" alt="Tax Resolution" onclick="openPopup('popup3')">
+            <h3>Tax Resolution</h3>
+        </div>
+
+        <!-- Service 4: Representation -->
+        <div class="service-col">
+            <img src="images/fedtaxes.png" alt="Representation" onclick="openPopup('popup4')">
+            <h3>Representation</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Popups -->
+<div id="popup1" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup1')">&times;</span>
+        <img class="popup-img" src="images/bookk.png" alt="Tax Preparation">
+        <h2>Tax Preparation</h2>
+        <p>We provide accurate and efficient tax preparation services to help you stay compliant and save on taxes.</p>
+        <a href="tax-prep.html" class="hero-btn">Read More</a>
+    </div>
+</div>
+
+<div id="popup2" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <img class="popup-img" src="images/consult.png" alt="Accounting Services">
+        <h2>Accounting Services</h2>
+        <p>Our accounting services ensure accurate financial reporting and compliance with regulations, helping you grow your business.</p>
+        <a href="accservices.html" class="hero-btn">Read More</a>
+    </div>
+</div>
+
+<div id="popup3" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup3')">&times;</span>
+        <img class="popup-img" src="images/resol.png" alt="Tax Resolution">
+        <h2>Tax Resolution</h2>
+        <p>We offer tax resolution services to help settle tax debts and disputes with the IRS.</p>
+        <a href="tax-res.html" class="hero-btn">Read More</a>
+    </div>
+</div>
+
+<div id="popup4" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup4')">&times;</span>
+        <img class="popup-img" src="images/fedtaxes.png" alt="Representation">
+        <h2>Representation</h2>
+        <p>We provide representation services to ensure you are supported and represented in front of the IRS or other authorities.</p>
+        <a href="represent.html" class="hero-btn">Read More</a>
+    </div>
+</div>
+
+<script>
+    function openPopup(popupId) {
+        document.getElementById(popupId).style.display = 'block';
+    }
+
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+    }
+</script>
+
+<script>
+    // Function to scroll to the next section
+    function scrollToNextSection() {
+        window.scroll({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
+    }
+
+    // Function to handle arrow fade out on scroll
+    window.onscroll = function () {
+        var scrollArrow = document.querySelector('.scroll-arrow');
+        if (window.scrollY > 50) {
+            scrollArrow.classList.add('hide');
+        } else {
+            scrollArrow.classList.remove('hide');
+        }
+    };
+</script>
+
+</section>
+
+
 <!----- Call to action ----->
 <section class="cta">
     <h1>Access Our Services From<br> Anywhere Around The World</h1>
