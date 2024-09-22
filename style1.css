@@ -98,10 +98,45 @@ nav img {
     display: block; /* Show the dropdown when hovering over Services */
 }
 
+/* Typewriter Effect */
+.typewriter {
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid rgba(154, 206, 93, 0.8, green); /* The typewriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Keeps the text in the center */
+	margin-top: -100px;
+	letter-spacing: .05em; /* Adjust as needed */
+	animation: 
+	  typing 3.5s steps(40, end),
+	  blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 90% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: rgba(154, 206, 93, 0.8, green); }
+  }
+  
+/* logo on center of index page */
+.fade-in-logo {
+    width: 300px; /* Adjust the size of the logo */
+    height: auto;
+    opacity: .4;
+	margin-bottom: 10px;
+	margin-top: -200px;
+
+}
+
 
 .text-box {
     width: 90%;
-    color: #fff;
+    color: rgb(215, 215, 215);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -110,13 +145,13 @@ nav img {
 }
 
 .text-box h1 {
-    font-size: 62px;
+    font-size: 40px;
 }
 
 .text-box p {
     margin: 10px 0 40px;
     font-size: 14px;
-    color: #fff;
+    color: rgb(230, 230, 230);
 }
 
 .hero-btn {
@@ -646,6 +681,54 @@ details.service-col:hover {
     margin-bottom: 30px;
 }
 
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px;
+    background: #f7f9fc; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.value-item {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.value-item img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.value-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.value-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 .about-us h2 {
     font-size: 24px;
     font-weight: 600;
@@ -1014,5 +1097,3 @@ button:hover {
     margin: 0 auto 20px; /* Center the image and add space below */
     border-radius: 10px; /* Optional: Add rounded corners */
 }
-
-
