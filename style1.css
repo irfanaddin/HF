@@ -548,6 +548,36 @@ ul {
 }
 
 
+/* Accounting Services Page */
+/* Style for service images */
+.service-image {
+    width: 100%;            /* Make sure images are responsive */
+    max-width: 600px;        /* Limit the width to 600px */
+    margin-bottom: 20px;     /* Add space below the image */
+    border-radius: 10px;     /* Round the corners of the image */
+}
+
+/* Style for CTA buttons */
+.cta-button {
+    display: inline-block;
+    background-color: rgba(61, 158, 26, 0.8);  /* Green button background */
+    color: white;
+    padding: 10px 20px;       /* Padding inside the button */
+    border-radius: 5px;       /* Round corners of the button */
+    text-decoration: none;    /* Remove underline from the link */
+    font-weight: bold;        /* Bold text */
+    transition: background-color 0.3s ease;  /* Smooth transition */
+}
+
+.cta-button:hover {
+    background-color: rgba(61, 158, 26, 1);  /* Darken button on hover */
+}
+
+/* Hover effect for service boxes */
+.service-col:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    transform: translateY(-10px);  /* Move the box slightly up */
+}
 
 
 
@@ -681,6 +711,17 @@ details.service-col:hover {
     margin-bottom: 30px;
 }
 
+.vision {
+    text-align: center;
+}
+
+.vision img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Adjusts image size for responsive design */
+}
+
+
 .values-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -775,6 +816,22 @@ details.service-col:hover {
 .about-us .core-values p strong {
     color: #123a52; /* Aligning with the primary color for trust */
 }
+
+.core-values {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%; /* Adjust as needed to control the width */
+}
+
+.core-values p {
+    text-align: center;
+}
+
+.core-values ul {
+    list-style-position: inside; /* To align the bullets with the centered text */
+    padding-left: 0; /* Remove padding for centering */
+}
+
 
 /*-------brothers------*/
 .brothers {
