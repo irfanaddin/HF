@@ -1154,3 +1154,42 @@ button:hover {
     margin: 0 auto 20px; /* Center the image and add space below */
     border-radius: 10px; /* Optional: Add rounded corners */
 }
+
+
+
+/* Additional Responsive Adjustments */
+
+/* Ensure text-box and hero sections are responsive */
+@media (max-width: 768px) {
+    .text-box h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+    .text-box p {
+        font-size: 14px;
+    }
+    .hero-btn {
+        padding: 10px 20px; /* Adjust button padding */
+    }
+}
+
+/* Ensure service columns stack on mobile devices */
+@media (max-width: 768px) {
+    .service-col {
+        flex-basis: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+}
+
+/* Adjustments for smaller navigation */
+@media (max-width: 768px) {
+    nav img {
+        width: 250px;
+    }
+    .nav-links ul li {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .nav-links {
+        padding: 20px;
+    }
+}
