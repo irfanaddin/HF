@@ -18,8 +18,13 @@
     </div>
     <nav>
         <a href="index.html"><img src="images/logo2.png"></a>
-        <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <!-- Hamburger menu button for small screens -->
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        
+            <!-- Navigation menu -->
+            <div class="nav-links" id="navLinks">
+                <!-- Close button for small screens -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
@@ -32,7 +37,6 @@
                         <li><a href="represent.html">Representation</a></li>
                     </ul>
                 </li>
-                    <!--<li><a href="tools.html">TOOLS</a></li>-->
                 <li><a href="contact.html">GET STARTED</a></li>
             </ul>
         </div>
@@ -53,34 +57,49 @@
 <section>    
 
 <!-- Services Section -->
+<!-- Services Section -->
+<!-- Services Section -->
 <section class="services">
     <h1>Explore Our Services</h1>
-    <div class="row">
+    <p>At Hamid Financials, LLP, we know that different industries have different needs.</p>
+    <br>
+    <p>Whether you need help with compliance or planning, HF has the resources help you meet your goals</p>
+    <div class="services-container">
         <!-- Service 1: Tax Preparation -->
-        <div class="service-col">
-            <img src="images/bookk.png" alt="Tax Preparation" onclick="openPopup('popup1')">
+        <div class="service-item">
+            <img src="images/bookk.png" alt="Tax Preparation" class="service-icon">
             <h3>Tax Preparation</h3>
+            <p>Stay compliant and save on taxes with our accurate and efficient tax preparation services.</p>
+            <a href="tax-prep.html" class="cta-button">Learn More</a>
         </div>
 
         <!-- Service 2: Accounting Services -->
-        <div class="service-col">
-            <img src="images/consult.png" alt="Accounting Services" onclick="openPopup('popup2')">
+        <div class="service-item">
+            <img src="images/consult.png" alt="Accounting Services" class="service-icon">
             <h3>Accounting Services</h3>
+            <p>Grow your business with accurate financial reporting and compliance, handled by experts.</p>
+            <a href="accservices.html" class="cta-button">Learn More</a>
         </div>
 
         <!-- Service 3: Tax Resolution -->
-        <div class="service-col">
-            <img src="images/resol.png" alt="Tax Resolution" onclick="openPopup('popup3')">
+        <div class="service-item">
+            <img src="images/resol.png" alt="Tax Resolution" class="service-icon">
             <h3>Tax Resolution</h3>
+            <p>Settle tax debts and disputes with our trusted tax resolution services.</p>
+            <a href="tax-res.html" class="cta-button">Learn More</a>
         </div>
 
         <!-- Service 4: Representation -->
-        <div class="service-col">
-            <img src="images/fedtaxes.png" alt="Representation" onclick="openPopup('popup4')">
+        <div class="service-item">
+            <img src="images/fedtaxes.png" alt="Representation" class="service-icon">
             <h3>Representation</h3>
+            <p>Get expert representation in front of the IRS or state tax authorities for peace of mind.</p>
+            <a href="represent.html" class="cta-button">Learn More</a>
         </div>
     </div>
 </section>
+
+
 
 <!-- Popups -->
 <div id="popup1" class="popup">
@@ -191,6 +210,24 @@
         }
     };
 </script>
+
+<script>
+    function showMenu() {
+        document.getElementById('navLinks').classList.add('show'); /* Show the menu */
+        document.querySelector('.fa-bars').style.display = 'none';  /* Hide the hamburger icon */
+        document.querySelector('.fa-times').style.display = 'block'; /* Show the close icon */
+    }
+
+    function hideMenu() {
+        document.getElementById('navLinks').classList.remove('show'); /* Hide the menu */
+        document.querySelector('.fa-bars').style.display = 'block';  /* Show the hamburger icon */
+        document.querySelector('.fa-times').style.display = 'none'; /* Hide the close icon */
+    }
+</script>
+
+<script src="https://kit.fontawesome.com/37fe9c0dd6.js" crossorigin="anonymous"></script>
+
+
 
 </body>
 </html>
