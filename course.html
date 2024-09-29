@@ -1,78 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
-    <link rel="stylesheet" href="style1.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Services</title>
+        <link rel="stylesheet" href="style1.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <link rel="icon" href="images/favicon.png" type="image/png">
+    </head>    
 <body>
 
-<section class="header">
-    <div class="top-bar">
-        <a>Contact us at: <a href="tel:+1 (714) 443-9818">(714) 443-9818 |</a></a>
-        <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login    </a> 
-    </div>
-    <nav>
-        <a href="index.html"><img src="images/logo2.png"></a>
-        <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li class="dropdown">
-                    <a href="course.html">SERVICES</a>
-                    <ul class="dropdown-content">
-                        <li><a href="tax-prep.html">Tax Services</a></li>
-                        <li><a href="accservices.html">Accounting Services</a></li>
-                        <li><a href="tax-res.html">Tax Resolution</a></li>
-                        <li><a href="represent.html">Representation</a></li>
-                    </ul>
-                </li>
-                    <!--<li><a href="tools.html">TOOLS</a></li>-->
-                <li><a href="contact.html">GET STARTED</a></li>
-            </ul>
+    <section class="header">
+        <div class="top-bar">
+            <a>Contact us at: <a href="tel:+1 (714) 443-9818">(714) 443-9818 |</a></a>
+            <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login    </a> 
         </div>
-    </nav>
-    <div class="text-box">
-        <h1 class="typewriter">Our Services</h1>
-        <p>With years of experience, our experts at Hamid Financials provide tailored financial services designed to alleviate uncertainty and reduce stress. </p>
-        <div class="scroll-arrow" onclick="scrollToNextSection()"></div>   
-    </div>
-</section>
+        <nav>
+            <a href="index.html"><img src="images/logo2.png"></a>
+        
+            <!-- Hamburger menu button for small screens -->
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        
+            <!-- Navigation menu -->
+            <div class="nav-links" id="navLinks">
+                <!-- Close button for small screens -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="course.html">SERVICES</a>
+                        <ul class="dropdown-content">
+                            <li><a href="tax-prep.html">Tax Services</a></li>
+                            <li><a href="accservices.html">Accounting Services</a></li>
+                            <li><a href="tax-res.html">Tax Resolution</a></li>
+                            <li><a href="represent.html">Representation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">GET STARTED</a></li>
+                </ul>
+            </div>
+        </nav>        
+          
+        <div class="text-box">
+            <h1 class="typewriter">Our Services</h1>
+            <p>With years of experience, our experts at Hamid Financials provide tailored financial services designed to alleviate uncertainty and reduce stress. </p>
+            <div class="scroll-arrow" onclick="scrollToNextSection()"></div>   
+        </div>
+    </section>
+    
 
+<!-- Services Section -->
 <!-- Services Section -->
 <section class="services">
     <h1>Explore Our Services</h1>
-    <div class="row">
+    <div class="services-container">
         <!-- Service 1: Tax Preparation -->
-        <div class="service-col">
-            <img src="images/bookk.png" alt="Tax Services" onclick="openPopup('popup1')">
+        <div class="service-item">
+            <img src="images/bookk.png" alt="Tax Services" class="service-icon" onclick="openPopup('popup1')">
             <h3>Tax Services</h3>
         </div>
 
         <!-- Service 2: Accounting Services -->
-        <div class="service-col">
-            <img src="images/consult.png" alt="Accounting Services" onclick="openPopup('popup2')">
+        <div class="service-item">
+            <img src="images/consult.png" alt="Accounting Services" class="service-icon" onclick="openPopup('popup2')">
             <h3>Accounting Services</h3>
         </div>
 
         <!-- Service 3: Tax Resolution -->
-        <div class="service-col">
-            <img src="images/resol.png" alt="Tax Resolution" onclick="openPopup('popup3')">
+        <div class="service-item">
+            <img src="images/resol.png" alt="Tax Resolution" class="service-icon" onclick="openPopup('popup3')">
             <h3>Tax Resolution</h3>
         </div>
 
         <!-- Service 4: Representation -->
-        <div class="service-col">
-            <img src="images/fedtaxes.png" alt="Representation" onclick="openPopup('popup4')">
+        <div class="service-item">
+            <img src="images/fedtaxes.png" alt="Representation" class="service-icon" onclick="openPopup('popup4')">
             <h3>Representation</h3>
         </div>
     </div>
 </section>
+
 
 <!-- Popups -->
 <div id="popup1" class="popup">
@@ -144,6 +154,23 @@
         }
     };
 </script>
+
+<script>
+    function showMenu() {
+        document.getElementById('navLinks').classList.add('show'); /* Show the menu */
+        document.querySelector('.fa-bars').classList.add('hide');  /* Hide the hamburger icon */
+        document.querySelector('.fa-times').style.display = 'block'; /* Show the close icon */
+    }
+
+    function hideMenu() {
+        document.getElementById('navLinks').classList.remove('show'); /* Hide the menu */
+        document.querySelector('.fa-bars').classList.remove('hide');  /* Show the hamburger icon */
+        document.querySelector('.fa-times').style.display = 'none'; /* Hide the close icon */
+    }
+</script>
+
+<script src="https://kit.fontawesome.com/37fe9c0dd6.js" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
