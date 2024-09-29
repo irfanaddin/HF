@@ -14,11 +14,16 @@
     <section class="header">
         <div class="top-bar">
             <a>Contact us at: <a href="tel:+1 (714) 443-9818">(714) 443-9818 |</a></a>
-            <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login    </a> 
+            <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login</a> 
         </div>
         <nav>
             <a href="index.html"><img src="images/logo2.png"></a>
+            <!-- Hamburger menu button for small screens -->
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        
+            <!-- Navigation menu -->
             <div class="nav-links" id="navLinks">
+                <!-- Close button for small screens -->
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -32,7 +37,6 @@
                             <li><a href="represent.html">Representation</a></li>
                         </ul>
                     </li>
-                    <!--<li><a href="tools.html">TOOLS</a></li>-->
                     <li><a href="contact.html">GET STARTED</a></li>
                 </ul>
             </div>
@@ -48,7 +52,35 @@
     <!-- Representation Services Section -->
     <section class="eservices" id="representation">
         <h1>Representation Services</h1>
-        <p>Being audited by the IRS (or any other government agency) is a stressful proposition for any taxpayer, and professional representation can be vital. At Hamid Financials, LLP, we are experienced and uniquely qualified to act as your audit representative. Trust us to handle communication with the auditor, and we’ll work diligently to ensure your audit is resolved quickly and fairly, so you don’t overpay in taxes and can get back to work.</p>
+        <img src="images/representation.jpg" alt="Representation Services" class="service-image">
+        <p>Facing an IRS audit or another government agency inquiry can be stressful. Let our team handle your case professionally, ensuring a fair outcome. Our qualified professionals have extensive experience representing clients in various audits and resolving tax disputes efficiently.</p>
+
+        <h2>Why Choose Us for Representation?</h2>
+        <p>We will handle all communication with the IRS on your behalf, ensuring that your rights are protected and that you don't overpay in taxes. We aim to resolve your case quickly and fairly, so you can focus on your business and life without stress.</p>
+        
+<!-- What We Offer Section -->
+<h2>What We Offer</h2>
+<div class="offerings-container">
+    <div class="offering">
+        <img src="images/audit-icon.png" alt="Audit Representation" class="offering-icon">
+        <h3>Audit Representation</h3>
+        <p>Expert representation before the IRS or state tax authorities to handle your audits smoothly.</p>
+    </div>
+    
+    <div class="offering">
+        <img src="images/dispute-icon.png" alt="Tax Disputes and Appeals" class="offering-icon">
+        <h3>Tax Disputes and Appeals</h3>
+        <p>Assistance with resolving tax disputes and navigating the appeals process to reach fair outcomes.</p>
+    </div>
+    
+    <div class="offering">
+        <img src="images/penalty-icon.png" alt="Penalty Negotiation" class="offering-icon">
+        <h3>Penalty Negotiation</h3>
+        <p>Negotiating penalties and interest reductions to help lower your overall tax liability.</p>
+    </div>
+</div>
+<a href="contact.html" class="cta-button">Get Started</a>
+
     </section>
 
     <script>
@@ -58,26 +90,34 @@
                 behavior: 'smooth'
             });
         }
-        window.onscroll = function () {
-            var scrollArrow = document.querySelector('.scroll-arrow');
-            if (window.scrollY > 50) {
-                scrollArrow.classList.add('hide');
-            } else {
-                scrollArrow.classList.remove('hide');
-            }
-        };
     </script>
+
+    <script>
+        function showMenu() {
+            document.getElementById('navLinks').style.right = "0"; // Show menu
+        }
+
+        function hideMenu() {
+            document.getElementById('navLinks').style.right = "-300px"; // Hide menu
+        }
+    </script>
+
 
 <script>
     function showMenu() {
-        document.getElementById('navLinks').style.right = "0"; // Show menu
+        document.getElementById('navLinks').classList.add('show'); /* Show the menu */
+        document.querySelector('.fa-bars').classList.add('hide');  /* Hide the hamburger icon */
+        document.querySelector('.fa-times').style.display = 'block'; /* Show the close icon */
     }
 
     function hideMenu() {
-        document.getElementById('navLinks').style.right = "-300px"; // Hide menu
+        document.getElementById('navLinks').classList.remove('show'); /* Hide the menu */
+        document.querySelector('.fa-bars').classList.remove('hide');  /* Show the hamburger icon */
+        document.querySelector('.fa-times').style.display = 'none'; /* Hide the close icon */
     }
 </script>
 
+<script src="https://kit.fontawesome.com/37fe9c0dd6.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
