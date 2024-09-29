@@ -14,11 +14,16 @@
     <section class="header">
         <div class="top-bar">
             <a>Contact us at: <a href="tel:+1 (714) 443-9818">(714) 443-9818 |</a></a>
-            <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login    </a> 
+            <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login</a> 
         </div>
         <nav>
             <a href="index.html"><img src="images/logo2.png"></a>
+            <!-- Hamburger menu button for small screens -->
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        
+            <!-- Navigation menu -->
             <div class="nav-links" id="navLinks">
+                <!-- Close button for small screens -->
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -32,7 +37,6 @@
                             <li><a href="represent.html">Representation</a></li>
                         </ul>
                     </li>
-                    <!--<li><a href="tools.html">TOOLS</a></li>-->
                     <li><a href="contact.html">GET STARTED</a></li>
                 </ul>
             </div>
@@ -44,50 +48,48 @@
         </div>
     </section>
 
-    <!-- Tax Resolution Services Section -->
+    <!-- Tax Resolution Section -->
     <section class="eservices" id="tax-resolution">
         <h1>Tax Resolution Services</h1>
-        <p>Owing back taxes can be overwhelming for any business or individual. Government agencies, such as the IRS, have the authority to garnish your wages, place liens on your property, and seize funds from your bank and retirement accounts. Our team at Hamid Financials LLP will analyze your unique situation and recommend and implement various solutions to help satisfy your taxes as quickly and painlessly as possible.</p>
-
-        <h2>Resolution Tools We Can Use</h2>
-        <ul>
-            <li>Tax Return Amendments</li>
-            <li>Installment Agreement</li>
-            <li>Offer In Compromise (OIC)</li>
-            <li>Penalty abatements</li>
-            <li>Innocent Spouse Relief</li>
-            <li>Currently Not Collectible Status (CNC)</li>
-        </ul>
-
-        <h3>Before Beginning the Tax Resolution Process</h3>
-        <p>Before starting the tax resolution process, it's important to:</p>
-        <ol>
-            <li>File all delinquent returns: The IRS requires taxpayers to be compliant with all tax laws, including filing all necessary returns.</li>
-            <li>Be current with all tax payments: Ensure proper withholding on paychecks or up-to-date estimated tax payments for the self-employed.</li>
-        </ol>
+        <img src="images/taxres.jpg" alt="Tax Resolution Services" class="service-image">
+        <p>Facing tax issues? We can help you resolve your tax debts with strategies that fit your situation. Our team at Hamid Financial LLP will analyze your case and recommend solutions to resolve your tax issues efficiently.</p>
     </section>
 
-    <!-- Definitions Section -->
-    <section class="eservices" id="definitions">
-        <h2>Definitions</h2>
-        <h3>Tax Return Amendments</h3>
-        <p>If you have filed your tax return and realized that you made a mistake, you can file a follow-up or amended tax return to make the correction. An amended tax return offers taxpayers the ability to make changes after filing their original return. Our team of professionals can help you determine whether an amended return is required, and if it is, we can assist you in filing the return with the appropriate authority.</p>
+    <!-- Resolution Tools Section -->
+<!-- Resolution Tools Section -->
+<section class="eservices" id="tools">
+    <h1>Resolution Tools We Use</h1>
+    <p>Our expert team can guide you through various tax resolution strategies, customized to your needs. Below are some of the tools we use to help resolve tax issues:</p>
+    
+    <div class="resolution-tools-list">
+        <div class="resolution-tool">
+            <h2>Installment Agreement</h2>
+            <p>Set up a payment plan with the IRS to pay off your tax debt over time.</p>
+        </div>
+        
+        <div class="resolution-tool">
+            <h2>Offer In Compromise (OIC)</h2>
+            <p>Negotiate a settlement that allows you to pay less than the full amount owed.</p>
+        </div>
 
-        <h3>Installment Agreement</h3>
-        <p>If you’re up to date on your tax returns but don’t have the funds to pay off an outstanding tax bill, an installment agreement can allow you to pay off the balance of your tax debt gradually. We can arrange an installment agreement for you and file the necessary paperwork with the IRS.</p>
+        <div class="resolution-tool">
+            <h2>Innocent Spouse Relief</h2>
+            <p>Get relief from tax liabilities caused by your spouse's or former spouse's errors.</p>
+        </div>
 
-        <h3>Offer In Compromise (OIC)</h3>
-        <p>If you feel you shouldn’t be liable for the assessed amount of a tax bill or if financial troubles are preventing you from paying off your tax debt, an Offer In Compromise might be the right solution. We can determine if you qualify and organize the documentation required to make your submission to the IRS.</p>
+        <div class="resolution-tool">
+            <h2>Penalty Abatement</h2>
+            <p>Request a reduction or removal of penalties for failure to file or pay on time, based on reasonable cause.</p>
+        </div>
 
-        <h3>Penalty Abatements</h3>
-        <p>Taxpayers often believe that once a penalty is assessed, it is due and payable. However, penalties are often assessed in error or calculated incorrectly. Our team will determine the reason for the penalty assessment and verify calculations. If reasonable cause exists, we will pursue an action that generally results in an abatement of the penalties.</p>
+        <div class="resolution-tool">
+            <h2>Currently Not Collectible (CNC) Status</h2>
+            <p>If you can’t pay due to financial hardship, we can help you get your account marked as uncollectible.</p>
+        </div>
+    </div>
+    <a href="contact.html" class="cta-button">Get Started</a>
+</section>
 
-        <h3>Innocent Spouse Relief</h3>
-        <p>Many times, spouses have balances due to taxing authorities caused by understatements of tax attributable to a current or former spouse’s intentional disregard to withhold pertinent information. Our team of professionals can help you resolve these balances if you did not have prior knowledge of them.</p>
-
-        <h3>Currently Not Collectible Status (CNC)</h3>
-        <p>There are times when you agree you owe the IRS, but you cannot pay due to your current financial situation. If the IRS agrees you cannot both pay your taxes and your basic living expenses, it may place your account in Currently Not Collectible (CNC) status.</p>
-    </section>
 
     <script>
         function scrollToNextSection() {
@@ -96,15 +98,24 @@
                 behavior: 'smooth'
             });
         }
-        window.onscroll = function () {
-            var scrollArrow = document.querySelector('.scroll-arrow');
-            if (window.scrollY > 50) {
-                scrollArrow.classList.add('hide');
-            } else {
-                scrollArrow.classList.remove('hide');
-            }
-        };
     </script>
+
+
+<script>
+    function showMenu() {
+        document.getElementById('navLinks').classList.add('show'); /* Show the menu */
+        document.querySelector('.fa-bars').classList.add('hide');  /* Hide the hamburger icon */
+        document.querySelector('.fa-times').style.display = 'block'; /* Show the close icon */
+    }
+
+    function hideMenu() {
+        document.getElementById('navLinks').classList.remove('show'); /* Hide the menu */
+        document.querySelector('.fa-bars').classList.remove('hide');  /* Show the hamburger icon */
+        document.querySelector('.fa-times').style.display = 'none'; /* Hide the close icon */
+    }
+</script>
+
+<script src="https://kit.fontawesome.com/37fe9c0dd6.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
