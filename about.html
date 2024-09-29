@@ -18,7 +18,14 @@
         </div>
         <nav>
             <a href="index.html"><img src="images/logo2.png"></a>
+
+
+            <!-- Hamburger menu button for small screens -->
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        
+            <!-- Navigation menu -->
             <div class="nav-links" id="navLinks">
+                <!-- Close button for small screens -->
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -32,8 +39,6 @@
                             <li><a href="represent.html">Representation</a></li>
                         </ul>
                     </li>
-                    <!-- Header Section -->
-                    <!--<li><a href="tools.html">TOOLS</a></li>-->
                     <li><a href="contact.html">GET STARTED</a></li>
                 </ul>
             </div>
@@ -47,17 +52,17 @@
         </section>
 <!--------Values--------->
 <section class="about-us">
-<h1>About Us</h1>
-
-<section class="about-us">
+    <h1>About Us</h1>
     <div class="vision">
         <h2>Our Vision</h2>
-        <img src="images/handshake.jpg" alt="vision">
+        <img src="images/handshake.jpg" alt="vision" class="vision-image">
         <p>Our vision is to instill complete confidence in the services we provide to our clients who have chosen us as their business partners. Everything we do is rooted in this vision and supported by six core values that guide how we work with each other and how we serve our clients.</p>
     </div>
 </section>
 
-</section>
+
+
+
     <div class="values-grid">
 
         <div class="value-item">
@@ -136,7 +141,7 @@
         
         <div class="brothers-col" onclick="openPopup('irfan-popup')">
             <img src="images/irfan.png" alt="Irfan Hamid">
-            <h3>Irfan Hamid<br> Development Analyst</h3>
+            <h3>Irfan Hamid<br> Chief Technology Officer</h3>
         </div>
         
         <!-- Popup structure -->
@@ -146,12 +151,12 @@
                 <img src="images/irfan.png" alt="Irfan Hamid" class="popup-img">
                 <h3>Irfan Hamid</h3>
                 <p>With an educational background in Cognitive Science with specialization in User Experience Design at UC San Diego and 
-                    valuable experience as a student leader, and a business analysis, Irfan has and continues to make notable 
+                    valuable experience as a student leader, and business professional, Irfan has and continues to make notable 
                     accomplishments in every environment and organization he steps foot into.
                     <br><br>
-                    For Hamid Financials, Irfan serves as a strategic advisor on the leadership team. Working with the Managing Partner, 
+                    For Hamid Financials, Irfan serves as a strategic advisor on the leadership team. Working with the Strategy Council, 
                     Irfan has used vision-shaping methodology and metrics to help accomplish annual goals for the company. Irfan's ability 
-                    to identify and prioritize critical issues that are often overlooked has allowed her to kickstart movements unthought 
+                    to identify and prioritize critical issues that are often overlooked has allowed him to kickstart movements unthought 
                     of.</p>
             </div>
         </div>
@@ -223,5 +228,21 @@
     }
     </script>
     
+    <script>
+        function showMenu() {
+            document.getElementById('navLinks').classList.add('show'); /* Show the menu */
+            document.querySelector('.fa-bars').classList.add('hide');  /* Hide the hamburger icon */
+            document.querySelector('.fa-times').style.display = 'block'; /* Show the close icon */
+        }
+    
+        function hideMenu() {
+            document.getElementById('navLinks').classList.remove('show'); /* Hide the menu */
+            document.querySelector('.fa-bars').classList.remove('hide');  /* Show the hamburger icon */
+            document.querySelector('.fa-times').style.display = 'none'; /* Hide the close icon */
+        }
+    </script>
+    
+    <script src="https://kit.fontawesome.com/37fe9c0dd6.js" crossorigin="anonymous"></script>
+
     </body>
 </html>
