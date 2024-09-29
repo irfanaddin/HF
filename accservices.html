@@ -18,7 +18,12 @@
         </div>
         <nav>
             <a href="index.html"><img src="images/logo2.png"></a>
+            <!-- Hamburger menu button for small screens -->
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        
+            <!-- Navigation menu -->
             <div class="nav-links" id="navLinks">
+                <!-- Close button for small screens -->
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -32,7 +37,6 @@
                             <li><a href="represent.html">Representation</a></li>
                         </ul>
                     </li>
-                    <!--<li><a href="tools.html">TOOLS</a></li>-->
                     <li><a href="contact.html">GET STARTED</a></li>
                 </ul>
             </div>
@@ -116,6 +120,23 @@
             }
         };
     </script>
+
+
+<script>
+    function showMenu() {
+        document.getElementById('navLinks').classList.add('show'); /* Show the menu */
+        document.querySelector('.fa-bars').classList.add('hide');  /* Hide the hamburger icon */
+        document.querySelector('.fa-times').style.display = 'block'; /* Show the close icon */
+    }
+
+    function hideMenu() {
+        document.getElementById('navLinks').classList.remove('show'); /* Hide the menu */
+        document.querySelector('.fa-bars').classList.remove('hide');  /* Show the hamburger icon */
+        document.querySelector('.fa-times').style.display = 'none'; /* Hide the close icon */
+    }
+</script>
+
+<script src="https://kit.fontawesome.com/37fe9c0dd6.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
