@@ -864,10 +864,42 @@ ul {
     background-color: rgba(61, 158, 26, 1);  /* Darken button on hover */
 }
 
-/* Hover effect for service boxes */
+/* Enhance the service columns */
+.service-col {
+    background-color: #f7f9fc;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 30%; /* Make cards larger */
+    margin: 20px auto; /* Add more space between the cards */
+}
+
 .service-col:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
     transform: translateY(-10px);  /* Move the box slightly up */
+}
+
+/* Larger images for the services */
+.service-col img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Larger text for service titles */
+.service-col h3 {
+    font-size: 24px; /* Increase size for a bolder look */
+    margin-top: 15px;
+    color: #123a52;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .service-col {
+        width: 90%; /* Full width on small screens */
+    }
 }
 
 
