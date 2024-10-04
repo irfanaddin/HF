@@ -85,7 +85,7 @@ body:not(.home-page) .header {
 
 nav {
     display: flex;
-    padding: 2% 6%;
+    padding: 2% 4%;
     justify-content: space-between;
     align-items: center;
     background: rgba(255, 255, 255, 1);
@@ -1142,27 +1142,26 @@ details.service-col:hover {
     margin: 50px auto;
 }
 
-/* Styling for the paragraph section */
-.left-content {
-    flex: 1;
-    margin-right: 50px; /* Add some space between the text and slider */
-    text-align: left;
-}
-
 .left-content h2 {
-    font-size: 28px;
+    text-align: center;
     color: #123a52;
+    font-size: 40px;
 }
 
 .left-content p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
+    text-align: left;
+    color: #000;
+    font-size: 17px;
 }
 
-/* Styling for the slider */
-.right-slider {
+.left-content {
     flex: 1;
+    margin-right: 50px; /* Adds space between text and slider */
+    text-align: left;
+}
+
+.right-slider {
+    flex: 1; /* Ensures the slider takes up half of the section */
 }
 
 .slider-container {
@@ -1181,7 +1180,7 @@ details.service-col:hover {
 }
 
 .slide {
-    width: 80%; /* Make all slides the same size */
+    width: 80%; /* All slides the same size */
     text-align: center;
     padding: 20px;
     background-color: #f7f9fc;
@@ -1194,6 +1193,7 @@ details.service-col:hover {
 .slide.active {
     opacity: 1;
 }
+
 
 .arrow {
     cursor: pointer;
@@ -1681,16 +1681,19 @@ button:hover {
 
 /* Popup content */
 .popup-content {
-    position: relative;
+    position: fixed; /* Make it fixed so it stays in view */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the element's own size */
     background-color: #fff;
-    margin: 15% auto;
     padding: 20px;
     width: 80%;
     max-width: 600px;
-    max-height: 80vh; /* Restrict height to 80% of the viewport */
-    overflow-y: auto; /* Enable vertical scrolling for long content */
     border-radius: 10px;
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001; /* Ensure it is above other content */
+    max-height: 80vh; /* Restrict height to 80% of the viewport */
+    overflow-y: auto; /* Enable scrolling inside the popup if content is too long */
 }
 
 /* Close button */
@@ -1714,11 +1717,11 @@ button:hover {
 
 
 .popup-img {
-    width: 300px; /* Adjust this size as needed */
+    width: 400px; /* Adjust this size as needed */
     height: auto; /* Maintain aspect ratio */
     display: block;
     margin: 0 auto 20px; /* Center the image and add space below */
-    border-radius: 10px; /* Optional: Add rounded corners */
+    border-radius: 10px; /* rounded corners */
 }
 
 
