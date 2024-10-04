@@ -469,9 +469,10 @@ p{
 }
 
 .offering-icon {
-    width: 50px;
+    width: 200px;
     height: auto;
     margin-bottom: 15px;
+    border-radius: 10px; /* rounded corners */
 }
 
 .offering h3 {
@@ -1110,6 +1111,12 @@ details.service-col:hover {
     padding: 20px;
 }
 
+.slide img {
+    width: 250px;
+    height: 230px;
+
+}
+
 .slide.active {
     display: block; /* Show only the active slide */
     opacity: 1;
@@ -1144,7 +1151,7 @@ details.service-col:hover {
 
 .left-content h2 {
     text-align: center;
-    color: #123a52;
+    color: #2a6f12;
     font-size: 40px;
 }
 
@@ -1198,7 +1205,7 @@ details.service-col:hover {
 .arrow {
     cursor: pointer;
     font-size: 2em;
-    color: #333;
+    color: #2a6f12;
     user-select: none;
 }
 
@@ -1375,6 +1382,7 @@ details.service-col:hover {
     font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
+    color: #2a6f12;
 }
 
 .brothers p {
@@ -1452,23 +1460,23 @@ details.service-col:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.vision h2 {
+.vision h1 {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #123a52;
+    color: #2a6f12;
 }
 
 .vision p {
     font-size: 16px;
     color: #333;
     line-height: 1.6;
-    margin: 20px 0;
+    margin: 40px 120px;
 }
 
 .vision-image {
-    width: 80%;  /* Adjust image size */
-    max-width: 600px;  /* Limit maximum size */
+    width: auto;  /* Adjust image size */
+    max-height: 500px;  /* Limit maximum size */
     border-radius: 20px;  /* Rounded corners */
     margin-bottom: 20px;  /* Space below the image */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for the image */
