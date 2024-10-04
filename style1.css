@@ -4,14 +4,84 @@
     font-family: 'Nanum Myeongjo', serif;
 }
 
+/* General styling */
+
 .header {
     min-height: 122.3vh;
     width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/blank3.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Apply different background for other pages */
+body:not(.home-page) .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/buildings.jpeg);
     background-position: center;
     background-size: cover;
-    position:relative;
 }
+
+/* Additional page styling */
+.cta {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/contact.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+
+
+/* Logo styling */
+.logo {
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Styling for the introduction section */
+.intro-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('images/big3.png'); /* Path to the image you uploaded */
+    background-size: cover;
+    background-position: right center;
+    width: 90%;
+    height: 100vh;
+    padding-left: 40px;
+}
+
+.intro-text {
+    max-width: 400px;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #3d9e1a;
+    padding: 12px 34px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #2a6f12;
+}
+
+
 
 nav {
     display: flex;
@@ -125,11 +195,12 @@ nav img {
   
 /* logo on center of index page */
 .fade-in-logo {
-    width: 300px; /* Adjust the size of the logo */
+    width: 350px; /* Adjust the size of the logo */
     height: auto;
-    opacity: .4;
+    opacity: .8;
 	margin-bottom: 10px;
 	margin-top: -200px;
+	margin-right: 600px;
 
 }
 
@@ -903,9 +974,6 @@ ul {
 }
 
 
-
-
-
 /* Style for <details> and <summary> */
 details.service-col {
     background: rgba(61, 158, 26, 0.5);
@@ -1012,6 +1080,146 @@ details.service-col:hover {
 }
 
 /* About Us Section */
+
+
+/* Core values slider */
+.core-values-slider {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+    text-align: center;
+    padding: 20px;
+}
+
+.slide.active {
+    display: block; /* Show only the active slide */
+    opacity: 1;
+}
+
+
+.arrow {
+    cursor: pointer;
+    font-size: 2em;
+    color: #333;
+    user-select: none;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 10px;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 10px;
+}
+
+/* Flex container for core values section */
+.core-values-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin: 50px auto;
+}
+
+/* Styling for the paragraph section */
+.left-content {
+    flex: 1;
+    margin-right: 50px; /* Add some space between the text and slider */
+    text-align: left;
+}
+
+.left-content h2 {
+    font-size: 28px;
+    color: #123a52;
+}
+
+.left-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Styling for the slider */
+.right-slider {
+    flex: 1;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    width: 80%; /* Make all slides the same size */
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 2em;
+    color: #333;
+    user-select: none;
+}
+
+.left-arrow {
+    position: absolute;
+    left: -30px;
+}
+
+.right-arrow {
+    position: absolute;
+    right: -30px;
+}
+
+
+
+
+
+
+
+
 .about-us {
     width: 80%;
     margin: auto;
