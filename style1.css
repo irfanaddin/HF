@@ -7,7 +7,7 @@
 /* General styling */
 
 .header {
-    min-height: 122.3vh;
+    min-height: 110.3vh;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/blank3.png);
     background-position: center;
@@ -112,7 +112,7 @@ nav img {
 }
 
 .nav-links ul li a {
-    color: rgb(167, 144, 222);
+    color: rgb(121, 105, 158);
     text-decoration: none;
     font-size: 13px;
 }
@@ -174,7 +174,7 @@ nav img {
 	border-right: .15em solid rgba(154, 206, 93, 0.8, green); /* The typewriter cursor */
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Keeps the text in the center */
-	margin-top: 20px;
+	margin-top: -90px;
 	letter-spacing: .05em; /* Adjust as needed */
 	animation: 
 	  typing 3.5s steps(40, end),
@@ -195,21 +195,20 @@ nav img {
   
 /* logo on center of index page */
 .fade-in-logo {
-    width: 400px; /* Adjust the size of the logo */
+    width: 35%; /* Adjust the size of the logo */
     height: auto;
     opacity: .8;
-	margin-bottom: 0px;
-	margin-top: -160px;
+	margin-bottom: 10px;
+	margin-top: -70px;
 	margin-right: 600px;
 }
-
 
 
 /* Hamburger Menu Styles */
 .fa-bars {
     display: none; /* Hidden by default */
     font-size: 28px;
-    color: #000; /* Set to black */
+    color: transparent; /* Set to black */
     cursor: pointer;
     position: absolute;
     right: 20px; /* Position in the top-right corner */
@@ -220,7 +219,7 @@ nav img {
 .fa-times {
     display: none; /* Hidden by default */
     font-size: 28px;
-    color: #000; /* Set to black */
+    color: transparent; /* Set to black */
     cursor: pointer;
     position: absolute;
     right: 20px;
@@ -294,6 +293,8 @@ nav img {
 }
 
 .text-box h1 {
+    padding-bottom: -50px;
+    padding-top: -150px;
     font-size: 40px;
 }
 
@@ -326,7 +327,7 @@ nav .fa {
 }
 
 @media (max-width: 700px) {
-    .text-box h1 {
+    .text-box {
         font-size: 20px;
     }
     .nav-links ul li {
@@ -334,11 +335,11 @@ nav .fa {
     }
     .nav-links {
         position: absolute;
-        background: #16512a;
+        background: rgb(118, 158, 72);
         height: 100vh;
-        width: 200px;
+        width: 100%;
         top: 0;
-        right: -300px;
+        right: -500px;
         text-align: left;
         z-index: 2;
         transition: 1s;
@@ -356,6 +357,29 @@ nav .fa {
     .nav-links {
         padding: 30px;
     }
+    .header {
+        position: inherit;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/phone3.png);
+    }
+    .typewriter {
+        position: relative;
+        letter-spacing: 5px;
+    }
+    .fade-in-logo {
+        display: block;
+        width: 50%;
+        padding-left: 25%;
+        position: relative;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .services {
+        padding-right: 20%;
+        padding-left: 7%;
+    }
+    .scroll-arrow {
+        display: none;
+    }
 }
 .top-bar {
     background-color: #29315c3c;  /* Light grey background */
@@ -363,6 +387,7 @@ nav .fa {
     text-align: right;        /* Center the text inside the bar */
     padding: 5px 0;            /* Padding to give some height */
     font-size: 14px;           /* Smaller font size */
+    margin-right: 25px;
 	
 }
 
@@ -1637,7 +1662,7 @@ button:hover {
 
 .scroll-arrow {
     position: absolute;
-    bottom: -165px; /* Adjust as needed */
+    bottom: -70px; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
     width: 50px; /* Adjust size as needed */
@@ -1702,6 +1727,10 @@ button:hover {
     z-index: 1001; /* Ensure it is above other content */
     max-height: 80vh; /* Restrict height to 80% of the viewport */
     overflow-y: auto; /* Enable scrolling inside the popup if content is too long */
+}
+
+.popup h2{
+    text-align: center;
 }
 
 /* Close button */
