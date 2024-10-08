@@ -124,7 +124,7 @@ nav img {
     background: rgb(76, 140, 53);
     display: block;
     margin: auto;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .nav-links ul li:hover::after {
@@ -228,7 +228,7 @@ nav img {
 }
 
 /* Show hamburger menu on small screens */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .fa-bars {
         display: block; /* Show the hamburger menu button on small screens */
         color: #000; /* Black color */
@@ -237,9 +237,9 @@ nav img {
     /* Adjust the navigation */
     .nav-links {
         position: absolute;
-        right: -300px; /* Initially hide the menu off-screen */
+        right: -500px; /* Initially hide the menu off-screen */
         top: 0;
-        background-color: #16512a;
+        background-color: #2a6f12;
         height: 100vh;
         width: 200px;
         text-align: left;
@@ -254,6 +254,7 @@ nav img {
     .nav-links ul li {
         display: block;
         padding: 10px;
+        text-align: center;
     }
 
     /* When menu is active (open) */
@@ -337,7 +338,7 @@ nav .fa {
         position: absolute;
         background: rgb(118, 158, 72);
         height: 100vh;
-        width: 100%;
+        width: 450px;
         top: 0;
         right: -500px;
         text-align: left;
@@ -534,7 +535,7 @@ p{
     grid-template-columns: repeat(2, 1fr); /* Two columns for the services */
     gap: 40px; /* Spacing between the service items */
     margin: 40px auto;
-    width: 80%;
+    width: 50%;
 }
 
 .service-item {
@@ -552,8 +553,8 @@ p{
 }
 
 .service-icon {
-    width: 400px; /* Larger image size */
-    height: auto;
+    width: auto; /* Larger image size */
+    max-height: 500px;
     margin-bottom: 15px;
     border-radius: 20px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add subtle shadow */
@@ -576,7 +577,7 @@ p{
     }
 
     .service-icon {
-        width: 100px; /* Slightly smaller image on mobile */
+        width: 300px; /* Slightly smaller image on mobile */
     }
 }
 
@@ -585,6 +586,7 @@ p{
     font-size: 14px; /* Adjusted font size */
     color: #333;
     line-height: 1.5;
+    padding-bottom: 20px;
 }
 
 .cta-button {
@@ -606,6 +608,7 @@ p{
 @media (max-width: 768px) {
     .services-container {
         grid-template-columns: 1fr; /* Stack services in a single column */
+        padding-right: 60px;
     }
 
     .service-item {
@@ -940,6 +943,7 @@ ul {
 .service-image {
     width: 100%;            /* Make sure images are responsive */
     max-width: 600px;        /* Limit the width to 600px */
+    max-height: 300px;
     margin-bottom: 20px;     /* Add space below the image */
     border-radius: 10px;     /* Round the corners of the image */
 }
@@ -1244,6 +1248,90 @@ details.service-col:hover {
     right: -30px;
 }
 
+@media (max-width: 768px) {
+    .core-values-section {
+        display: block;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 90%;
+        margin: 50px auto;
+        padding-left: 10px;
+    }
+    
+    .left-content h2 {
+        text-align: center;
+        color: #2a6f12;
+        font-size: 40px;
+        padding-left: 25px;
+    }
+    
+    .left-content p {
+        text-align: center;
+        color: #000;
+        font-size: 17px;
+        padding-bottom: 50px;
+        padding-left: 25px;
+    }
+    
+    .left-content {
+        flex: 1;
+        margin-right: 50px; /* Adds space between text and slider */
+        text-align: left;
+    }
+    
+    .right-slider {
+        flex: 1; /* Ensures the slider takes up half of the section */
+    }
+    
+    .slider-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+    }
+    
+    .slider {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .slide {
+        width: 80%; /* All slides the same size */
+        text-align: center;
+        padding: 20px;
+        background-color: #f7f9fc;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: opacity 0.5s ease;
+        opacity: 0;
+    }
+    
+    .slide.active {
+        opacity: 1;
+    }
+    
+    
+    .arrow {
+        cursor: pointer;
+        font-size: 2em;
+        color: #2a6f12;
+        user-select: none;
+    }
+    
+    .left-arrow {
+        position: absolute;
+        left: -10px;
+    }
+    
+    .right-arrow {
+        position: absolute;
+        right: -10px;
+    }
+}
+
 
 
 
@@ -1273,9 +1361,7 @@ details.service-col:hover {
     margin-bottom: 30px;
 }
 
-.vision {
-    text-align: center;
-}
+
 
 .vision img {
     display: block;
@@ -1485,6 +1571,22 @@ details.service-col:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+@media(max-width: 700px){
+	.vision{
+        text-align: center;
+        padding: 20px 0px;
+        background-color: #f7f9fc; /* Light background for contrast */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+	}
+    .vision img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%; /* Adjusts image size for responsive design */
+    }
+}
+
+
 .vision h1 {
     font-size: 28px;
     font-weight: bold;
@@ -1496,7 +1598,7 @@ details.service-col:hover {
     font-size: 16px;
     color: #333;
     line-height: 1.6;
-    margin: 40px 120px;
+    margin-top: 20px;
 }
 
 .vision-image {
@@ -1506,9 +1608,6 @@ details.service-col:hover {
     margin-bottom: 20px;  /* Space below the image */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for the image */
 }
-
-
-
 
 /*-------blog-------*/
 .blog{
