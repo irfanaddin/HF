@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HF | Services</title>
+        <title>Our Services</title>
         <link rel="stylesheet" href="style1.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
@@ -54,86 +54,40 @@
 
 <!-- Services Section -->
 <!-- Services Section -->
-<section class="services">
-    <h1>Explore Our Services</h1>
-    <div class="services-container">
-        <!-- Service 1: Tax Preparation -->
-        <div class="service-item">
-            <img src="images/bookk.png" alt="Tax Services" class="service-icon" onclick="openPopup('popup1')">
-            <h3>Tax Services</h3>
-        </div>
 
-        <!-- Service 2: Accounting Services -->
-        <div class="service-item">
-            <img src="images/consult.png" alt="Accounting Services" class="service-icon" onclick="openPopup('popup2')">
-            <h3>Accounting Services</h3>
-        </div>
-
-        <!-- Service 3: Tax Resolution -->
-        <div class="service-item">
-            <img src="images/resol.png" alt="Tax Resolution" class="service-icon" onclick="openPopup('popup3')">
-            <h3>Tax Resolution</h3>
-        </div>
-
-        <!-- Service 4: Representation -->
-        <div class="service-item">
-            <img src="images/fedtaxes.png" alt="Representation" class="service-icon" onclick="openPopup('popup4')">
-            <h3>Representation</h3>
-        </div>
+<div class="services-container">
+    <!-- Service 2: Accounting Services -->
+    <div class="service-item">
+        <img src="images/bookk.png" alt="Accounting Services" class="service-image">
+        <h1>Tax Preparation</h1>
+        <p>Stay compliant and save on taxes with our accurate and efficient tax preparation services.</p>
+            <a href="tax-prep.html" class="cta-button">Learn More</a>
     </div>
-</section>
 
+    <!-- Service 3: Tax Resolution -->
+    <div class="service-item">
+        <img src="images/accserv.jpg" alt="Accounting Services" class="service-image">
+        <h3>Accounting Services</h3>
+        <p>Grow your business with accurate financial reporting and compliance, handled by experts.</p>
+            <a href="accservices.html" class="cta-button">Learn More</a>
+    </div>
 
-<!-- Popups -->
-<div id="popup1" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('popup1')">&times;</span>
-        <img class="popup-img" src="images/bookk.png" alt="Tax Preparation">
-        <h2>Tax Preparation</h2>
-        <p>We provide accurate and efficient tax preparation services to help you stay compliant and save on taxes.</p>
-        <a href="tax-prep.html" class="hero-btn">Read More</a>
+    <!-- Service 1: Tax Preparation -->
+    <div class="service-item">
+        <img src="images/resol.png" alt="Accounting Services" class="service-image">
+        <h1>Tax Resolution</h1>
+        <p>Settle tax debts and disputes with our trusted tax resolution services.</p>
+            <a href="tax-res.html" class="cta-button">Learn More</a>
+    </div>
+
+    <!-- Service 4: Representation -->
+    <div class="service-item">
+        <img src="images/fedtaxes.png" alt="Representation" class="service-image">
+        <h3>Representation</h3>
+        <p>Get expert representation in front of the IRS or state tax authorities for peace of mind.</p>
+            <a href="represent.html" class="cta-button">Learn More</a>
     </div>
 </div>
-
-<div id="popup2" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('popup2')">&times;</span>
-        <img class="popup-img" src="images/consult.png" alt="Accounting Services">
-        <h2>Accounting Services</h2>
-        <p>Our accounting services ensure accurate financial reporting and compliance with regulations, helping you grow your business.</p>
-        <a href="accservices.html" class="hero-btn">Read More</a>
-    </div>
-</div>
-
-<div id="popup3" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('popup3')">&times;</span>
-        <img class="popup-img" src="images/resol.png" alt="Tax Resolution">
-        <h2>Tax Resolution</h2>
-        <p>We offer tax resolution services to help settle tax debts and disputes with the IRS.</p>
-        <a href="tax-res.html" class="hero-btn">Read More</a>
-    </div>
-</div>
-
-<div id="popup4" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('popup4')">&times;</span>
-        <img class="popup-img" src="images/fedtaxes.png" alt="Representation">
-        <h2>Representation</h2>
-        <p>We provide representation services to ensure you are supported and represented in front of the IRS or other authorities.</p>
-        <a href="represent.html" class="hero-btn">Read More</a>
-    </div>
-</div>
-
-<script>
-    function openPopup(popupId) {
-        document.getElementById(popupId).style.display = 'block';
-    }
-
-    function closePopup(popupId) {
-        document.getElementById(popupId).style.display = 'none';
-    }
-</script>
 
 <script>
     // Function to scroll to the next section
