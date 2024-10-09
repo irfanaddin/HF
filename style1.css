@@ -254,7 +254,7 @@ nav img {
     .nav-links ul li {
         display: block;
         padding: 10px;
-        text-align: center;
+        text-align: right;
     }
 
     /* When menu is active (open) */
@@ -530,6 +530,90 @@ p{
 
 /* Services Section Styling */
 /* Services Section Styling */
+
+
+/* Adjust Explore Our Services section for index.html only */
+.home-page .services-container {
+    width: 70%; /* Reduce width for index.html */
+    grid-template-columns: repeat(2, 1fr); /* Keep two columns */
+    gap: 30px; /* Adjust spacing between service items */
+    margin: 20px auto; /* Reduce margin for a smaller overall section */
+}
+
+.home-page .service-item {
+    padding: 20px; /* Reduce padding around each service item */
+}
+
+.home-page .service-icon {
+    max-height: 200px; /* Reduce the size of the icons/images */
+}
+
+
+/* Media query for tablets and smaller devices */
+@media (max-width: 768px) {
+    /* For index.html specifically */
+    .home-page .services-container {
+        width: 90%; /* Increase width to use more screen space */
+        grid-template-columns: 1fr; /* Stack services in a single column */
+        gap: 20px; /* Adjust the spacing between service items */
+        margin: 20px auto; /* Center the section */
+    }
+
+    .home-page .service-item {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .home-page .service-icon {
+        max-height: 150px; /* Reduce icon size further */
+        width: auto; /* Ensure images scale properly */
+    }
+
+    .home-page h1 {
+        font-size: 28px; /* Reduce font size for section heading */
+    }
+
+    .home-page p {
+        font-size: 14px; /* Adjust paragraph font size for better readability */
+    }
+
+    .home-page .cta-button {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 14px; /* Reduce font size for buttons */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .home-page .services-container {
+        width: 100%; /* Full width on very small screens */
+        gap: 15px; /* Reduce spacing between items */
+    }
+
+    .home-page .service-item {
+        padding: 10px; /* Further reduce padding for mobile */
+    }
+
+    .home-page .service-icon {
+        max-height: 120px; /* Make icons even smaller */
+    }
+
+    .home-page h1 {
+        font-size: 24px; /* Smaller heading on mobile */
+    }
+
+    .home-page p {
+        font-size: 12px; /* Smaller paragraph text */
+    }
+
+    .home-page .cta-button {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 12px; /* Smaller buttons */
+    }
+}
+
+
+
+
 .services-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns for the services */
