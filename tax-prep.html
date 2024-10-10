@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Tax Preparation</title>
+    <title>Hamid Financials | Tax Preparation</title>
     <link rel="stylesheet" href="style1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
@@ -48,42 +48,32 @@
         </div>
     </section>
 
-<!-- Services Section -->
+
+
 <section class="services">
     <h1>Explore Our Services</h1>
-    <p>The tax preparation process at Hamid Financials focuses on accuracy, efficiency, and timeliness. Whether you have an individual tax return involving federal and states only, an individual return involving international tax complexities, or a business tax return, our goal is to ensure your return is timely planned for and prepared accurately, capturing every valuable deduction while abiding by the ever-changing rules of the IRS and other tax authorities. </p>
-    <div class="row">
-        <!-- Service 1: Fed&State Tax Services -->
-        <div class="service-col">
-            <img src="images/fedtaxes.png" alt="Fed&State" onclick="openPopup('popup1')">
-            <h3>Federal and State Tax Services</h3>
-        </div>
-
-        <!-- Service 2: International Tax Services -->
-        <div class="service-col">
-            <img src="images/intax.png" alt="International" onclick="openPopup('popup2')">
-            <h3>International Tax Services</h3>
-        </div>
+    <p>The tax preparation process at Hamid Financials focuses on accuracy, efficiency, and timeliness. Whether you have an individual 
+        tax return involving federal and states only, an individual return involving international tax complexities, or a business tax 
+        return, our goal is to ensure your return is timely planned for and prepared accurately, capturing every valuable deduction 
+        while abiding by the ever-changing rules of the IRS and other tax authorities. </p>
 </section>
 
-<!-- Popups -->
-<div id="popup1" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('popup1')">&times;</span>
-        <img class="popup-img" src="images/fedtaxes.png" alt="Fed&State">
-        <h2>Federal and State Tax Services</h2>
-        <p>We provide accurate and efficient tax preparation services to help you stay compliant and save on taxes.</p>
-        <a href="fed-tax.html" class="hero-btn">Read More</a>
-    </div>
-</div>
 
-<div id="popup2" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('popup2')">&times;</span>
-        <img class="popup-img" src="images/intax.png" alt="International">
-        <h2>International Tax Services</h2>
+<div class="services-container">
+    <!-- Service 2: Federal and State Tax Services Section -->
+    <div class="service-item">
+        <img src="images/fedtaxes.png" alt="Federal and State Tax Services" class="service-image">
+        <h1>Federal and State Tax Services</h1>
+        <p>We provide accurate and efficient tax preparation services to help you stay compliant and save on taxes.</p>
+            <a href="fed-tax.html" class="cta-button">Learn More</a>
+    </div>
+
+        <!-- Service 3: International Tax Services Section -->
+    <div class="service-item">
+        <img src="images/intax.png" alt="International Taxes" class="service-image">
+        <h3>International Tax Services</h3>
         <p>Our accounting services ensure accurate financial reporting and compliance with regulations, helping you grow your business.</p>
-        <a href="int-tax.html" class="hero-btn">Read More</a>
+            <a href="int-tax.html" class="cta-button">Learn More</a>
     </div>
 </div>
 
