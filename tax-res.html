@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
@@ -17,13 +18,11 @@
             <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login</a> 
         </div>
         <nav>
-            <a href="index.html"><img src="images/logo2.png"></a>
-            <!-- Hamburger menu button for small screens -->
+            <a href="index.html"><img src="images/logo2.png" alt="Hamid Financials Logo"></a>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-        
-            <!-- Navigation menu -->
+
+
             <div class="nav-links" id="navLinks">
-                <!-- Close button for small screens -->
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -31,7 +30,13 @@
                     <li class="dropdown">
                         <a href="course.html">SERVICES</a>
                         <ul class="dropdown-content">
-                            <li><a href="tax-prep.html">Tax Services</a></li>
+                            <li class="dropdown">
+                                <a href="tax-prep.html">Tax Services</a>
+                                <ul class="nested-dropdown-content">
+                                    <li><a href="fed-tax.html">Federal and State Tax</a></li>
+                                    <li><a href="int-tax.html">International Tax</a></li>
+                                </ul>
+                            </li>
                             <li><a href="accservices.html">Accounting Services</a></li>
                             <li><a href="tax-res.html">Tax Resolution</a></li>
                             <li><a href="represent.html">Representation</a></li>
@@ -41,6 +46,7 @@
                 </ul>
             </div>
         </nav>
+
         <div class="text-box">
             <h1>Tax Resolution Services</h1>
             <p>Owing back taxes can be overwhelming. Let us help you find the best resolution for your situation.</p>
@@ -65,27 +71,27 @@
     
     <div class="resolution-tools-list">
         <div class="resolution-tool">
-            <h2>Installment Agreement</h2>
+            <h2>Installment Agreement</h2><br>
             <p>Set up a payment plan with the IRS to pay off your tax debt over time.</p>
         </div>
         
         <div class="resolution-tool">
-            <h2>Offer In Compromise (OIC)</h2>
+            <h2>Offer In Compromise (OIC)</h2><br>
             <p>Negotiate a settlement that allows you to pay less than the full amount owed.</p>
         </div>
 
         <div class="resolution-tool">
-            <h2>Innocent Spouse Relief</h2>
+            <h2>Innocent Spouse Relief</h2><br>
             <p>Get relief from tax liabilities caused by your spouse's or former spouse's errors.</p>
         </div>
 
         <div class="resolution-tool">
-            <h2>Penalty Abatement</h2>
+            <h2>Penalty Abatement</h2><br>
             <p>Request a reduction or removal of penalties for failure to file or pay on time, based on reasonable cause.</p>
         </div>
 
         <div class="resolution-tool">
-            <h2>Currently Not Collectible (CNC) Status</h2>
+            <h2>Currently Not Collectible (CNC) Status</h2><br>
             <p>If you can’t pay due to financial hardship, we can help you get your account marked as uncollectible.</p>
         </div>
     </div>
