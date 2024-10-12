@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style1.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
         <link rel="icon" href="images/favicon.png" type="image/png">
     </head>    
@@ -18,14 +19,11 @@
             <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login    </a> 
         </div>
         <nav>
-            <a href="index.html"><img src="images/logo2.png"></a>
-        
-            <!-- Hamburger menu button for small screens -->
+            <a href="index.html"><img src="images/logo2.png" alt="Hamid Financials Logo"></a>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-        
-            <!-- Navigation menu -->
+
+
             <div class="nav-links" id="navLinks">
-                <!-- Close button for small screens -->
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -33,7 +31,13 @@
                     <li class="dropdown">
                         <a href="course.html">SERVICES</a>
                         <ul class="dropdown-content">
-                            <li><a href="tax-prep.html">Tax Services</a></li>
+                            <li class="dropdown">
+                                <a href="tax-prep.html">Tax Services</a>
+                                <ul class="nested-dropdown-content">
+                                    <li><a href="fed-tax.html">Federal and State Tax</a></li>
+                                    <li><a href="int-tax.html">International Tax</a></li>
+                                </ul>
+                            </li>
                             <li><a href="accservices.html">Accounting Services</a></li>
                             <li><a href="tax-res.html">Tax Resolution</a></li>
                             <li><a href="represent.html">Representation</a></li>
