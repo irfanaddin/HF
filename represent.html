@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
@@ -17,13 +18,11 @@
             <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login</a> 
         </div>
         <nav>
-            <a href="index.html"><img src="images/logo2.png"></a>
-            <!-- Hamburger menu button for small screens -->
+            <a href="index.html"><img src="images/logo2.png" alt="Hamid Financials Logo"></a>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-        
-            <!-- Navigation menu -->
+
+
             <div class="nav-links" id="navLinks">
-                <!-- Close button for small screens -->
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -31,7 +30,13 @@
                     <li class="dropdown">
                         <a href="course.html">SERVICES</a>
                         <ul class="dropdown-content">
-                            <li><a href="tax-prep.html">Tax Services</a></li>
+                            <li class="dropdown">
+                                <a href="tax-prep.html">Tax Services</a>
+                                <ul class="nested-dropdown-content">
+                                    <li><a href="fed-tax.html">Federal and State Tax</a></li>
+                                    <li><a href="int-tax.html">International Tax</a></li>
+                                </ul>
+                            </li>
                             <li><a href="accservices.html">Accounting Services</a></li>
                             <li><a href="tax-res.html">Tax Resolution</a></li>
                             <li><a href="represent.html">Representation</a></li>
@@ -40,7 +45,6 @@
                     <li><a href="contact.html">GET STARTED</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         <div class="text-box">
             <h1>Representation Services</h1>
@@ -52,11 +56,15 @@
     <!-- Representation Services Section -->
     <section class="eservices" id="representation">
         <h1>Representation Services</h1>
-        <img src="images/representation.jpg" alt="Representation Services" class="service-image">
-        <p>Facing an IRS audit or another government agency inquiry can be stressful. Let our team handle your case professionally, ensuring a fair outcome. Our qualified professionals have extensive experience representing clients in various audits and resolving tax disputes efficiently.</p>
+        <img src="images/fadeinlogo.png" alt="Representation Services" class="service-image">
+        <p>Facing an IRS audit or another government agency inquiry can be stressful. Let our team handle your case professionally, ensuring 
+            a fair outcome. Our qualified professionals have extensive experience representing clients in various audits and resolving tax 
+            disputes efficiently.</p>
 
         <h2>Why Choose Us for Representation?</h2>
-        <p>We will handle all communication with the IRS on your behalf, ensuring that your rights are protected and that you don't overpay in taxes. We aim to resolve your case quickly and fairly, so you can focus on your business and life without stress.</p>
+        <br><br>
+        <p>We will handle all communication with the IRS on your behalf, ensuring that your rights are protected and that you don't overpay 
+            in taxes. We aim to resolve your case quickly and fairly, so you can focus on your business and life without stress.</p>
         
 <!-- What We Offer Section -->
 <h2>What We Offer</h2>
