@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Raleway', serif;
 }
 
 /* General styling */
@@ -104,17 +104,27 @@ nav img {
     text-align: right;
 }
 
-.nav-links ul li {
+.nav-links ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
+}
+
+.nav-links ul li {
+    position: relative; /* Necessary for positioning dropdowns */
     display: inline-block;
     padding: 8px 12px;
-    position: relative;
+    list-style: none;
+    text-align: left;
 }
 
 .nav-links ul li a {
-    color: rgb(121, 105, 158);
     text-decoration: none;
-    font-size: 13px;
+    padding: 10px;
+    display: block;
+    color: rgb(121, 105, 158);
+    font-size: 14px;
+
 }
 
 .nav-links ul li::after {
@@ -132,14 +142,16 @@ nav img {
 }
 
 /* Dropdown Menu for Services */
-.nav-links ul li {
-    position: relative; /* Necessary for the dropdown positioning */
+
+/* General Dropdown Styling */
+.nav-links li {
+    position: relative; /* Necessary for dropdown positioning */
 }
 
-.nav-links .dropdown-content {
-    display: none; /* Hidden by default */
+.nav-links .dropdown-content, .nav-links .nested-dropdown-content {
+    display: none;
     position: absolute;
-    background-color: #f7f9fc; /* Light background for the dropdown */
+    background-color: #f7f9fc;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     list-style: none;
@@ -148,25 +160,36 @@ nav img {
     top: 100%;
 }
 
-.nav-links .dropdown-content li {
-    text-align: left;
-    padding: 10px;
+.nav-links .dropdown-content {
     width: 200px;
 }
 
 .nav-links .dropdown-content li a {
+    padding: 10px;
     color: #333;
     text-decoration: none;
-    display: block;
 }
 
 .nav-links .dropdown-content li a:hover {
     background-color: rgba(154, 206, 93, 0.8); /* Hover effect for dropdown links */
 }
 
-.nav-links li:hover .dropdown-content {
-    display: block; /* Show the dropdown when hovering over Services */
+/* Show main dropdown on hover */
+.nav-links li:hover > .dropdown-content {
+    display: block;
 }
+
+/* Nested Dropdown Styling */
+.nav-links .nested-dropdown-content {
+    right: 100%; /* Position to the right of the main dropdown */
+    top: 0;
+}
+
+.nav-links .dropdown-content li:hover > .nested-dropdown-content {
+    display: block; /* Show nested dropdown on hover */
+}
+
+
 
 /* Typewriter Effect */
 .typewriter {
@@ -174,8 +197,9 @@ nav img {
 	border-right: .15em solid rgba(154, 206, 93, 0.8, green); /* The typewriter cursor */
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Keeps the text in the center */
-	margin-top: -90px;
+	margin-top: -100px;
 	letter-spacing: .05em; /* Adjust as needed */
+    padding-top: 5%;
 	animation: 
 	  typing 3.5s steps(40, end),
 	  blink-caret .75s step-end infinite;
@@ -184,7 +208,7 @@ nav img {
   /* The typing effect */
   @keyframes typing {
 	from { width: 0 }
-	to { width: 90% }
+	to { width: 70% }
   }
   
   /* The typewriter cursor effect */
@@ -195,11 +219,11 @@ nav img {
   
 /* logo on center of index page */
 .fade-in-logo {
-    width: 35%; /* Adjust the size of the logo */
+    width: 30%; /* Adjust the size of the logo */
     height: auto;
     opacity: .8;
-	margin-bottom: 10px;
-	margin-top: -70px;
+	margin-bottom: 60px;
+	margin-top: -50px;
 	margin-right: 600px;
 }
 
@@ -278,9 +302,6 @@ nav img {
 .nav-links.show {
     right: 0;
 }
-
-
-
 
 
 .text-box {
@@ -364,7 +385,7 @@ nav .fa {
     }
     .typewriter {
         position: relative;
-        letter-spacing: 5px;
+        letter-spacing: 2px;
     }
     .fade-in-logo {
         display: block;
@@ -439,7 +460,7 @@ p{
     width: 80%;
     margin: auto;
     text-align: left;
-    padding-top: 20px;
+    padding-top: 0px;
 }
 
 .resolution-tool {
@@ -808,11 +829,16 @@ ul {
     margin-bottom: 20px;
 }
 
+.eservices h2 {
+    margin-bottom: -25px;
+    text-align: left;
+}
+
 .eservices p {
     font-size: 16px;
     color: #333;
     margin-bottom: 40px;
-    line-height: 1.8;
+    line-height: 1.4;
 }
 
 .erow {
@@ -961,6 +987,8 @@ ul {
 .eservice-img {
     flex: 1;
     margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: -15px;
 }
 
 .eservice-img img {
@@ -1230,6 +1258,18 @@ details.service-col:hover {
 
 }
 
+.slide h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #2a6f12;
+}
+
+.slide h4 {
+    font-size: 18px;
+    margin-bottom: 0px;
+    color: #666;
+}
+
 .slide.active {
     display: block; /* Show only the active slide */
     opacity: 1;
@@ -1441,18 +1481,6 @@ details.service-col:hover {
     margin-bottom: 20px;
 }
 
-.about-us .vision, .about-us .core-values {
-    margin-bottom: 30px;
-}
-
-
-
-.vision img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%; /* Adjusts image size for responsive design */
-}
-
 
 .values-grid {
     display: grid;
@@ -1646,6 +1674,17 @@ details.service-col:hover {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* Vision Section Styling */
 .vision {
     text-align: center;
@@ -1655,22 +1694,27 @@ details.service-col:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-@media(max-width: 700px){
-	.vision{
-        text-align: center;
-        padding: 20px 0px;
-        background-color: #f7f9fc; /* Light background for contrast */
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-	}
+@media (max-width: 700px) {
+    .vision {
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+
     .vision img {
         display: block;
         margin: 0 auto;
-        max-width: 80%; /* Adjusts image size for responsive design */
+        max-width: 80%; /* Adjust image size for responsive design */
+    }
+
+    .vision-image {
+        width: auto;  /* Adjust image size */
+        max-height: 500px;  /* Limit maximum size */
+        border-radius: 20px;  /* Rounded corners */
+        margin-bottom: 20px;  /* Space below the image */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for the image */
     }
 }
 
-
+/* Vision Section Heading */
 .vision h1 {
     font-size: 28px;
     font-weight: bold;
@@ -1678,6 +1722,7 @@ details.service-col:hover {
     color: #2a6f12;
 }
 
+/* Vision Section Paragraph */
 .vision p {
     font-size: 16px;
     color: #333;
@@ -1685,6 +1730,7 @@ details.service-col:hover {
     margin-top: 20px;
 }
 
+/* Vision Image Styling */
 .vision-image {
     width: auto;  /* Adjust image size */
     max-height: 500px;  /* Limit maximum size */
@@ -1693,44 +1739,72 @@ details.service-col:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for the image */
 }
 
-/*-------blog-------*/
-.blog{
-	width: 80%;
-	margin: auto;
-	padding-top: 100px;
-	text-align: center;
+.about-us .vision,
+.about-us .core-values {
+    margin-bottom: 30px;
 }
-.blog-col{
-	flex-basis: 44%;
-	border-radius: 10px;
-	margin-bottom: 5%;
-	text-align: left;
-	background: #b0d7f1;
-	padding: 25px;
-	cursor: pointer;
-	display: flex;
+
+/* General Image Styling in Vision Section */
+.vision img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Adjust image size for responsive design */
 }
-.blog-col img{
-	height: 40px;
-	margin-left: 5px;
-	margin-right: 30px;
-	border-radius: 50%;
+
+/* Vision Section Styling */
+.vision {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f7f9fc; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 40px;
 }
-.blog-col p{
-	padding: 0;
+
+.vision img {
+    max-width: 50%; /* Image takes up 50% of the section */
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+    margin-right: 30px; /* Space between image and text */
 }
-.blog-col h3{
-	margin-top: 15px;
-	text-align: left;
+
+.vision-content {
+    flex: 1;
+    text-align: left; /* Align text to the left */
 }
-.blog-col .fa{
-	color: #123a52;
+
+.vision-content h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2a6f12;
 }
-@media(max-width: 700px){
-	.blog-col img{
-		margin-left: 0px;
-		margin-right: 15px;
-	}
+
+.vision-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .vision {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vision img {
+        max-width: 80%; /* Reduce image size on smaller screens */
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .vision-content {
+        text-align: center;
+    }
 }
 
 
