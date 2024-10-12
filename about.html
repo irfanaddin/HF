@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
 <link rel="icon" href="images/favicon.png" type="image/png">
 
@@ -17,15 +18,11 @@
             <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login    </a> 
         </div>
         <nav>
-            <a href="index.html"><img src="images/logo2.png"></a>
-
-
-            <!-- Hamburger menu button for small screens -->
+            <a href="index.html"><img src="images/logo2.png" alt="Hamid Financials Logo"></a>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-        
-            <!-- Navigation menu -->
+
+
             <div class="nav-links" id="navLinks">
-                <!-- Close button for small screens -->
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -33,7 +30,13 @@
                     <li class="dropdown">
                         <a href="course.html">SERVICES</a>
                         <ul class="dropdown-content">
-                            <li><a href="tax-prep.html">Tax Services</a></li>
+                            <li class="dropdown">
+                                <a href="tax-prep.html">Tax Services</a>
+                                <ul class="nested-dropdown-content">
+                                    <li><a href="fed-tax.html">Federal and State Tax</a></li>
+                                    <li><a href="int-tax.html">International Tax</a></li>
+                                </ul>
+                            </li>
                             <li><a href="accservices.html">Accounting Services</a></li>
                             <li><a href="tax-res.html">Tax Resolution</a></li>
                             <li><a href="represent.html">Representation</a></li>
@@ -52,15 +55,18 @@
         </section>
 <!--------Values--------->
 <div class="vision">
-    <h1>Our Vision</h1>
     <img src="images/big3.png" alt="vision" class="vision-image">
-    <p>Our vision is to instill complete confidence in the services we provide to our clients who have chosen us as their business partners. 
-        Everything we do is rooted in this vision and supported by seven core values that guide how we work with each other and how we 
-        serve our clients.  </p>
+    <div class="vision-content">
+        <h1>Our Vision</h1>
+        <p>Our vision is to instill complete confidence in the services we provide to our clients who have chosen us as their business partners. 
+            Everything we do is rooted in this vision and supported by seven core values that guide how we work with each other and how we 
+            serve our clients.  </p>
+    </div>
 </div>
 
 
-<br><br><br><br>
+
+<br><br>
 
 <section class="core-values-section">
     <div class="left-content">
