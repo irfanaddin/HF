@@ -6,6 +6,7 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="style1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/fadeinlogo.png" type="image/png">
@@ -16,8 +17,8 @@
 <body>
     <section class="header">
         <div class="top-bar">
-            <a>Contact us at: <a href="tel:+1 (714) 443-9818">(714) 443-9818 |</a></a>
-            <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login    </a> 
+            <a>Contact us at: <a href="tel:+1 (657) 513-5388">(657) 513-5388 |</a></a>
+            <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login</a> 
         </div>
         <nav>
             <a href="index.html"><img src="images/logo2.png" alt="Hamid Financials Logo"></a>
@@ -56,39 +57,61 @@
                 <div class="scroll-arrow" onclick="scrollToNextSection()"></div>      
     </section>
 
-    <section class="cbody">
-        <form class="contact-form" action="https://formspree.io/f/mldrkowj" method="POST">
-
-        <div class="ccontact-form">
-            <h1>Contact Us</h1>
-            <form id="contactForm" action="contact.php" method="POST">
-                <div class="cform-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-    
-                <div class="cform-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="cform-group">
-                    <label for="company">Phone</label>
-                    <input type="company" id="company" name="company" required>
-                </div>
-    
-                <div class="cform-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-    
-                <button type="submit">Send Message</button>
-            </form>
-            <p id="status"></p>
+    <section class="contact-container">
+        <div class="contact-left">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Give our office a call to schedule an appointment and take advantage of our free 1-hour initial consultation!</p>
+                <p>20101 SW Birch St. Newport Beach, CA 92660, USA</p>
+                <p>Email: ccontact@hamidfinancials.com</p>
+                <p>Phone: (657) 513-5388</p>
+            </div>
+            <div id="map">
+                <!-- Google Map Embed -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.9054384726446!2d-117.8755754!3d33.659611999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcde537a75511f%3A0xa5bc56b3440ed38c!2s20101%20SW%20Birch%20St%2C%20Newport%20Beach%2C%20CA%2092660!5e0!3m2!1sen!2sus!4v1729301675121!5m2!1sen!2sus%22" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
-    </form>
+        <div class="contact-right">
+            <form class="contact-form" action="https://formspree.io/f/mldrkowj" method="POST">
+                <div class="ccontact-form">
+                    <h1>Contact Us</h1>
+                    <form id="contactForm" action="contact.php" method="POST">
+                        <div class="cform-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
     
+                        <div class="cform-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+    
+                        <div class="cform-group">
+                            <label for="company">Phone</label>
+                            <input type="company" id="company" name="company" required>
+                        </div>
+    
+                        <div class="cform-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+    
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <p id="status"></p>
+                </div>
+            </form>
+        </div>
     </section>
+    
 
 
 
@@ -105,8 +128,12 @@
             </a>
             -------->
 
-            <a href="https://www.instagram.com/hamid.financials?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            <a href="https://www.instagram.com/hamid.financials?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                 <i class="fa fa-instagram"></i>
+            </a>
+            
+            <a href="https://www.yelp.com/biz/hamid-financials-newport-beach-2">
+            <i class="fa fa-yelp" ></i>
             </a>
 
             <!-------
@@ -115,7 +142,7 @@
             </a>
             -------->
 
-            <a href="https://www.linkedin.com/company/hamid-financials-llp" target="_blank">
+            <a href="https://www.linkedin.com/company/hamid-financials-llp">
                 <i class="fa fa-linkedin"></i>
             </a>
         </div>
