@@ -1220,7 +1220,12 @@ details.service-col:hover {
 
 }
 
+
+
+
+
 /* About Us Section */
+
 
 
 /* Core values slider */
@@ -2183,4 +2188,170 @@ button:hover {
 .social-icons i {
     font-size: 24px;
     color: white;
+}
+
+
+
+
+
+
+
+
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for desktop */
+    gap: 40px;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.service-item {
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    width: auto;
+    max-height: 150px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.service-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #123a52;
+}
+
+.service-item p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #3d9e1a;  /* Green button background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2a6f12;  /* Darker green on hover */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr; /* Stack services in a single column */
+    }
+}
+
+
+/* Services Gallery code below */
+
+
+.services-gallery {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px 0;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.gallery-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item {
+    min-width: 30%; /* Each gallery item takes up a third of the container */
+    margin: 0 10px;
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left-arrow, .right-arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #ffffff;
+    user-select: none;
+    background-color: #3d9e1a;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    width: 50px;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    opacity: 1; /* Make the arrow more visible on hover */
+}
+
+.left-arrow {
+    left: -10px; /* Place the arrow closer to the left of the gallery */
+}
+
+.right-arrow {
+    right: -10px; /* Place the arrow closer to the right of the gallery */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #3d9e1a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2a6f12;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        min-width: 100%; /* Show only one item at a time on smaller screens */
+    }
+
+    .left-arrow, .right-arrow {
+        display: none; /* Hide arrows on smaller screens */
+    }
 }
