@@ -31,6 +31,7 @@
                         <li class="dropdown">
                             <a href="course.html">SERVICES</a>
                             <ul class="dropdown-content">
+                                <li><a href="tax-strategy.html">Tax Strategy</a></li>
                                 <li class="dropdown">
                                     <a href="tax-prep.html">Tax Services</a>
                                     <ul class="nested-dropdown-content">
@@ -41,7 +42,6 @@
                                 <li><a href="accservices.html">Accounting Services</a></li>
                                 <li><a href="tax-res.html">Tax Resolution</a></li>
                                 <li><a href="represent.html">Representation</a></li>
-                                <li><a href="tax-strategy.html">Tax Strategy</a></li>
                             </ul>
                         </li>
                         <li><a href="contact.html">GET STARTED</a></li>
@@ -307,27 +307,28 @@
 
 
 <script>
-    let currentIndex = 0;
+let currentIndex = 0;
 
-    function moveGallery(direction) {
-        const gallery = document.querySelector('.gallery');
-        const totalItems = gallery.children.length;
-        const itemsPerView = 3;
+function moveGallery(direction) {
+    const gallery = document.querySelector('.gallery');
+    const items = gallery.children;
+    const itemWidth = items[0].getBoundingClientRect().width + 20; // Include margin
+    const totalItems = items.length;
 
-        // Calculate the new index
-        currentIndex += direction * itemsPerView;
+    // Calculate the new index
+    currentIndex += direction;
 
-        // Clamp the index to prevent overflow or underflow
-        if (currentIndex < 0) {
-            currentIndex = 0;
-        } else if (currentIndex > totalItems - itemsPerView) {
-            currentIndex = totalItems - itemsPerView;
-        }
-
-        // Move the gallery
-        const itemWidth = gallery.children[0].getBoundingClientRect().width + 20; // Adding margin
-        gallery.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+    // Clamp the index to prevent overflow or underflow
+    if (currentIndex < 0) {
+        currentIndex = 0;
+    } else if (currentIndex >= totalItems) {
+        currentIndex = totalItems - 1;
     }
+
+    // Move the gallery
+    gallery.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+}
+
 </script>
 
 
