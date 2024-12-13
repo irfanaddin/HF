@@ -2169,7 +2169,7 @@ button:hover {
 
 /* Footer Section */
 .footer {
-    background-color: #123a52;
+    background-color: #878787;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -2353,5 +2353,112 @@ button:hover {
 
     .left-arrow, .right-arrow {
         display: none; /* Hide arrows on smaller screens */
+    }
+}
+
+/* our partners*/
+
+
+.partners {
+    text-align: center;
+    background-color: #f7f9fc; /* Light background color */
+    padding: 20px 0; /* Vertical spacing */
+    border-top: 2px solid #e0e0e0; /* Optional: top border */
+    border-bottom: 2px solid #e0e0e0; /* Optional: bottom border */
+}
+
+.partners h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #123a52; /* Align with theme */
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between logos */
+    flex-wrap: wrap; /* Wrap logos on smaller screens */
+}
+
+.partner-logos img {
+    max-height: 50px; /* Limit the logo height */
+    width: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Optional hover effect */
+    margin: 15px;
+}
+
+.partner-logos img:hover {
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+}
+
+
+/* homepage about us section */
+
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-text {
+    max-width: 60%;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #123a52;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text .cta-button {
+    background-color: #3d9e1a;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.about-text .cta-button:hover {
+    background-color: #2a6f12;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text, .about-image {
+        max-width: 100%;
+    }
+    .about-image img {
+        width: 70%;
     }
 }
