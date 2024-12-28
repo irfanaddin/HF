@@ -1757,6 +1757,7 @@ details.service-col:hover {
 }
 
 /* Vision Section Styling */
+/* Vision Section Styling */
 .vision {
     display: flex;
     align-items: center;
@@ -2347,14 +2348,44 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .gallery-item {
-        min-width: 100%; /* Show only one item at a time on smaller screens */
+    .gallery-container {
+        overflow: hidden;
+        width: 100%; /* Full width for smaller screens */
     }
 
+    .gallery {
+        display: flex;
+        transition: transform 0.5s ease; /* Smooth transition for sliding */
+    }
+
+    .gallery-item {
+        flex: 0 0 100%; /* Each item takes full width */
+    }
     .left-arrow, .right-arrow {
-        display: none; /* Hide arrows on smaller screens */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: rgba(61, 158, 26, 0.8); /* Green background */
+        color: white;
+    }
+    .left-arrow {
+        left: 10px;
+    }
+    .right-arrow {
+        right: 10px;
+    }
+
+    .gallery-wrapper {
+        overflow: hidden; /* Ensure only one card is visible at a time */
+        width: 100%;
     }
 }
+
+
 
 /* our partners*/
 
