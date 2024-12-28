@@ -13,9 +13,9 @@ body {
 
 /* Top Bar */
 .top-bar {
-    background: rgb(54, 43, 78);
+    background-color: #29315c;
     color: #fff;
-    padding: 10px 25px;
+    padding: 8px 25px;
     text-align: right;
     font-size: 14px;
     position: relative;
@@ -26,13 +26,11 @@ body {
     color: #fff;
     text-decoration: none;
     margin-left: 15px;
-    transition: all 0.3s ease;
-    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
 .top-bar a:hover {
-    opacity: 1;
-    transform: translateY(-1px);
+    opacity: 0.8;
 }
 
 /* Navigation */
@@ -97,7 +95,7 @@ nav img:hover {
     width: 100%;
 }
 
-/* Dropdown styles */
+
 .nav-links .dropdown-content, 
 .nav-links .nested-dropdown-content {
     display: none;
@@ -411,7 +409,7 @@ nav img:hover {
 
 /* Footer */
 .footer {
-    background: rgb(54, 43, 78);
+    background: #29315c;
     color: #fff;
     padding: 40px 0;
     text-align: center;
@@ -454,7 +452,7 @@ nav img:hover {
 .fa-bars, .fa-times {
     display: none;
     font-size: 24px;
-    color: #66666600;
+    color: #666;
     cursor: pointer;
 }
 
@@ -463,16 +461,15 @@ nav img:hover {
         display: block;
         position: fixed;
         right: 20px;
-        top: 45px;
+        top: 25px;
         z-index: 1002;
-        color: #666;
     }
 
     .fa-times {
         display: none;
         position: fixed;
         right: 20px;
-        top: 45px;
+        top: 25px;
         z-index: 1002;
         color: #fff;
     }
@@ -511,9 +508,20 @@ nav img:hover {
     }
 
     /* Hide dropdown functionality on mobile */
-    .dropdown-content,
-    .nested-dropdown-content {
+    .nav-links .dropdown-content,
+    .nav-links .nested-dropdown-content {
         display: none !important;
+        position: static;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        margin-left: 20px;
+    }
+
+    .nav-links .dropdown > a::after {
+        content: '\25BC';
+        margin-left: 5px;
+        font-size: 10px;
     }
 
     .nav-links ul li::after {
@@ -676,7 +684,8 @@ nav img:hover {
 @media (min-width: 769px) {
     .nav-links .nested-dropdown-content {
         top: 0;
-        left: 100%;
+        right: 100%; /* Updated position */
+        left: auto;
     }
 }
 
