@@ -543,7 +543,17 @@ footer h4 {
     transform: translateY(-5px);
 }
 
+/* Mobile Navigation */
+.fa-bars, .fa-times {
+    display: none;
+    font-size: 24px;
+    color: #66666600;
+    cursor: pointer;
+}
+
+
 /* Responsive Design */
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
