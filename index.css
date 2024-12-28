@@ -13,9 +13,9 @@ body {
 
 /* Top Bar */
 .top-bar {
-    background-color: #29315c;
+    background: rgb(54, 43, 78);
     color: #fff;
-    padding: 8px 25px;
+    padding: 10px 25px;
     text-align: right;
     font-size: 14px;
     position: relative;
@@ -26,11 +26,13 @@ body {
     color: #fff;
     text-decoration: none;
     margin-left: 15px;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 0.9;
 }
 
 .top-bar a:hover {
-    opacity: 0.8;
+    opacity: 1;
+    transform: translateY(-1px);
 }
 
 /* Navigation */
@@ -95,7 +97,7 @@ nav img:hover {
     width: 100%;
 }
 
-
+/* Dropdown styles */
 .nav-links .dropdown-content, 
 .nav-links .nested-dropdown-content {
     display: none;
@@ -409,7 +411,7 @@ nav img:hover {
 
 /* Footer */
 .footer {
-    background: #29315c;
+    background: rgb(54, 43, 78);
     color: #fff;
     padding: 40px 0;
     text-align: center;
@@ -469,7 +471,7 @@ nav img:hover {
         display: none;
         position: fixed;
         right: 20px;
-        top: 25px;
+        top: 45px;
         z-index: 1002;
         color: #fff;
     }
@@ -505,12 +507,13 @@ nav img:hover {
     .nav-links ul li a {
         color: #fff;
         font-size: 18px;
+        display: block;
+        padding: 10px 0;
     }
 
-    /* Hide dropdown functionality on mobile */
     .nav-links .dropdown-content,
     .nav-links .nested-dropdown-content {
-        display: none !important;
+        display: none;
         position: static;
         background: none;
         box-shadow: none;
@@ -518,10 +521,20 @@ nav img:hover {
         margin-left: 20px;
     }
 
+    .nav-links .dropdown-content.show,
+    .nav-links .nested-dropdown-content.show {
+        display: block;
+    }
+
     .nav-links .dropdown > a::after {
         content: '\25BC';
         margin-left: 5px;
         font-size: 10px;
+    }
+
+    .nav-links .dropdown-content li a {
+        font-size: 16px;
+        padding: 8px 0;
     }
 
     .nav-links ul li::after {
@@ -684,7 +697,7 @@ nav img:hover {
 @media (min-width: 769px) {
     .nav-links .nested-dropdown-content {
         top: 0;
-        right: 100%; /* Updated position */
+        right: 100%;
         left: auto;
     }
 }
