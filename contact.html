@@ -1,200 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Hamid Financials</title>
+    <link rel="stylesheet" href="contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="images/fadeinlogo.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTLSRR2QWW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QTLSRR2QWW');
-</script>
 <body>
-    <section class="header">
-        <div class="top-bar">
-            <a>Contact us at: <a href="tel:+1 (657) 513-5388">(657) 513-5388 |</a></a>
-            <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login</a> 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QTLSRR2QWW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QTLSRR2QWW');
+    </script>
+    <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/cee8586aef4ed0e1baca637f955ce43f.js"></script>
+
+    <div class="top-bar">
+        <a href="tel:+1 (657) 513-5388"><i class="fas fa-phone-alt"></i> Contact Us: (657) 513-5388</a>
+        <a href="https://www.clientaxcess.com/#/user/login" target="_blank"><i class="fas fa-user"></i> Client Login</a>
+    </div>
+
+    <nav>
+        <a href="index.html" class="logo"><img src="images/newlogo_no-bkg.png" alt="Hamid Financials Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li class="dropdown">
+                    <a href="services.html">SERVICES</a>
+                    <ul class="dropdown-content">
+                        <li><a href="tax-strategy.html">Tax Strategy</a></li>
+                        <li class="nested-dropdown">
+                            <a href="tax-prep.html">Tax Services</a>
+                            <ul class="nested-dropdown-content">
+                                <li><a href="fed-tax.html">Federal and State Tax</a></li>
+                                <li><a href="int-tax.html">International Tax</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="accservices.html">Accounting Services</a></li>
+                        <li><a href="tax-res.html">Tax Resolution</a></li>
+                        <li><a href="represent.html">Representation</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="active">GET STARTED</a></li>
+            </ul>
         </div>
-        <nav>
-            <a href="index.html"><img src="images/newlogo_no-bkg.png" alt="Hamid Financials Logo"></a>
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
 
-
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li class="dropdown">
-                        <a href="course.html">SERVICES</a>
-                        <ul class="dropdown-content">
-                            <li><a href="tax-strategy.html">Tax Strategy</a></li>
-                            <li class="dropdown">
-                                <a href="tax-prep.html">Tax Services</a>
-                                <ul class="nested-dropdown-content">
-                                    <li><a href="fed-tax.html">Federal and State Tax</a></li>
-                                    <li><a href="int-tax.html">International Tax</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="accservices.html">Accounting Services</a></li>
-                            <li><a href="tax-res.html">Tax Resolution</a></li>
-                            <li><a href="represent.html">Representation</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">GET STARTED</a></li>
-                </ul>
-            </div>
-        </nav>
-        
-        <div class="text-box">
-            <h1 class="typewriter">Get Started</h1>
-            <p>Fill out the brief form with your contact information and any inquiries
-                and our trusted staff would love to reach out to you!</p>
-                <div class="scroll-arrow" onclick="scrollToNextSection()"></div>      
-    </section>
-
-    <section class="contact-container">
-        <div class="contact-left">
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p>Give our office a call to schedule an appointment and take advantage of our free 1-hour initial consultation!</p>
-                <p>20101 SW Birch St. Newport Beach, CA 92660, USA</p>
-                <p>Email: contact@hamidfinancials.com</p>
-                <p>Phone: (657) 513-5388</p>
-            </div>
-            <div id="map">
-                <!-- Google Map Embed -->
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.9054384726446!2d-117.8755754!3d33.659611999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcde537a75511f%3A0xa5bc56b3440ed38c!2s20101%20SW%20Birch%20St%2C%20Newport%20Beach%2C%20CA%2092660!5e0!3m2!1sen!2sus!4v1729301675121!5m2!1sen!2sus%22" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p>We're here to answer your questions and provide expert financial guidance.</p>
         </div>
-        <div class="contact-right">
-            <form class="contact-form" action="https://formspree.io/f/mldrkowj" method="POST">
-                <div class="ccontact-form">
-                    <h1>Contact Us</h1>
-                    <form id="contactForm" action="contact.php" method="POST">
-                        <div class="cform-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-    
-                        <div class="cform-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-    
-                        <div class="cform-group">
-                            <label for="company">Phone</label>
-                            <input type="company" id="company" name="company" required>
-                        </div>
-    
-                        <div class="cform-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-    
-                        <button type="submit">Send Message</button>
-                    </form>
-                    <p id="status"></p>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h3>Our Office</h3>
+                    <p>20101 SW Birch St. Newport Beach, CA 92660, USA</p>
                 </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:info@hamidfinancials.com">info@hamidfinancials.com</a></p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+16575135388">(657) 513-5388</a></p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/hamid.financials" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.yelp.com/biz/hamid-financials-newport-beach-2" target="_blank" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+                <a href="https://www.linkedin.com/company/hamid-financials-llp" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="https://formspree.io/f/mldrkowj" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
             </form>
+        </section>
+    </main>
+
+    <section class="map-section">
+        <h2>Our Location</h2>
+        <div id="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.9054384726446!2d-117.8755754!3d33.659611999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcde537a75511f%3A0xa5bc56b3440ed38c!2s20101%20SW%20Birch%20St%2C%20Newport%20Beach%2C%20CA%2092660!5e0!3m2!1sen!2sus!4v1729301675121!5m2!1sen!2sus" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </section>
-    
 
-
-
-
-
-
-    <!-------footer------->
-    <section class="footer">
-        <h4>Find Us On Social Media Sites</h4>
-        <div class="icons">
-            <!------------
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fa fa-facebook"></i>
-            </a>
-            -------->
-
-            <a href="https://www.instagram.com/hamid.financials?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                <i class="fa fa-instagram"></i>
-            </a>
-            
-            <a href="https://www.yelp.com/biz/hamid-financials-newport-beach-2">
-            <i class="fa fa-yelp" ></i>
-            </a>
-
-            <!-------
-            <a href="https://www.twitter.com" target="_blank">
-                <i class="fa fa-twitter"></i>
-            </a>
-            -------->
-
-            <a href="https://www.linkedin.com/company/hamid-financials-llp">
-                <i class="fa fa-linkedin"></i>
-            </a>
+    <footer>
+        <div class="footer-content">
+            <h4>Find Us On Social Media</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/hamid.financials" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.yelp.com/biz/hamid-financials-newport-beach-2" target="_blank" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+                <a href="https://www.linkedin.com/company/hamid-financials-llp" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
-    </section>
-    
+    </footer>
 
     <script>
-        // Function to scroll to the next section
-        function scrollToNextSection() {
-            window.scroll({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
+        function showMenu() {
+            document.getElementById('navLinks').classList.add('show');
         }
-    
-        // Function to handle arrow fade out on scroll
-        window.onscroll = function () {
-            var scrollArrow = document.querySelector('.scroll-arrow');
-            if (window.scrollY > 50) {
-                scrollArrow.classList.add('hide');
-            } else {
-                scrollArrow.classList.remove('hide');
-            }
-        };
+        function hideMenu() {
+            document.getElementById('navLinks').classList.remove('show');
+        }
     </script>
-
-
-<script>
-    function showMenu() {
-        document.getElementById('navLinks').classList.add('show'); /* Show the menu */
-        document.querySelector('.fa-bars').classList.add('hide');  /* Hide the hamburger icon */
-        document.querySelector('.fa-times').style.display = 'block'; /* Show the close icon */
-    }
-
-    function hideMenu() {
-        document.getElementById('navLinks').classList.remove('show'); /* Hide the menu */
-        document.querySelector('.fa-bars').classList.remove('hide');  /* Show the hamburger icon */
-        document.querySelector('.fa-times').style.display = 'none'; /* Hide the close icon */
-    }
-</script>
-
-<script src="https://kit.fontawesome.com/37fe9c0dd6.js" crossorigin="anonymous"></script>
-    
 </body>
 </html>
+
