@@ -130,7 +130,7 @@ nav img:hover {
 }
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/contact-hero.jpg');
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/buildings.jpeg);
     background-size: cover;
     background-position: center;
     height: 60vh;
