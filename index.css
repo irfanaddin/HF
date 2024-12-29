@@ -451,12 +451,21 @@ nav img:hover {
 }
 
 /* Mobile Navigation */
-.fa-bars, .fa-times {
-    display: none;
+.fa-bars {
+    display: block;
     font-size: 24px;
     color: #666;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
+.fa-times {
+    display: block;
+    font-size: 24px;
+    color: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
 
 @media (max-width: 768px) {
     .fa-bars {
@@ -467,12 +476,19 @@ nav img:hover {
         z-index: 1002;
     }
 
+    .fa-bars.active {
+        color: transparent;
+    }
+
     .fa-times {
         display: none;
         position: fixed;
         right: 20px;
-        top: 45px;
+        top: 25px;
         z-index: 1002;
+    }
+
+    .fa-times.active {
         color: #fff;
     }
 
@@ -483,7 +499,7 @@ nav img:hover {
         width: 100%;
         max-width: 300px;
         height: 100vh;
-        background: #29315c;
+        background: rgb(54, 43, 78);
         padding: 80px 20px;
         transition: 0.5s ease-in-out;
         z-index: 1001;
