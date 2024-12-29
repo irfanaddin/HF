@@ -30,33 +30,33 @@
                 <a href="https://www.clientaxcess.com/#/user/login" target="_blank"><i class="fas fa-user"></i> Client Login</a>
             </div>
             <nav>
-                <a href="index.html"><img src="images/newlogo_no-bkg.png" alt="Hamid Financials Logo"></a>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li class="dropdown">
-                            <a href="services.html">SERVICES</a>
-                            <ul class="dropdown-content">
-                                <li><a href="tax-strategy.html">Tax Strategy</a></li>
-                                <li class="dropdown">
-                                    <a href="tax-prep.html">Tax Services</a>
-                                    <ul class="nested-dropdown-content">
-                                        <li><a href="fed-tax.html">Federal and State Tax</a></li>
-                                        <li><a href="int-tax.html">International Tax</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="accservices.html">Accounting Services</a></li>
-                                <li><a href="tax-res.html">Tax Resolution</a></li>
-                                <li><a href="represent.html">Representation</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">GET STARTED</a></li>
-                    </ul>
-                </div>
-                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-            </nav>     
+    <a href="index.html"><img src="images/newlogo_no-bkg.png" alt="Hamid Financials Logo"></a>
+    <div class="nav-links" id="navLinks">
+        <br>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li class="dropdown">
+                <a href="services.html">SERVICES</a>
+                <ul class="dropdown-content">
+                    <li><a href="tax-strategy.html">Tax Strategy</a></li>
+                    <li class="dropdown">
+                        <a href="tax-prep.html">Tax Services</a>
+                        <ul class="nested-dropdown-content">
+                            <li><a href="fed-tax.html">Federal and State Tax</a></li>
+                            <li><a href="int-tax.html">International Tax</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="accservices.html">Accounting Services</a></li>
+                    <li><a href="tax-res.html">Tax Resolution</a></li>
+                    <li><a href="represent.html">Representation</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">GET STARTED</a></li>
+        </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>     
             
             
             <div class="text-box">
@@ -290,12 +290,14 @@ window.addEventListener('resize', () => {
 <script>
 function showMenu() {
     document.getElementById("navLinks").classList.add("active");
-    
+    document.querySelector(".fa-bars").classList.add("active");
+    document.querySelector(".fa-times").classList.add("active");
 }
 
 function hideMenu() {
     document.getElementById("navLinks").classList.remove("active");
-    
+    document.querySelector(".fa-bars").classList.remove("active");
+    document.querySelector(".fa-times").classList.remove("active");
 }
 
 // Close menu when clicking outside
@@ -308,9 +310,7 @@ document.addEventListener('click', function(event) {
         hideMenu();
     }
 });
-</script>
 
-<script>
 document.addEventListener('DOMContentLoaded', function() {
     const dropdowns = document.querySelectorAll('.dropdown > a');
     
@@ -351,14 +351,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<script>
-    function showMenu() {
-        document.getElementById("navLinks").classList.add("active");
-    }
-    function hideMenu() {
-        document.getElementById("navLinks").classList.remove("active");
-    }
-</script>
 </body>
 </html>
 
