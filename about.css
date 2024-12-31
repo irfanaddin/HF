@@ -168,7 +168,7 @@ nav img:hover {
 
 /* Hero Section */
 .hero {
-    min-height: 60vh;
+    min-height: 100vh; /* Change from 60vh to 100vh */
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/buildings.jpeg);
     background-position: center;
@@ -674,4 +674,278 @@ footer h4 {
     .social-icons {
         gap: 20px;
     }
+}
+/* Team Section Styles */
+.team {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.team::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center right, rgba(76, 140, 53, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    color: #29315c;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.team h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #4c8c35 0%, #3d9e1a 100%);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+.team-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.team-member {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.member-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+.member-social {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    transition: bottom 0.3s ease;
+}
+
+.team-member:hover .member-social {
+    bottom: 0;
+}
+
+.member-social a {
+    color: white;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.member-social a:hover {
+    background: #4c8c35;
+    transform: translateY(-3px);
+}
+/* Previous styles remain unchanged */
+
+.learn-more-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.team-member:hover .learn-more-btn {
+    opacity: 1;
+}
+
+.learn-more-btn:hover {
+    background-color: rgba(76, 140, 53, 0.7);
+    border-color: rgba(76, 140, 53, 0.7);
+}
+
+/* Popup styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.popup-image-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.popup-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-text {
+    text-align: center;
+}
+
+.popup-text h3 {
+    font-size: 1.5rem;
+    color: #29315c;
+    margin-bottom: 5px;
+}
+
+.popup-text p {
+    color: #666;
+    line-height: 1.6;
+}
+
+#popupRole {
+    color: #4c8c35;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .popup-content {
+        padding: 20px;
+    }
+
+    .popup-image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .popup-text h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content {
+        padding: 15px;
+    }
+
+    .popup-image-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .popup-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .popup-text p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Added styles for social media icons */
+.member-social a {
+    color: white;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.member-social a:hover {
+    background-color: #0077b5; /* LinkedIn blue color */
+    transform: translateY(-3px);
 }
