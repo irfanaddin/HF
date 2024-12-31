@@ -96,56 +96,167 @@
     </div>
 </section>
 
-    <section class="team">
-        <div class="container">
-            <h2>Meet Our Team</h2>
-            <p>Our team of dedicated professionals brings together decades of experience in tax, accounting, and financial services.</p>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="images/ihsan.png" alt="Ihsan Hamid">
-                    <div class="team-member-content">
+<!-- Previous sections remain unchanged -->
+<section class="team">
+    <div class="container">
+        <h2>Meet Our Team</h2>
+        <p class="team-subtitle">Our team of dedicated professionals brings together decades of experience in tax, accounting, and financial services.</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-image-wrapper">
+                    <img src="images/ihsan.png" alt="Ihsan Hamid" loading="lazy">
+                    <div class="member-social">
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Ihsan Hamid's LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <button class="learn-more-btn" data-member="ihsan">Learn More</button>
+                </div>
+                <div class="team-member-content">
+                    <div class="member-info">
                         <h3>Ihsan Hamid, CPA</h3>
-                        <p>Managing Partner</p>
-                        <div class="member-bio">
-                            <p>Ihsan Hamid is a distinguished graduate of the University of California Riverside, holding a Bachelor of Science 
-                                degree in Business Accounting. As a CPA, he is a dedicated member of both the AICPA and CalCPA. Ihsan's career began
-                                at Novogradac & Company, LLP, where he specialized in tax and audit services, focusing on LIHTC and new markets tax 
-                                industries. He later transitioned to RSM US LLP, gaining expertise in international tax consulting. As the managing 
-                                partner of Hamid Financials LLP, Ihsan is dedicated to building strong client relationships and maintaining excellence 
-                                in every interaction.</p>
-                        </div>
+                        <span class="member-role">Managing Partner</span>
                     </div>
                 </div>
-                <div class="team-member">
-                    <img src="images/kamal.png" alt="Kamal Hamid">
-                    <div class="team-member-content">
+            </div>
+
+            <div class="team-member">
+                <div class="member-image-wrapper">
+                    <img src="images/kamal.png" alt="Kamal Hamid" loading="lazy">
+                    <div class="member-social">
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Kamal Hamid's LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <button class="learn-more-btn" data-member="kamal">Learn More</button>
+                </div>
+                <div class="team-member-content">
+                    <div class="member-info">
                         <h3>Kamal Hamid</h3>
-                        <p>Staff Accountant</p>
-                        <div class="member-bio">
-                            <p>Kamal Hamid is a Tax Staff Accountant with expertise in tax preparation and financial analysis. He is a 
-                                graduate of the University of California, Riverside, with a concentration in Accounting. Kamal plays a 
-                                key role in preparing and reviewing tax returns for individuals, partnerships, and corporations, and is 
-                                committed to delivering high-quality services to clients.
-                            </p>
-                        </div>
+                        <span class="member-role">Staff Accountant</span>
                     </div>
                 </div>
-                <div class="team-member">
-                    <img src="images/irfan.png" alt="Irfan Hamid">
-                    <div class="team-member-content">
+            </div>
+
+            <div class="team-member">
+                <div class="member-image-wrapper">
+                    <img src="images/irfan.png" alt="Irfan Hamid" loading="lazy">
+                    <div class="member-social">
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Irfan Hamid's LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <button class="learn-more-btn" data-member="irfan">Learn More</button>
+                </div>
+                <div class="team-member-content">
+                    <div class="member-info">
                         <h3>Irfan Hamid</h3>
-                        <p>Development Analyst</p>
-                        <div class="member-bio">
-                            <p>With an educational background in Cognitive Science with specialization in User Experience Design at UC 
-                                San Diego and valuable experience as a student leader, and business professional, Irfan has and continues 
-                                to make notable accomplishments in every environment and organization he steps foot into. Irfan serves as 
-                                a strategic advisor on the leadership team, using his prowess to kickstart movements unthought of.</p>
-                        </div>
+                        <span class="member-role">Development Analyst</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-content">
+        <button class="close-popup">&times;</button>
+        <div class="popup-image-wrapper">
+            <img src="" alt="" id="popupImage">
+        </div>
+        <div class="popup-text">
+            <h3 id="popupName"></h3>
+            <p id="popupRole"></p>
+            <p id="popupDescription"></p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const closePopup = document.querySelector('.close-popup');
+    const popupImage = document.getElementById('popupImage');
+    const popupName = document.getElementById('popupName');
+    const popupRole = document.getElementById('popupRole');
+    const popupDescription = document.getElementById('popupDescription');
+
+    const teamMembers = {
+        ihsan: {
+            name: 'Ihsan Hamid, CPA',
+            role: 'Managing Partner',
+            image: 'images/ihsan.png',
+            description: 'Ihsan Hamid is a distinguished graduate of the University of California Riverside, holding a Bachelor of Science degree in Business Accounting. As a CPA, he is a dedicated member of both the AICPA and CalCPA. Ihsan\'s career began at Novogradac & Company, LLP, where he specialized in tax and audit services, focusing on LIHTC and new markets tax industries. He later transitioned to RSM US LLP, gaining expertise in international tax consulting. As the managing partner of Hamid Financials LLP, Ihsan is dedicated to building strong client relationships and maintaining excellence in every interaction.'
+        },
+        kamal: {
+            name: 'Kamal Hamid',
+            role: 'Staff Accountant',
+            image: 'images/kamal.png',
+            description: 'Kamal Hamid is a Tax Staff Accountant with expertise in tax preparation and financial analysis. He is a graduate of the University of California, Riverside, with a concentration in Accounting. Kamal plays a key role in preparing and reviewing tax returns for individuals, partnerships, and corporations, and is committed to delivering high-quality services to clients.'
+        },
+        irfan: {
+            name: 'Irfan Hamid',
+            role: 'Development Analyst',
+            image: 'images/irfan.png',
+            description: 'With an educational background in Cognitive Science with specialization in User Experience Design at UC San Diego and valuable experience as a student leader, and business professional, Irfan has and continues to make notable accomplishments in every environment and organization he steps foot into. Irfan serves as a strategic advisor on the leadership team, using his prowess to kickstart movements unthought of.'
+        }
+    };
+
+    learnMoreButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const member = teamMembers[this.dataset.member];
+            popupImage.src = member.image;
+            popupImage.alt = member.name;
+            popupName.textContent = member.name;
+            popupRole.textContent = member.role;
+            popupDescription.textContent = member.description;
+            popupOverlay.style.display = 'flex';
+        });
+    });
+
+    closePopup.addEventListener('click', function() {
+        popupOverlay.style.display = 'none';
+    });
+
+    popupOverlay.addEventListener('click', function(e) {
+        if (e.target === popupOverlay) {
+            popupOverlay.style.display = 'none';
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popupOverlay.style.display === 'flex') {
+            popupOverlay.style.display = 'none';
+        }
+    });
+});
+</script>
+
+
+
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-content">
+        <button class="close-popup">&times;</button>
+        <div class="popup-image-wrapper">
+            <img src="" alt="" id="popupImage">
+        </div>
+        <div class="popup-text">
+            <h3 id="popupName"></h3>
+            <p id="popupRole"></p>
+            <p id="popupDescription"></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 
     <footer>
         <div class="container">
@@ -166,6 +277,7 @@
             document.getElementById("navLinks").style.right = "-250px";
         }
     </script>
+
 </body>
 </html>
 
