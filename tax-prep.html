@@ -3,37 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamid Financials | Tax Preparation</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Hamid Financials | Tax Preparation Services</title>
+    <link rel="stylesheet" href="tax-prep.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="images/fadeinlogo.png" type="image/png">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTLSRR2QWW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QTLSRR2QWW');
-</script>
-<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/cee8586aef4ed0e1baca637f955ce43f.js"></script>
 <body>
-    <!-- Header Section -->
     <section class="header">
         <div class="top-bar">
-            <a>Contact us at: <a href="tel:+1 (657) 513-5388">(657) 513-5388 |</a></a>
-            <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login</a> 
+            <a href="tel:+1 (657) 513-5388"><i class="fas fa-phone-alt"></i> Contact Us : (657) 513-5388 |</a>
+            <a href="https://www.clientaxcess.com/#/user/login" target="_blank"><i class="fas fa-user"></i> Client Login</a>
         </div>
         <nav>
             <a href="index.html"><img src="images/newlogo_no-bkg.png" alt="Hamid Financials Logo"></a>
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-
-
             <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
@@ -56,152 +41,105 @@
                     <li><a href="contact.html">GET STARTED</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-        <div class="text-box">
-            <h1>Tax Preparation Services</h1>
-            <p>Tax preparation at Hamid Financials involves careful planning and strategizing, and our goal is to help you file with accuracy, efficiency, and timeliness. </p>
-            <div class="scroll-arrow" onclick="scrollToNextSection()"></div>
+
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Tax Preparation Services</h1>
+                <div class="underline"></div>
+                <p>Tax preparation at Hamid Financials involves careful planning and strategizing to help you file with accuracy, efficiency, and timeliness.</p>
+            </div>
         </div>
     </section>
 
-
-
-<section class="services">
-    <h1>Explore Our Services</h1>
-    <p>The tax preparation process at Hamid Financials focuses on accuracy, efficiency, and timeliness. Whether you have an individual 
-        tax return involving federal and states only, an individual return involving international tax complexities, or a business tax 
-        return, our goal is to ensure your return is timely planned for and prepared accurately, capturing every valuable deduction 
-        while abiding by the ever-changing rules of the IRS and other tax authorities. </p>
-</section>
-
-
-<div class="services-container">
-    <!-- Service 2: Federal and State Tax Services Section -->
-    <div class="service-item">
-        <img src="images/fedtaxes.png" alt="Federal and State Tax Services" class="service-image">
-        <h1>Federal and State Tax Services</h1>
-        <p>We provide accurate and efficient tax preparation services to help you stay compliant and save on taxes.</p>
-            <a href="fed-tax.html" class="cta-button">Learn More</a>
-    </div>
-
-        <!-- Service 3: International Tax Services Section -->
-    <div class="service-item">
-        <img src="images/intax.png" alt="International Taxes" class="service-image">
-        <h3>International Tax Services</h3>
-        <p>Our accounting services ensure accurate financial reporting and compliance with regulations, helping you grow your business.</p>
-            <a href="int-tax.html" class="cta-button">Learn More</a>
-    </div>
-</div>
-
-
-
-
-    <!-------footer------->
-    <section class="footer">
-        <h4>Find Us On Social Media Sites</h4>
-        <div class="icons">
-            <!------------
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fa fa-facebook"></i>
-            </a>
-            -------->
-
-            <a href="https://www.instagram.com/hamid.financials?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                <i class="fa fa-instagram"></i>
-            </a>
-            
-            <a href="https://www.yelp.com/biz/hamid-financials-newport-beach-2">
-            <i class="fa fa-yelp" ></i>
-            </a>
-
-            <!-------
-            <a href="https://www.twitter.com" target="_blank">
-                <i class="fa fa-twitter"></i>
-            </a>
-            -------->
-
-            <a href="https://www.linkedin.com/company/hamid-financials-llp">
-                <i class="fa fa-linkedin"></i>
-            </a>
+    <section class="service-content">
+        <div class="container">
+            <h2>Our Tax Preparation Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="images/fedtaxes.png" alt="Federal and State Tax Services">
+                    <div class="service-card-content">
+                        <h3>Federal and State Tax Services</h3>
+                        <p>We provide accurate and efficient tax preparation services to help you stay compliant and save on taxes.</p>
+                        <a href="fed-tax.html" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/intax.png" alt="International Tax Services">
+                    <div class="service-card-content">
+                        <h3>International Tax Services</h3>
+                        <p>Our expert team handles complex international tax matters, ensuring compliance with global tax regulations.</p>
+                        <a href="int-tax.html" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-
-
-
+    <footer class="footer">
+        <div class="container">
+            <h4>Find Us On Social Media</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/hamid.financials" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.yelp.com/biz/hamid-financials-newport-beach-2" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-yelp"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/hamid-financials-llp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        function scrollToNextSection() {
-            window.scroll({
-                top: window.innerHeight,
-                behavior: 'smooth'
+        function showMenu() {
+            document.getElementById("navLinks").classList.add("active");
+            document.querySelector(".fa-bars").classList.add("active");
+        }
+
+        function hideMenu() {
+            document.getElementById("navLinks").classList.remove("active");
+            document.querySelector(".fa-bars").classList.remove("active");
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.dropdown > a');
+            
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const dropdownContent = this.nextElementSibling;
+                        if (dropdownContent.style.display === 'block') {
+                            dropdownContent.style.display = 'none';
+                        } else {
+                            document.querySelectorAll('.dropdown-content').forEach(content => {
+                                content.style.display = 'none';
+                            });
+                            dropdownContent.style.display = 'block';
+                        }
+                    }
+                });
             });
-        }
-        window.onscroll = function () {
-            var scrollArrow = document.querySelector('.scroll-arrow');
-            if (window.scrollY > 50) {
-                scrollArrow.classList.add('hide');
-            } else {
-                scrollArrow.classList.remove('hide');
-            }
-        };
-    </script>
 
-<script>
-    function openPopup(popupId) {
-        document.getElementById(popupId).style.display = "block";
-    }
-
-    function closePopup(popupId) {
-        document.getElementById(popupId).style.display = "none";
-    }
-</script>
-<script>
-    function openPopup(popupId) {
-        document.getElementById(popupId).style.display = 'block';
-    }
-
-    function closePopup(popupId) {
-        document.getElementById(popupId).style.display = 'none';
-    }
-</script>
-
-<script>
-    // Function to scroll to the next section
-    function scrollToNextSection() {
-        window.scroll({
-            top: window.innerHeight,
-            behavior: 'smooth'
+            const servicesLink = document.querySelector('.dropdown > a[href="services.html"]');
+            servicesLink.addEventListener('click', function(e) {
+                if (window.innerWidth > 768) {
+                    return;
+                }
+                e.preventDefault();
+                const dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === 'block') {
+                    window.location.href = this.getAttribute('href');
+                } else {
+                    dropdownContent.style.display = 'block';
+                }
+            });
         });
-    }
-
-    // Function to handle arrow fade out on scroll
-    window.onscroll = function () {
-        var scrollArrow = document.querySelector('.scroll-arrow');
-        if (window.scrollY > 50) {
-            scrollArrow.classList.add('hide');
-        } else {
-            scrollArrow.classList.remove('hide');
-        }
-    };
-</script>
-
-
-<script>
-    function showMenu() {
-        document.getElementById('navLinks').classList.add('show'); /* Show the menu */
-        document.querySelector('.fa-bars').classList.add('hide');  /* Hide the hamburger icon */
-        document.querySelector('.fa-times').style.display = 'block'; /* Show the close icon */
-    }
-
-    function hideMenu() {
-        document.getElementById('navLinks').classList.remove('show'); /* Hide the menu */
-        document.querySelector('.fa-bars').classList.remove('hide');  /* Show the hamburger icon */
-        document.querySelector('.fa-times').style.display = 'none'; /* Hide the close icon */
-    }
-</script>
-
-<script src="https://kit.fontawesome.com/37fe9c0dd6.js" crossorigin="anonymous"></script>
-
+    </script>
 </body>
 </html>
+
