@@ -1,445 +1,163 @@
-:root {
-    --primary-color: #4c8c35;
-    --secondary-color: #362b4e;
-    --background-color: #f7f9fc;
-    --text-color: #333;
-    --accent-color: #3d9e1a;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-}
-
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Top Bar */
-.top-bar {
-    background: var(--secondary-color);
-    color: #fff;
-    padding: 10px 25px;
-    text-align: right;
-    font-size: 14px;
-    position: relative;
-    z-index: 1001;
-}
-
-.top-bar a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 15px;
-    transition: all 0.3s ease;
-    opacity: 0.9;
-}
-
-.top-bar a:hover {
-    opacity: 1;
-    transform: translateY(-1px);
-}
-
-/* Navigation */
-nav {
-    background-color: rgba(255, 255, 255, 0.98);
-    padding: 1.5% 4%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(10px);
-}
-
-nav img {
-    width: 300px;
-    transition: all 0.3s ease;
-}
-
-nav img:hover {
-    transform: scale(1.02);
-}
-
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
-
-.nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-
-.nav-links ul li a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-}
-
-.nav-links ul li a:hover {
-    color: var(--primary-color);
-}
-
-.nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-links ul li:hover::after {
-    width: 100%;
-}
-
-/* Dropdown styles */
-.nav-links .dropdown-content, 
-.nav-links .nested-dropdown-content {
-    display: none;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    z-index: 1;
-    list-style: none;
-    padding: 8px 0;
-    margin: 0;
-    min-width: 220px;
-    transform-origin: top;
-    animation: dropdownFade 0.3s ease;
-}
-
-@keyframes dropdownFade {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.nav-links .dropdown-content {
-    top: 100%;
-}
-
-.nav-links .nested-dropdown-content {
-    right: 100%;
-    top: 0;
-}
-
-.nav-links .dropdown-content li {
-    display: block;
-    padding: 0;
-}
-
-.nav-links .dropdown-content li a {
-    padding: 12px 20px;
-    display: block;
-    color: var(--secondary-color);
-    transition: all 0.3s ease;
-}
-
-.nav-links .dropdown-content li:hover > .nested-dropdown-content {
-    display: block;
-}
-
-.nav-links li:hover > .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background: linear-gradient(90deg, rgba(76, 140, 53, 0.1) 0%, rgba(61, 158, 26, 0.1) 100%);
-    color: var(--primary-color);
-}
-
-/* Hero Section */
-.hero-section {
-    position: relative;
-    background: var(--secondary-color);
-    min-height: 60vh;
-    width: 100%;
-    overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/buildings.jpeg);
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-}
-
-.hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    text-align: center;
-    color: #fff;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
-    position: relative;
-    display: inline-block;
-}
-
-.underline {
-    width: 80px;
-    height: 4px;
-    background: var(--primary-color);
-    margin: 0 auto 30px;
-    border-radius: 2px;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* Accounting Services Section */
-.accounting-services {
-    padding: 80px 0;
-}
-
-.accounting-services h2 {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.accounting-services p {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    max-width: 800px;
-    margin: 0 auto 50px;
-    text-align: center;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
-}
-
-.service-card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.service-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.service-card-content {
-    padding: 25px;
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-}
-
-.service-card p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-2px);
-}
-
-/* Footer Styles */
-.footer {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.footer h4 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 24px;
-    transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: var(--accent-color);
-    transform: translateY(-3px);
-}
-
-/* Mobile Navigation */
-.fa-bars, .fa-times {
-    display: none;
-    font-size: 24px;
-    color: var(--secondary-color);
-    cursor: pointer;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        width: 100%;
-        max-width: 300px;
-        height: 100vh;
-        background: var(--secondary-color);
-        padding: 80px 20px;
-        transition: 0.5s ease-in-out;
-        z-index: 1001;
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    .nav-links ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links ul li {
-        display: block;
-        margin: 25px 0;
-        text-align: left;
-    }
-
-    .nav-links ul li a {
-        color: #fff;
-        font-size: 18px;
-    }
-
-    .nav-links .dropdown-content,
-    .nav-links .nested-dropdown-content {
-        display: none;
-        position: static;
-        background: none;
-        box-shadow: none;
-        padding: 0;
-        margin-left: 20px;
-    }
-
-    .nav-links .dropdown-content.show,
-    .nav-links .nested-dropdown-content.show {
-        display: block;
-    }
-
-    nav img {
-        width: 200px;
-    }
-
-    .fa-bars {
-        display: block;
-        position: fixed;
-        right: 20px;
-        top: 25px;
-        z-index: 1002;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1.1rem;
-    }
-
-    .accounting-services h2 {
-        font-size: 2rem;
-    }
-
-    .accounting-services p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .top-bar {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    .top-bar a {
-        margin-left: 0;
-        margin-bottom: 5px;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .accounting-services h2 {
-        font-size: 1.8rem;
-    }
-
-    .service-card h3 {
-        font-size: 1.3rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamid Financials | Accounting Services</title>
+    <link rel="stylesheet" href="accservices.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/fadeinlogo.png" type="image/png">
+</head>
+<body>
+    <section class="header">
+        <div class="top-bar">
+            <a href="tel:+1 (657) 513-5388"><i class="fas fa-phone-alt"></i> Contact Us : (657) 513-5388 |</a>
+            <a href="https://www.clientaxcess.com/#/user/login" target="_blank"><i class="fas fa-user"></i> Client Login</a>
+        </div>
+        <nav>
+            <a href="index.html"><img src="images/newlogo_no-bkg.png" alt="Hamid Financials Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">SERVICES</a>
+                        <ul class="dropdown-content">
+                            <li><a href="tax-strategy.html">Tax Strategy</a></li>
+                            <li class="dropdown">
+                                <a href="tax-prep.html">Tax Services</a>
+                                <ul class="nested-dropdown-content">
+                                    <li><a href="fed-tax.html">Federal and State Tax</a></li>
+                                    <li><a href="int-tax.html">International Tax</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="accservices.html">Accounting Services</a></li>
+                            <li><a href="tax-res.html">Tax Resolution</a></li>
+                            <li><a href="represent.html">Representation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">GET STARTED</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Accounting Services</h1>
+                <div class="underline"></div>
+                <p>Our team stays informed on the latest regulatory and legislative changes, saving you the time and effort of navigating accounting complexities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="accounting-services">
+        <div class="container">
+            <h2>Our Accounting Services</h2>
+            <p>At Hamid Financials, we offer a comprehensive range of accounting services to help your business thrive. Our expert team ensures accurate financial reporting and strategic financial management.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/bookk.png" alt="Bookkeeping Services">
+                    <div class="service-card-content">
+                        <h3>Bookkeeping Services</h3>
+                        <p>We offer top-notch bookkeeping solutions for small to mid-size businesses that go beyond basic record-keeping. Our intricate approaches handle your business financials with precision.</p>
+                        <a href="contact.html" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/finstate.png" alt="Financial Statement Preparation">
+                    <div class="service-card-content">
+                        <h3>Financial Statement Preparation</h3>
+                        <p>We ensure your financial statements are clear, concise, and in line with accounting frameworks. Our statements help evaluate your business's health and support informed decision-making.</p>
+                        <a href="contact.html" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/payroll.png" alt="Payroll Services">
+                    <div class="service-card-content">
+                        <h3>Payroll Services</h3>
+                        <p>Our complete payroll solutions alleviate your administrative workload. We ensure compliance with all applicable rules and regulations, reducing the likelihood of costly errors and penalties.</p>
+                        <a href="contact.html" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/fedtaxes.png" alt="Financial Statement Analysis">
+                    <div class="service-card-content">
+                        <h3>Financial Statement Analysis</h3>
+                        <p>Our professional CPAs offer deep dives into your financial statements, clearing up errors and helping you make informed business decisions based on thorough analysis.</p>
+                        <a href="contact.html" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h4>Find Us On Social Media</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/hamid.financials" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.yelp.com/biz/hamid-financials-newport-beach-2" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-yelp"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/hamid-financials-llp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showMenu() {
+            document.getElementById("navLinks").classList.add("active");
+            document.querySelector(".fa-bars").classList.add("active");
+        }
+
+        function hideMenu() {
+            document.getElementById("navLinks").classList.remove("active");
+            document.querySelector(".fa-bars").classList.remove("active");
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.dropdown > a');
+            
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const dropdownContent = this.nextElementSibling;
+                        if (dropdownContent.style.display === 'block') {
+                            dropdownContent.style.display = 'none';
+                        } else {
+                            document.querySelectorAll('.dropdown-content').forEach(content => {
+                                content.style.display = 'none';
+                            });
+                            dropdownContent.style.display = 'block';
+                        }
+                    }
+                });
+            });
+
+            const servicesLink = document.querySelector('.dropdown > a[href="services.html"]');
+            servicesLink.addEventListener('click', function(e) {
+                if (window.innerWidth > 768) {
+                    return;
+                }
+                e.preventDefault();
+                const dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === 'block') {
+                    window.location.href = this.getAttribute('href');
+                } else {
+                    dropdownContent.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
 
