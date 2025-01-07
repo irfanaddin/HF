@@ -27,15 +27,22 @@
             <div id="registrationPopup" class="popup">
                 <div class="popup-content">
                     <h2>Register for Webinar</h2>
-                    <form id="registrationForm">
-                        <label for="fullName">Your Name:</label>
-                        <input type="text" id="fullName" name="fullName" required>
+                    <form action="https://formspree.io/f/xvggvlyv" method="POST" id="registrationForm">                          
+                        </form>
+
+                    <form action="https://formspree.io/f/xvggvlyv" method="POST" id="registrationForm">
+                        <label>
+                            Full Name:
+                            <input name="message"></input>
+                        </label>
+                        <label>
+                            Your email:
+                            <input type="email" name="email">
+                        </label>
                         
-                        <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        
-                        <button type="submit" class="custom-btn">Submit</button>
-                    </form>
+                        <!-- your other form fields go here -->
+                        <button type="submit" class="custom-btn">Send</button>
+                        </form>
                 </div>
             </div>
             <div class="confirmation-container" style="display: none;">
@@ -54,7 +61,7 @@
                     </div>
                 </div>
                 <div class="cta">
-                    <a href="index.html" class="custom-btn">Return to Homepage</a>
+                    <a href="ad.html" class="custom-btn">Return to Homepage</a>
                 </div>
             </div>
         </div>
@@ -81,3 +88,4 @@
     </script>
 </body>
 </html>
+
