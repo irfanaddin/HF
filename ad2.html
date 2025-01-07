@@ -8,26 +8,74 @@
     <link rel="stylesheet" href="ad.css">
 </head>
 <body>
-    <div class="confirmation-container">
-        <div class="confirmation-card">
-            <h1>Thank You for Registering!</h1>
-            <p>We're excited to have you join us for the Tax Planning and 2025 Tax Updates Webinar.</p>
-            <div class="event-details">
-                <div class="detail">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                    <span>January 16, 2025 | 2:00 PM - 4:00 PM EST</span>
-                </div>
-                <div class="detail">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                    <a href="#" class="event-link">Event Link (to be provided)</a>
-                </div>
-                <div class="detail">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                    <span>Speakers: Ihsan Hamid, Irfan Hamid, Bill ____, Cody Paningsoro</span>
+    <div class="container">
+        <div class="left-panel">
+            <img src="images/logo1.png" alt="Hamid Financials LLP" class="logo">
+            <div class="date-time">
+                <h3>Join Us On</h3>
+                <p>January 16, 2025</p>
+                <p>6:30 PM - 7:30 PM PST</p>
+            </div>
+            <div class="agenda">
+                <h3>About</h3>
+                <p>Learn how to leverage tax planning to save on your income taxes! We'll break down the tax formula and share effective strategies that can help you legally minimize taxes at every step.</p>
+                <p>Don't miss out – we look forward to seeing you there!</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div id="registrationPopup" class="popup">
+                <div class="popup-content">
+                    <h2>Register for Webinar</h2>
+                    <form id="registrationForm">
+                        <label for="fullName">Your Name:</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <button type="submit" class="custom-btn">Submit</button>
+                    </form>
                 </div>
             </div>
-            <a href="ad.html" class="btn">Return to Homepage</a>
+            <div class="confirmation-container" style="display: none;">
+                <h1>Thank You for Registering!</h1>
+                <h2>We're excited to have you join us for the Tax Planning and 2025 Tax Updates Webinar.</h2>
+                <div class="event-details">
+                    <div class="detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        <span>January 16, 2025 | 6:30 PM - 7:30 PM PST</span>
+                    </div>
+                    <div class="detail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        <a href="#" class="event-link">Event Link (to be provided)</a>
+                    </div>
+                </div>
+                <div class="cta">
+                    <a href="ad.html" class="custom-btn">Return to Homepage</a>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('registrationPopup');
+            const form = document.getElementById('registrationForm');
+            const confirmationContainer = document.querySelector('.confirmation-container');
+
+            // Show popup immediately
+            popup.style.display = 'flex';
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to your server
+                // For this example, we'll just simulate a successful submission
+                
+                popup.style.display = 'none';
+                confirmationContainer.style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
+
