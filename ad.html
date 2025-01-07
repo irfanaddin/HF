@@ -6,7 +6,6 @@
     <title>Tax Planning and 2025 Tax Updates Webinar</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
         * {
             margin: 0;
@@ -336,117 +335,6 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(149, 117, 205, 0.4);
         }
-
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(5px);
-        }
-
-        .popup-content {
-            background-color: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transform: scale(0.9);
-            opacity: 0;
-            transition: all 0.3s ease;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .popup.active .popup-content {
-            transform: scale(1);
-            opacity: 1;
-        }
-
-        .popup h2 {
-            margin-top: 0;
-            color: #2d3436;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .popup form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .popup label {
-            margin-top: 1rem;
-            font-weight: 500;
-            color: #4a4a4a;
-        }
-
-        .popup input, .popup textarea {
-            margin-top: 0.5rem;
-            padding: 0.75rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .popup input:focus, .popup textarea:focus {
-            border-color: #9575cd;
-            box-shadow: 0 0 0 3px rgba(149, 117, 205, 0.2);
-            outline: none;
-        }
-
-        .popup button {
-            margin-top: 1.5rem;
-            padding: 0.75rem 1.5rem;
-            background: linear-gradient(135deg, #9575cd 0%, #8bc34a 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            font-weight: 600;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .popup button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(149, 117, 205, 0.4);
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #4a4a4a;
-            transition: all 0.3s ease;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .close-btn:hover {
-            color: #9575cd;
-        }
-
-        @media (max-width: 480px) {
-            .popup-content {
-                max-width: 90%;
-                padding: 2rem;
-            }
-        }
-        
     </style>
 </head>
 <body>
@@ -462,9 +350,9 @@
             <div class="agenda">
                 <h3>About</h3>
                 <ul>
-                <p>Learn how to leverage tax planning to save on your income taxes! We’ll break down the tax formula and share effective strategies that can help you legally minimize taxes at every step.
+                <p>Learn how to leverage tax planning to save on your income taxes! We'll break down the tax formula and share effective strategies that can help you legally minimize taxes at every step.
 
-                 Don’t miss out – we look forward to seeing you there!
+                 Don't miss out – we look forward to seeing you there!
                 </p>
                 </ul>
             </div>
@@ -508,77 +396,10 @@
             </div>
 
             <div class="cta">
-                <button id="registerBtn" class="custom-btn">Register Now</button>
+                <a href="ad2.html" class="custom-btn">Register Now</a>
             </div>
         </div>
     </div>
-
-    <div id="registrationPopup" class="popup">
-        <div class="popup-content">
-            <button class="close-btn">&times;</button>
-            <h2>Register for Webinar</h2>
-            <form action="https://formspree.io/f/xvggvlyv" method="POST">
-                <label for="fullName">Your Name:</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
-            
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript for handling the popup
-        const registerBtn = document.getElementById('registerBtn');
-        const popup = document.getElementById('registrationPopup');
-        const form = document.getElementById('registrationForm');
-        const closeBtn = document.querySelector('.close-btn');
-
-        registerBtn.addEventListener('click', () => {
-            popup.style.display = 'flex';
-            setTimeout(() => {
-                popup.classList.add('active');
-            }, 10);
-        });
-
-        function closePopup() {
-            popup.classList.remove('active');
-            setTimeout(() => {
-                popup.style.display = 'none';
-            }, 300);
-        }
-
-        popup.addEventListener('click', (e) => {
-            if (e.target === popup) {
-                closePopup();
-            }
-        });
-
-        closeBtn.addEventListener('click', closePopup);
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                method: form.method,
-                body: formData,
-                headers: { Accept: 'application/json' },
-            })
-                .then((response) => {
-                    if (response.ok) {
-                        // Redirect on success
-                        window.location.href = 'ad2.html';
-                    } else {
-                        alert('There was an error submitting your form. Please try again.');
-                    }
-                })
-                .catch((error) => {
-                    alert('Error: ' + error.message);
-                });
-        });
-    </script>
 </body>
 </html>
+
