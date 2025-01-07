@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -63,7 +62,7 @@ body {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-.date-time {
+.date-time, .agenda {
     background: rgba(255, 255, 255, 0.15);
     padding: 1.5rem;
     border-radius: 15px;
@@ -73,53 +72,21 @@ body {
     transition: transform 0.3s ease;
 }
 
-.date-time:hover {
+.date-time:hover, .agenda:hover {
     transform: translateY(-5px);
 }
 
-.date-time h3 {
+.date-time h3, .agenda h3 {
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 1rem;
     letter-spacing: 0.5px;
 }
 
-.date-time p {
+.date-time p, .agenda p {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
     opacity: 0.9;
-}
-
-.agenda {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 1.5rem;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-}
-
-.agenda h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    letter-spacing: 0.5px;
-}
-
-.agenda ul {
-    list-style-type: none;
-}
-
-.agenda li {
-    position: relative;
-    padding-left: 1.8rem;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.agenda li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    font-weight: bold;
 }
 
 .right-panel {
@@ -129,7 +96,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 h1 {
@@ -150,146 +117,32 @@ h2 {
     font-weight: 500;
 }
 
-.presenters {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+.event-details {
     margin-bottom: 2rem;
 }
 
-.presenter {
+.detail {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(149, 117, 205, 0.05);
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
 }
 
-.presenter:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(149, 117, 205, 0.1);
+.icon {
+    margin-right: 0.5rem;
+    color: #9575cd;
 }
 
-.presenter img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #9575cd;
-    box-shadow: 0 5px 15px rgba(149, 117, 205, 0.2);
+.event-link {
+    color: #9575cd;
+    text-decoration: none;
 }
 
-.presenter-info h3 {
-    color: #2d3436;
-    margin-bottom: 0.25rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.presenter-info p {
-    color: #636e72;
-    font-size: 0.9rem;
-    font-weight: 500;
+.event-link:hover {
+    text-decoration: underline;
 }
 
 .cta {
     text-align: center;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, #9575cd 0%, #8bc34a 100%);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(149, 117, 205, 0.3);
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(149, 117, 205, 0.4);
-}
-
-@media (max-width: 1200px) {
-    .container {
-        max-width: 95%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: row;
-    }
-
-    .left-panel, .right-panel {
-        width: 50%;
-    }
-
-    .left-panel {
-        padding: 2rem;
-    }
-
-    .right-panel {
-        padding: 2rem;
-    }
-
-    .logo {
-        max-width: 100%;
-        margin: 0 0 2rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-        text-align: left;
-    }
-
-    h2 {
-        font-size: 1.3rem;
-        text-align: left;
-    }
-}
-
-@media (max-width: 768px) {
-    .presenters {
-        grid-template-columns: 1fr;
-    }
-
-    .presenter {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 640px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .left-panel, .right-panel {
-        width: 100%;
-    }
-
-    .presenter {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .date-time, .agenda {
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .btn {
-        width: 100%;
-    }
 }
 
 .custom-btn {
@@ -307,7 +160,6 @@ h2 {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    font-family: 'Poppins', sans-serif;
 }
 
 .custom-btn:before {
@@ -351,15 +203,6 @@ h2 {
     max-width: 500px;
     width: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transform: scale(0.9);
-    opacity: 0;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-}
-
-.popup.active .popup-content {
-    transform: scale(1);
-    opacity: 1;
 }
 
 .popup h2 {
@@ -388,7 +231,6 @@ h2 {
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
 }
 
 .popup input:focus {
@@ -399,43 +241,57 @@ h2 {
 
 .popup button {
     margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, #9575cd 0%, #8bc34a 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
 }
 
-.popup button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(149, 117, 205, 0.4);
+@media (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+    }
 }
 
-.close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #4a4a4a;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+    }
+
+    .left-panel {
+        padding: 2rem;
+    }
+
+    .right-panel {
+        padding: 2rem;
+    }
+
+    .logo {
+        max-width: 100%;
+        margin: 0 0 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
 }
 
-.close-btn:hover {
-    color: #9575cd;
-}
+@media (max-width: 640px) {
+    .container {
+        border-radius: 0;
+    }
 
-@media (max-width: 480px) {
     .popup-content {
         max-width: 90%;
         padding: 2rem;
     }
+
+    .custom-btn {
+        width: 100%;
+    }
 }
+
