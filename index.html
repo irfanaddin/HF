@@ -26,7 +26,7 @@
     <body class="home-page">
         <section class="header">
             <div class="top-bar">
-                <a href="tel:+1 (657) 513-5388"><i class="fas fa-phone-alt"></i> Contact Us : (657) 513-5388 |</a>
+                <a href="tel:+1 (949) 418 8814"><i class="fas fa-phone-alt"></i> Contact Us : (949) 418 8814 |</a>
                 <a href="https://www.clientaxcess.com/#/user/login" target="_blank"><i class="fas fa-user"></i> Client Login</a>
             </div>
             <nav>
@@ -63,43 +63,15 @@
                 <img src="images/fadeinlogo.png" alt="Hamid Financials Logo" class="fade-in-logo">
                 <h1 class="typewriter">Entrust Hamid Financials as your All-in-One CPA Firm</h1>
                 <br>
-                <a href="about.html" class="hero-btn">Learn More</a>
-                <div class="scroll-arrow" onclick="scrollToNextSection()"></div>  
+                <a href="#partners" class="hero-btn">Learn More</a>
+                <div class="scroll-arrow" onclick="location.href='#partners'"></div>  
             </div> 
         </section>
-    
-<section class="about-us">
-    <div class="about-container">
-        <div class="about-image">
-            <img src="images/new3.png" alt="Hamid Financials Team">
-        </div>
-        <div class="about-text">
-            <h1>About Us</h1>
-            <p>
-                At Hamid Financials, we are driven by the passion to deliver tailored financial solutions for individuals and businesses. 
-                With over a decade of expertise, our firm has earned a reputation for excellence and trust.
-            </p>
-            <p>
-                Our mission is to empower our clients with the tools and insights they need to achieve their financial goals, 
-                from tax preparation and accounting to strategic advisory services. We believe every business is a family business.
-            </p>
-            <p>
-                Our values center around integrity, innovation, and a client-first mindset, ensuring we are not just financial advisors 
-                but trusted partners in your success.
-            </p>
-            <a href="about.html" class="cta-button">Meet Our Team</a>
-        </div>
-    </div>
-</section>
-
-
-
-
 
 <!-- our partners-->
 
 
-<section class="partners">
+<section id="partners" class="partners animate-section">
     <h2>Our Partners</h2>
     <div class="partner-logos">
         <img src="images/chhaccess.webp" alt="CCH Axcess Tax Logo">
@@ -116,7 +88,7 @@
 
 
 
-<section class="services-gallery">
+<section id="services" class="services-gallery animate-section">
     <h1>Our Services</h1>
     <div class="gallery-container">
         <button class="left-arrow" onclick="moveGallery(-1)">&#8249;</button>
@@ -151,7 +123,7 @@
                 <div class="gallery-item">
                     <img src="images/tax-res.webp" alt="Tax Resolution" class="service-icon">
                     <h3>Tax Resolution</h3>
-                    <p>Owing back taxes doesn’t have to be stressful. We can help you negotiate with the IRS to get you back in good standing. </p>
+                    <p>Owing back taxes doesn't have to be stressful. We can help you negotiate with the IRS to get you back in good standing. </p>
                     <a href="tax-res.html" class="cta-button">Learn More</a>
                 </div>
                 <div class="gallery-item">
@@ -190,13 +162,7 @@
 
 <script>
     // Function to scroll to the next section
-    function scrollToNextSection() {
-        window.scroll({
-            top: window.innerHeight,
-            behavior: 'smooth'
-        });
-    }
-
+    
     // Function to handle arrow fade out on scroll
     window.onscroll = function () {
         var scrollArrow = document.querySelector('.scroll-arrow');
@@ -210,7 +176,7 @@
 </section>
 
 <!----- Call to action ----->
-<section class="cta">
+<section id="cta" class="cta animate-section">
     <h1>Access Our Services From<br> Anywhere Around The World</h1>
     <a href="contact.html" class="hero-btn">Have Inquiries?</a>
 </section>
@@ -219,12 +185,7 @@
     <section class="footer">
         <h4>Find Us On Social Media Sites</h4>
         <div class="icons">
-            <!------------
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fa fa-facebook"></i>
-            </a>
-            -------->
-
+            
             <a href="https://www.instagram.com/hamid.financials?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                 <i class="fa fa-instagram"></i>
             </a>
@@ -233,12 +194,7 @@
             <i class="fa fa-yelp" ></i>
             </a>
 
-            <!-------
-            <a href="https://www.twitter.com" target="_blank">
-                <i class="fa fa-twitter"></i>
-            </a>
-            -------->
-
+            
             <a href="https://www.linkedin.com/company/hamid-financials-llp">
                 <i class="fa fa-linkedin"></i>
             </a>
@@ -348,10 +304,20 @@ document.addEventListener('DOMContentLoaded', function() {
             dropdownContent.style.display = 'block';
         }
     });
+
+    // Trigger animations on load
+    document.querySelectorAll('.animate-section').forEach(section => {
+        section.classList.add('animate');
+    });
 });
 </script>
 
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="transition-animation.js"></script>
+<script>
+     ReactDOM.render(React.createElement(TransitionAnimation), document.createElement('div'));
+   </script>
 </body>
 </html>
-
 
