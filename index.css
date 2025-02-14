@@ -450,6 +450,106 @@ nav img:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
+
+/* Update these styles in your existing CSS file */
+
+.footer {
+    background: rgb(54, 43, 78);
+    color: #fff;
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-info i {
+    font-size: 24px;
+    color: #4c8c35;
+    margin-bottom: 10px;
+}
+
+.footer-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-info p {
+    color: #ffffff99;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.social-section .footer-info {
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.icons a {
+    color: #fff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.icons a:hover {
+    color: #4c8c35;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #ffffff99;
+}
+
+/* Media Query for larger screens */
+@media (min-width: 1024px) {
+    .footer-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .footer-column {
+        text-align: left;
+    }
+
+    .footer-info {
+        align-items: flex-start;
+    }
+
+    .social-section .footer-info {
+        align-items: center;
+    }
+}
+
+
+
 /* Mobile Navigation */
 .fa-bars {
     display: block;
@@ -736,4 +836,5 @@ nav img:hover {
       transition: none;
     }
   }
+  
   
