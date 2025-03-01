@@ -837,4 +837,60 @@ nav img:hover {
     }
   }
   
+/*popup*/
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #84c96b, #5eb73e);
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1002;
+    opacity: 0;
+    animation: fadeInSlide 0.5s forwards;
+    font-family: 'Raleway', sans-serif;
+    position: fixed;
+  }
+  
+  /* Animation for popup appearance */
+  @keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Style for the popup text */
+  .popup p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  /* Stylish close button */
+  .popup button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    transition: transform 0.2s ease;
+  }
+  
+  .popup button:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Mobile: position popup at the bottom center */
+  @media (max-width: 768px) {
+    .popup {
+      top: auto;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
   
