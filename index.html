@@ -1,380 +1,408 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Hamid Financials</title>
-    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamid Financials - Expert CPA Services</title>
+    <meta name="description" content="Professional CPA services including tax preparation, accounting, and financial consulting. Trusted by businesses and individuals.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Favicon -->
     <link rel="icon" href="images/fadeinlogo.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QTLSRR2QWW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QTLSRR2QWW');
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTLSRR2QWW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QTLSRR2QWW');
-</script>
-<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/cee8586aef4ed0e1baca637f955ce43f.js"></script>
 <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
 
-
-<!----popup-->
-
-<div id="announcement-popup" class="popup">
-    <p>Get in Touch to Schedule a FREE
-        <br>
-        <br>30 Minute Consultation Today!
-        <br>
-        <br>
-    </p>
-    <a href="contact.html" class="cta-button">Get in Touch</a>
-    <button onclick="closePopup('announcement-popup')">x</button>
-  </div>
-  
-
-
-    <body class="home-page">
-        <section class="header">
-            <div class="top-bar">
-                <a href="tel:+1 (657) 513 5388"><i class="fas fa-phone-alt"></i> Contact Us : (657) 513 5388 |</a>
-                <a href="https://www.clientaxcess.com/#/user/login" target="_blank"><i class="fas fa-user"></i> Client Login</a>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="tel:+16575135388">
+                        <i class="fas fa-phone"></i> (657) 513-5388
+                    </a>
+                    <a href="mailto:info@hamidfinancials.com">
+                        <i class="fas fa-envelope"></i> info@hamidfinancials.com
+                    </a>
+                </div>
+                <div class="top-bar-links">
+                    <a href="https://www.clientaxcess.com/#/user/login" target="_blank">
+                        <i class="fas fa-user"></i> Client Portal
+                    </a>
+                </div>
             </div>
-            <nav>
-    <a href="index.html"><img src="images/newlogo_no-bkg.png" alt="Hamid Financials Logo"></a>
-    <div class="nav-links" id="navLinks">
-        <br>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li class="dropdown">
-                <a href="services.html">SERVICES</a>
-                <ul class="dropdown-content">
-                    <li><a href="tax-strategy.html">Tax Strategy</a></li>
-                    <li class="dropdown">
-                        <a href="tax-prep.html">Tax Services</a>
-                        <ul class="nested-dropdown-content">
-                            <li><a href="fed-tax.html">Federal and State Tax</a></li>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/newlogo_no-bkg.png" alt="Hamid Financials">
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="services.html" class="nav-link">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tax-strategy.html">Tax Strategy</a></li>
+                            <li><a href="fed-tax.html">Federal & State Tax</a></li>
                             <li><a href="int-tax.html">International Tax</a></li>
+                            <li><a href="accservices.html">Accounting Services</a></li>
+                            <li><a href="tax-res.html">Tax Resolution</a></li>
+                            <li><a href="represent.html">Representation</a></li>
                         </ul>
                     </li>
-                    <li><a href="accservices.html">Accounting Services</a></li>
-                    <li><a href="tax-res.html">Tax Resolution</a></li>
-                    <li><a href="represent.html">Representation</a></li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </li>
                 </ul>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <img src="images/newlogo_no-bkg.png" alt="Hamid Financials" style="height: 40px;">
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Home</a>
             </li>
-            <li><a href="contact.html">GET STARTED</a></li>
+            <li class="mobile-nav-item">
+                <a href="about.html" class="mobile-nav-link">About</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="services.html" class="mobile-nav-link">Services</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="tax-strategy.html" class="mobile-nav-link">Tax Strategy</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="fed-tax.html" class="mobile-nav-link">Federal & State Tax</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="int-tax.html" class="mobile-nav-link">International Tax</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="accservices.html" class="mobile-nav-link">Accounting Services</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="tax-res.html" class="mobile-nav-link">Tax Resolution</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="represent.html" class="mobile-nav-link">Representation</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </li>
         </ul>
     </div>
-    <i class="fa fa-bars" onclick="showMenu()"></i>
-</nav>     
-            
-            
-            <div class="text-box">
-                <img src="images/fadeinlogo.png" alt="Hamid Financials Logo" class="fade-in-logo">
-                <h1 class="typewriter">Entrust Hamid Financials as your All-in-One CPA Firm</h1>
-                <br>
-                <a href="#partners" class="hero-btn">Learn More</a>
-                <div class="scroll-arrow" onclick="location.href='#partners'"></div>  
-            </div> 
-        </section>
 
-<!-- our partners-->
-
-
-<section id="partners" class="partners animate-section">
-    <h2>Our Partners</h2>
-    <div class="partner-logos">
-        <img src="images/chhaccess.webp" alt="CCH Axcess Tax Logo">
-        <img src="images/thomsonreuters.png" alt="Checkpoint Edge Logo">
-        <img src="images/quickbooks.png" alt="Quickbooks Logo">
-        <img src="images/openai.png" alt="Open AI Logo">
-        <img src="images/adp.png " alt="ADP Logo">
-        <img src="images/aicpa&cima.png" alt="AICPA & CIMA">
-    </div>
-</section>
-
-
-<!-- services gallery section below this line-->
-
-
-
-<section id="services" class="services-gallery animate-section">
-    <h1>Our Services</h1>
-    <div class="gallery-container">
-        <button class="left-arrow" onclick="moveGallery(-1)">&#8249;</button>
-        <div class="gallery-wrapper">
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="images/bookk.png" alt="Tax Preparation" class="service-icon">
-                    <h3>Tax Strategy</h3>
-                    <p>Our experts provide tailored financial services to alleviate uncertainty and reduce stress. </p>
-                    <a href="tax-strategy.html" class="cta-button">Learn More</a>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/fedtaxes.png" alt="Tax Planning" class="service-icon">
-                    <h3>Federal and State Tax</h3>
-                    <p>Our advisors provide individualized services to help reduce your tax burden and plan effectively for the future.</p>
-                    <a href="fed-tax.html" class="cta-button">Learn More</a>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/intax.png" alt="Business Advisory" class="service-icon">
-                    <h3>International Tax</h3>
-                    <p>Expert business advisory to help your company grow and overcome financial challenges.</p>
-                    <a href="int-tax.html" class="cta-button">Learn More</a>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/accserv.jpg" alt="Accounting Services" class="service-icon">
-                    <h3>Accounting Services</h3>
-                    <p>Our team stays informed, saving you the time and effort of navigating accounting complexities.</p>
-                    <a href="accservices.html" class="cta-button">Learn More</a>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/tax-res.webp" alt="Tax Resolution" class="service-icon">
-                    <h3>Tax Resolution</h3>
-                    <p>Owing back taxes doesn't have to be stressful. We can help you negotiate with the IRS to get you back in good standing. </p>
-                    <a href="tax-res.html" class="cta-button">Learn More</a>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/reppin.jpg" alt="Representation" class="service-icon">
-                    <h3>Representation</h3>
-                    <p>Entrust our professionals to quickly finish your audit or examination notice so you can get back to work as normal.  </p>
-                    <a href="represent.html" class="cta-button">Learn More</a>
-                </div>
-                
-
-                
-            </div>
-        </div>
-        <button class="right-arrow" onclick="moveGallery(1)">&#8250;</button>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-<script>
-    function openPopup(popupId) {
-        document.getElementById(popupId).style.display = 'block';
-    }
-
-    function closePopup(popupId) {
-        document.getElementById(popupId).style.display = 'none';
-    }
-</script>
-
-<script>
-    // Function to scroll to the next section
-    
-    // Function to handle arrow fade out on scroll
-    window.onscroll = function () {
-        var scrollArrow = document.querySelector('.scroll-arrow');
-        if (window.scrollY > 50) {
-            scrollArrow.classList.add('hide');
-        } else {
-            scrollArrow.classList.remove('hide');
-        }
-    };
-</script>
-</section>
-
-<!----- Call to action ----->
-<section id="cta" class="cta animate-section">
-    <h1>Access Our Services From<br> Anywhere Around The World</h1>
-    <a href="contact.html" class="hero-btn">Have Inquiries?</a>
-</section>
-
-<!-------footer------->
-<section class="footer">
-    <div class="footer-content">
-        <div class="footer-column">
-            <div class="footer-info">
-                <i class="fas fa-home"></i>
-                <h4>Address</h4>
-                <p>Corporate Office</p>
-                <p>17702 Mitchell N </p>
-                <p>Suite 210 Irvine, CA 92614</p>
-            </div>
-        </div>
-        
-        <div class="footer-column">
-            <div class="footer-info">
-                <i class="far fa-clock"></i>
-                <h4>Business Hours</h4>
-                <p>Monday-Friday: 8:30am – 5:30pm</p>
-            </div>
-        </div>
-        
-        <div class="footer-column">
-            <div class="footer-info">
-                <i class="fas fa-phone"></i>
-                <h4>Phone</h4>
-                <p>Corporate Office: (657) 513-5388</p>
-            </div>
-        </div>
-        
-        <div class="footer-column">
-            <div class="footer-info">
-                <i class="fas fa-envelope"></i>
-                <h4>Email</h4>
-                <p>info@hamidfinancials.com</p>
-            </div>
-        </div>
-
-        <div class="footer-column social-section">
-            <div class="footer-info">
-                <h4>Find Us On Social Media</h4>
-                <div class="icons">
-                    <a href="https://www.instagram.com/hamidfinancials/">
-                        <i class="fa fa-instagram"></i>
-                    </a>    
-                    <a href="https://www.yelp.com/biz/hamid-financials-irvine-2">
-                        <i class="fa fa-yelp"></i>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to <br>Hamid Financials</h1>
+                <p class="hero-subtitle">
+                    <br><br>Entrust HF As Your All-In-One CPA Firm
+                </p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        Schedule Consultation
                     </a>
-                    <a href="https://www.linkedin.com/company/hamid-financials-llp">
-                        <i class="fa fa-linkedin"></i>
+                    <a href="services.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-right"></i>
+                        Our Services
                     </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="footer-bottom">
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Hamid Financials. All rights reserved.</p>
-    </div>
-</section>
+    <!-- Our Partners Section -->
+    <section class="section partners">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Partners</h2>
+                <p class="section-subtitle">
+                    We work with industry-leading platforms to provide you with the best possible service
+                </p>
+            </div>
+            
+            <div class="partner-logos loading">
+                <div class="partner-logo">
+                    <img src="images/chhaccess.webp" alt="CCH Axcess Tax Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/thomsonreuters.png" alt="Checkpoint Edge Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/quickbooks.png" alt="Quickbooks Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/openai.png" alt="Open AI Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/adp.png" alt="ADP Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/aicpa&cima.png" alt="AICPA & CIMA">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="https://kit.fontawesome.com/37fe9c0dd6.js" crossorigin="anonymous"></script>
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">
+                    Comprehensive financial services tailored to your needs
+                </p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="service-title">Tax Strategy</h3>
+                        <p class="service-description">
+                            Strategic tax planning to minimize your liability and maximize savings throughout the year.
+                        </p>
+                        <a href="tax-strategy.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
 
+                <div class="card service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="service-title">Tax Preparation</h3>
+                        <p class="service-description">
+                            Expert federal and state tax preparation with accuracy, efficiency, and timeliness.
+                        </p>
+                        <a href="fed-tax.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
 
+                <div class="card service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="service-title">International Tax</h3>
+                        <p class="service-description">
+                            Complex international tax matters handled with expertise and compliance focus.
+                        </p>
+                        <a href="int-tax.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
 
+                <div class="card service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="service-title">Accounting Services</h3>
+                        <p class="service-description">
+                            Full-service accounting solutions including bookkeeping and financial statements.
+                        </p>
+                        <a href="accservices.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
 
-<script>
-let currentIndex = 0;
-const gallery = document.querySelector('.gallery');
-const items = gallery.children;
-const totalItems = items.length;
-const itemsPerView = window.innerWidth <= 768 ? 1 : 3;
+                <div class="card service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="service-title">Tax Resolution</h3>
+                        <p class="service-description">
+                            Professional assistance with tax debt resolution and IRS negotiations.
+                        </p>
+                        <a href="tax-res.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
 
-function moveGallery(direction) {
-    const itemWidth = items[0].getBoundingClientRect().width + 30; // Include gap
-    const maxIndex = totalItems - itemsPerView;
+                <div class="card service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="service-title">Representation</h3>
+                        <p class="service-description">
+                            Expert representation during audits and tax authority examinations.
+                        </p>
+                        <a href="represent.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Update current index
-    currentIndex += direction;
+    <!-- About Preview Section -->
+    <section class="section" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center;">
+                <div class="loading">
+                    <h2>Why Choose Hamid Financials?</h2>
+                    <p>
+                        With years of experience and a commitment to excellence, we provide personalized 
+                        financial services that help our clients achieve their goals. Our team of certified 
+                        professionals stays current with the latest tax laws and regulations.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: var(--space-lg) 0;">
+                        <li style="margin-bottom: var(--space-sm);">
+                            <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: var(--space-sm);"></i>
+                            Certified Public Accountants
+                        </li>
+                        <li style="margin-bottom: var(--space-sm);">
+                            <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: var(--space-sm);"></i>
+                            Personalized Service
+                        </li>
+                        <li style="margin-bottom: var(--space-sm);">
+                            <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: var(--space-sm);"></i>
+                            Year-Round Support
+                        </li>
+                        <li style="margin-bottom: var(--space-sm);">
+                            <i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: var(--space-sm);"></i>
+                            Latest Technology
+                        </li>
+                    </ul>
+                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+                </div>
+                <div class="loading">
+                    <img src="images/fadeinlogo.png" alt="About Hamid Financials" 
+                         style="width: 100%; max-width: 400px; height: auto; border-radius: var(--radius-lg);">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Loop back to start/end
-    if (currentIndex > maxIndex) {
-        currentIndex = 0;
-    } else if (currentIndex < 0) {
-        currentIndex = maxIndex;
-    }
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-subtitle">
+                Schedule your free consultation today and discover how we can help optimize your financial future.
+            </p>
+            <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-accent">
+                    <i class="fas fa-calendar-plus"></i>
+                    Free Consultation
+                </a>
+                <a href="tel:+16575135388" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </section>
 
-    // Apply smooth transition
-    gallery.style.transition = 'transform 0.5s ease';
-    gallery.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
-}
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 17702 Mitchell N #210<br>Irvine, CA 92614</p>
+                    <p><i class="fas fa-phone"></i> (657) 513-5388</p>
+                    <p><i class="fas fa-envelope"></i> info@hamidfinancials.com</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/hamidfinancials" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.yelp.com/biz/hamid-financials-irvine-2" class="social-link" target="_blank">
+                            <i class="fab fa-yelp"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/hamid-financials-llp" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@hamidfinancials.cpa" class="social-link" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="tax-strategy.html">Tax Strategy</a>
+                    <a href="fed-tax.html">Federal & State Tax</a>
+                    <a href="int-tax.html">International Tax</a>
+                    <a href="accservices.html">Accounting Services</a>
+                    <a href="tax-res.html">Tax Resolution</a>
+                    <a href="represent.html">Representation</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">All Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="https://www.clientaxcess.com/#/user/login" target="_blank">Client Portal</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday<br>8:30 AM - 5:30 PM</p>
+                    <p>Saturday & Sunday<br>By Appointment</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hamid Financials. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-// Update gallery on window resize
-window.addEventListener('resize', () => {
-    const newItemsPerView = window.innerWidth <= 768 ? 1 : 3;
-    if (newItemsPerView !== itemsPerView) {
-        currentIndex = 0;
-        gallery.style.transform = 'translateX(0)';
-    }
-});
-
-</script>
-
-<script>
-function showMenu() {
-    document.getElementById("navLinks").classList.add("active");
-    document.querySelector(".fa-bars").classList.add("active");
-    document.querySelector(".fa-times").classList.add("active");
-}
-
-function hideMenu() {
-    document.getElementById("navLinks").classList.remove("active");
-    document.querySelector(".fa-bars").classList.remove("active");
-    document.querySelector(".fa-times").classList.remove("active");
-}
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    const navLinks = document.getElementById("navLinks");
-    const hamburger = document.querySelector(".fa-bars");
-    if (event.target !== navLinks && 
-        !navLinks.contains(event.target) && 
-        event.target !== hamburger) {
-        hideMenu();
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdowns = document.querySelectorAll('.dropdown > a');
-    
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                const dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === 'block') {
-                    dropdownContent.style.display = 'none';
-                } else {
-                    // Close all other dropdowns
-                    document.querySelectorAll('.dropdown-content').forEach(content => {
-                        content.style.display = 'none';
-                    });
-                    dropdownContent.style.display = 'block';
-                }
-            }
-        });
-    });
-
-    // Add click event for the "SERVICES" link
-    const servicesLink = document.querySelector('.dropdown > a[href="services.html"]');
-    servicesLink.addEventListener('click', function(e) {
-        if (window.innerWidth > 768) {
-            // On desktop, let the link work normally
-            return;
-        }
-        // On mobile, toggle the dropdown
-        e.preventDefault();
-        const dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === 'block') {
-            window.location.href = this.getAttribute('href');
-        } else {
-            dropdownContent.style.display = 'block';
-        }
-    });
-
-    // Trigger animations on load
-    document.querySelectorAll('.animate-section').forEach(section => {
-        section.classList.add('animate');
-    });
-});
-</script>
-
-<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-<script src="transition-animation.js"></script>
-<script>
-     ReactDOM.render(React.createElement(TransitionAnimation), document.createElement('div'));
-   </script>
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
 </body>
 </html>
-

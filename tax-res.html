@@ -3,175 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Tax Resolution</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Tax Resolution Services - Hamid Financials</title>
+    <meta name="description" content="Professional tax resolution services to help resolve tax debts and negotiate with the IRS. Get back in good standing.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Favicon -->
     <link rel="icon" href="images/fadeinlogo.png" type="image/png">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTLSRR2QWW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QTLSRR2QWW');
-</script>
-<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/cee8586aef4ed0e1baca637f955ce43f.js"></script>
 <body>
-    <!-- Header Section -->
-    <section class="header">
-        <div class="top-bar">
-            <a>Contact us at: <a href="tel:+1 (657) 513 5388">(657) 513 5388 |</a></a>
-            <a href="https://www.clientaxcess.com/#/user/login" target="https://www.clientaxcess.com/#/user/login">Client Login</a> 
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="tel:+16575135388">
+                        <i class="fas fa-phone"></i> (657) 513-5388
+                    </a>
+                    <a href="mailto:info@hamidfinancials.com">
+                        <i class="fas fa-envelope"></i> info@hamidfinancials.com
+                    </a>
+                </div>
+                <div class="top-bar-links">
+                    <a href="https://www.clientaxcess.com/#/user/login" target="_blank">
+                        <i class="fas fa-user"></i> Client Portal
+                    </a>
+                </div>
+            </div>
         </div>
-        <nav>
-            <a href="index.html"><img src="images/newlogo_no-bkg.png" alt="Hamid Financials Logo"></a>
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </div>
 
-
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li class="dropdown">
-                        <a href="services.html">SERVICES</a>
-                        <ul class="dropdown-content">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/newlogo_no-bkg.png" alt="Hamid Financials">
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="services.html" class="nav-link">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
                             <li><a href="tax-strategy.html">Tax Strategy</a></li>
-                            <li class="dropdown">
-                                <a href="tax-prep.html">Tax Services</a>
-                                <ul class="nested-dropdown-content">
-                                    <li><a href="fed-tax.html">Federal and State Tax</a></li>
-                                    <li><a href="int-tax.html">International Tax</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="fed-tax.html">Federal & State Tax</a></li>
+                            <li><a href="int-tax.html">International Tax</a></li>
                             <li><a href="accservices.html">Accounting Services</a></li>
-                            <li><a href="tax-res.html">Tax Resolution</a></li>
+                            <li><a href="tax-res.html" style="color: var(--primary-color);">Tax Resolution</a></li>
                             <li><a href="represent.html">Representation</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">GET STARTED</a></li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </li>
                 </ul>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </nav>
-
-        <div class="text-box">
-            <h1>Tax Resolution Services</h1>
-            <p>Owing back taxes can be overwhelming. Let us help you find the best resolution for your situation.</p>
-            <div class="scroll-arrow" onclick="scrollToNextSection()"></div>
         </div>
-    </section>
+    </nav>
 
-    <!-- Tax Resolution Section -->
-    <section class="eservices" id="tax-resolution">
-        <h1>Tax Resolution Services</h1>
-        <img src="images/tax-res.webp" alt="Tax Resolution Services" class="service-image">
-        <p>Facing tax issues? We can help you resolve your tax debts with strategies that fit your situation. Our team at Hamid Financial LLP 
-            will analyze your case and recommend solutions to resolve your tax issues efficiently.</p>
-    </section>
-
-    <!-- Resolution Tools Section -->
-<!-- Resolution Tools Section -->
-<section class="eservices" id="tools">
-    <h1>Resolution Tools We Use</h1>
-    <p>Our expert team can guide you through various tax resolution strategies, customized to your needs. Below are some of the tools we use 
-        to help resolve tax issues:</p>
-    
-    <div class="resolution-tools-list">
-        <div class="resolution-tool">
-            <h2>Installment Agreement</h2><br>
-            <p>Set up a payment plan with the IRS to pay off your tax debt over time.</p>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <img src="images/newlogo_no-bkg.png" alt="Hamid Financials" style="height: 40px;">
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        
-        <div class="resolution-tool">
-            <h2>Offer In Compromise (OIC)</h2><br>
-            <p>Negotiate a settlement that allows you to pay less than the full amount owed.</p>
-        </div>
-
-        <div class="resolution-tool">
-            <h2>Innocent Spouse Relief</h2><br>
-            <p>Get relief from tax liabilities caused by your spouse's or former spouse's errors.</p>
-        </div>
-
-        <div class="resolution-tool">
-            <h2>Penalty Abatement</h2><br>
-            <p>Request a reduction or removal of penalties for failure to file or pay on time, based on reasonable cause.</p>
-        </div>
-
-        <div class="resolution-tool">
-            <h2>Currently Not Collectible (CNC) Status</h2><br>
-            <p>If you can’t pay due to financial hardship, we can help you get your account marked as uncollectible.</p>
-        </div>
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="about.html" class="mobile-nav-link">About</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="services.html" class="mobile-nav-link">Services</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </li>
+        </ul>
     </div>
-    <a href="contact.html" class="cta-button">Get Started</a>
-</section>
 
-
-
-
-
-
-
-
-    <!-------footer------->
-    <section class="footer">
-        <h4>Find Us On Social Media Sites</h4>
-        <div class="icons">
-            <!------------
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fa fa-facebook"></i>
-            </a>
-            -------->
-
-            <a href="https://www.instagram.com/hamid.financials?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                <i class="fa fa-instagram"></i>
-            </a>
-            
-            <a href="https://www.yelp.com/biz/hamid-financials-newport-beach-2">
-            <i class="fa fa-yelp" ></i>
-            </a>
-
-            <!-------
-            <a href="https://www.twitter.com" target="_blank">
-                <i class="fa fa-twitter"></i>
-            </a>
-            -------->
-
-            <a href="https://www.linkedin.com/company/hamid-financials-llp">
-                <i class="fa fa-linkedin"></i>
-            </a>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Tax Resolution Services</h1>
+            <p class="page-subtitle">
+                Owing back taxes can be overwhelming. Let us help you find the best resolution for your situation
+            </p>
         </div>
     </section>
 
+    <!-- Service Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: var(--space-3xl);">
+                <div class="loading">
+                    <h2>Tax Resolution Services</h2>
+                    <p>
+                        Facing tax issues? We can help you resolve your tax debts with strategies that fit your situation. 
+                        Our team at Hamid Financial LLP will analyze your case and recommend solutions to resolve your tax 
+                        issues efficiently.
+                    </p>
+                    <p>
+                        Owing back taxes doesn't have to be stressful. We can help you negotiate with the IRS to get you 
+                        back in good standing. Our qualified professionals have extensive experience representing clients 
+                        in various tax resolution matters.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        Schedule Consultation
+                    </a>
+                </div>
+                <div class="loading">
+                    <img src="images/tax-res.webp" alt="Tax Resolution Services" 
+                         style="width: 100%; height: auto; border-radius: var(--radius-lg);">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        function scrollToNextSection() {
-            window.scroll({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+    <!-- Resolution Tools -->
+    <section class="section" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Resolution Tools We Use</h2>
+                <p class="section-subtitle">
+                    Our expert team can guide you through various tax resolution strategies, customized to your needs
+                </p>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="card loading">
+                    <div class="card-body">
+                        <div class="service-icon" style="margin-bottom: var(--space-lg);">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Installment Agreement</h3>
+                        <p>
+                            Set up a payment plan with the IRS to pay off your tax debt over time.
+                        </p>
+                    </div>
+                </div>
 
+                <div class="card loading">
+                    <div class="card-body">
+                        <div class="service-icon" style="background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark)); margin-bottom: var(--space-lg);">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Offer In Compromise (OIC)</h3>
+                        <p>
+                            Negotiate a settlement that allows you to pay less than the full amount owed.
+                        </p>
+                    </div>
+                </div>
 
-<script>
-    function showMenu() {
-        document.getElementById('navLinks').classList.add('show'); /* Show the menu */
-        document.querySelector('.fa-bars').classList.add('hide');  /* Hide the hamburger icon */
-        document.querySelector('.fa-times').style.display = 'block'; /* Show the close icon */
-    }
+                <div class="card loading">
+                    <div class="card-body">
+                        <div class="service-icon" style="background: linear-gradient(135deg, var(--accent-color), var(--accent-dark)); margin-bottom: var(--space-lg);">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Innocent Spouse Relief</h3>
+                        <p>
+                            Get relief from tax liabilities caused by your spouse's or former spouse's errors.
+                        </p>
+                    </div>
+                </div>
 
-    function hideMenu() {
-        document.getElementById('navLinks').classList.remove('show'); /* Hide the menu */
-        document.querySelector('.fa-bars').classList.remove('hide');  /* Show the hamburger icon */
-        document.querySelector('.fa-times').style.display = 'none'; /* Hide the close icon */
-    }
-</script>
+                <div class="card loading">
+                    <div class="card-body">
+                        <div class="service-icon" style="background: linear-gradient(135deg, #10b981, #059669); margin-bottom: var(--space-lg);">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Penalty Abatement</h3>
+                        <p>
+                            Request a reduction or removal of penalties for failure to file or pay on time, based on reasonable cause.
+                        </p>
+                    </div>
+                </div>
 
-<script src="https://kit.fontawesome.com/37fe9c0dd6.js" crossorigin="anonymous"></script>
+                <div class="card loading" style="grid-column: 1 / -1;">
+                    <div class="card-body text-center">
+                        <div class="service-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); margin-bottom: var(--space-lg);">
+                            <i class="fas fa-pause-circle"></i>
+                        </div>
+                        <h3>Currently Not Collectible (CNC) Status</h3>
+                        <p>
+                            If you can't pay due to financial hardship, we can help you get your account marked as uncollectible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <h2 class="cta-title">Need Help with Tax Resolution?</h2>
+            <p class="cta-subtitle">
+                Don't let tax debt overwhelm you. Let our experts help you find the best resolution strategy for your situation.
+            </p>
+            <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-accent">
+                    <i class="fas fa-calendar-plus"></i>
+                    Schedule Consultation
+                </a>
+                <a href="tel:+16575135388" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 17702 Mitchell N #210<br>Irvine, CA 92614</p>
+                    <p><i class="fas fa-phone"></i> (657) 513-5388</p>
+                    <p><i class="fas fa-envelope"></i> info@hamidfinancials.com</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/hamidfinancials" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.yelp.com/biz/hamid-financials-irvine-2" class="social-link" target="_blank">
+                            <i class="fab fa-yelp"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/hamid-financials-llp" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@hamidfinancials.cpa" class="social-link" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="tax-strategy.html">Tax Strategy</a>
+                    <a href="fed-tax.html">Federal & State Tax</a>
+                    <a href="int-tax.html">International Tax</a>
+                    <a href="accservices.html">Accounting Services</a>
+                    <a href="tax-res.html">Tax Resolution</a>
+                    <a href="represent.html">Representation</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">All Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="https://www.clientaxcess.com/#/user/login" target="_blank">Client Portal</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday<br>8:30 AM - 5:30 PM</p>
+                    <p>Saturday & Sunday<br>By Appointment</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hamid Financials. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
 </body>
 </html>

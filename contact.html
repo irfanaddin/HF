@@ -3,187 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Hamid Financials</title>
-    <link rel="stylesheet" href="contact.css">
+    <title>Contact Us - Hamid Financials</title>
+    <meta name="description" content="Get in touch with Hamid Financials for expert CPA services. Schedule your free consultation today.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Favicon -->
     <link rel="icon" href="images/fadeinlogo.png" type="image/png">
 </head>
 <body>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QTLSRR2QWW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QTLSRR2QWW');
-    </script>
-    <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/cee8586aef4ed0e1baca637f955ce43f.js"></script>
-
-    <div class="top-bar">
-        <a href="tel:+1 (657) 513 5388"><i class="fas fa-phone-alt"></i> Contact Us: (657) 513 5388</a>
-        <a href="https://www.clientaxcess.com/#/user/login" target="_blank"><i class="fas fa-user"></i> Client Login</a>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
     </div>
 
-    <nav>
-        <a href="index.html" class="logo"><img src="images/newlogo_no-bkg.png" alt="Hamid Financials Logo"></a>
-        <div class="nav-links" id="navLinks">
-            <i class="fas fa-times" onclick="hideMenu()"></i>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li class="dropdown">
-                    <a href="services.html">SERVICES</a>
-                    <ul class="dropdown-content">
-                        <li><a href="tax-strategy.html">Tax Strategy</a></li>
-                        <li class="nested-dropdown">
-                            <a href="tax-prep.html">Tax Services</a>
-                            <ul class="nested-dropdown-content">
-                                <li><a href="fed-tax.html">Federal and State Tax</a></li>
-                                <li><a href="int-tax.html">International Tax</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="accservices.html">Accounting Services</a></li>
-                        <li><a href="tax-res.html">Tax Resolution</a></li>
-                        <li><a href="represent.html">Representation</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html" class="active">GET STARTED</a></li>
-            </ul>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="tel:+16575135388">
+                        <i class="fas fa-phone"></i> (657) 513-5388
+                    </a>
+                    <a href="mailto:info@hamidfinancials.com">
+                        <i class="fas fa-envelope"></i> info@hamidfinancials.com
+                    </a>
+                </div>
+                <div class="top-bar-links">
+                    <a href="https://www.clientaxcess.com/#/user/login" target="_blank">
+                        <i class="fas fa-user"></i> Client Portal
+                    </a>
+                </div>
+            </div>
         </div>
-        <i class="fas fa-bars" onclick="showMenu()"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/newlogo_no-bkg.png" alt="Hamid Financials">
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="services.html" class="nav-link">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tax-strategy.html">Tax Strategy</a></li>
+                            <li><a href="fed-tax.html">Federal & State Tax</a></li>
+                            <li><a href="int-tax.html">International Tax</a></li>
+                            <li><a href="accservices.html">Accounting Services</a></li>
+                            <li><a href="tax-res.html">Tax Resolution</a></li>
+                            <li><a href="represent.html">Representation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary" style="background: var(--accent-color);">Get Started</a>
+                    </li>
+                </ul>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Get in Touch</h1>
-            <p>We're here to answer your questions and provide expert financial guidance.</p>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <img src="images/newlogo_no-bkg.png" alt="Hamid Financials" style="height: 40px;">
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-    </header>
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="about.html" class="mobile-nav-link">About</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="services.html" class="mobile-nav-link">Services</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </li>
+        </ul>
+    </div>
 
-    <main class="contact-container">
-    <section class="contact-content">
-        <div class="contact-info">
-            <h2>Contact Information</h2>
-            <p>Give our office a call to schedule an appointment and take advantage of our free 1-hour initial consultation!</p>
-            <br>
-            <div class="info-item">
-                <i class="fas fa-phone-alt"></i>
-                <div>
-                    <h3>Call Us</h3>
-                    <p><a href="tel:+19494188814">(657) 513 5388</a></p>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                    <h3>Our Office</h3>
-                    <p>17702 Mitchell N #210, Irvine, CA 92614</p>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                    <h3>Email Us</h3>
-                    <p><a href="mailto:info@hamidfinancials.com">info@hamidfinancials.com</a></p>
-                </div>
-            </div>
-
-            <div class="social-links">
-                <a href="https://www.instagram.com/hamid.financials" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.yelp.com/biz/hamid-financials-newport-beach-2" target="_blank" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
-                <a href="https://www.linkedin.com/company/hamid-financials-llp" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-        <div class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="https://formspree.io/f/mldrkowj" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Get in Touch</h1>
+            <p class="page-subtitle">
+                Ready to take control of your finances? Contact us today for expert guidance and personalized service.
+            </p>
         </div>
     </section>
-</main>
 
-    <section class="map-section">
-    <div class="map-content">
-        <div class="map-info">
-            <h2>Visit Our Office</h2>
-            <p>We're conveniently located in Irvine, CA. Come visit us for a personalized consultation.</p>
-            <address>
-                17702 Mitchell N, Suite 210<br>
-                Irvine, CA 92614<br>
-                United States
-            </address>
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="gap: var(--space-3xl);">
+                <!-- Contact Information -->
+                <div class="loading">
+                    <h2>Contact Information</h2>
+                    <p style="margin-bottom: var(--space-2xl);">
+                        Give our office a call to schedule an appointment and take advantage of our free 1-hour initial consultation!
+                    </p>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <div style="display: flex; align-items: center; margin-bottom: var(--space-lg);">
+                            <div style="width: 60px; height: 60px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: var(--space-lg);">
+                                <i class="fas fa-phone" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-xs);">Phone</h4>
+                                <a href="tel:+16575135388" style="font-size: 1.125rem;">(657) 513-5388</a>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; margin-bottom: var(--space-lg);">
+                            <div style="width: 60px; height: 60px; background: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: var(--space-lg);">
+                                <i class="fas fa-envelope" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-xs);">Email</h4>
+                                <a href="mailto:info@hamidfinancials.com" style="font-size: 1.125rem;">info@hamidfinancials.com</a>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: flex-start; margin-bottom: var(--space-lg);">
+                            <div style="width: 60px; height: 60px; background: var(--accent-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: var(--space-lg);">
+                                <i class="fas fa-map-marker-alt" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-xs);">Address</h4>
+                                <p style="margin: 0; font-size: 1.125rem;">
+                                    17702 Mitchell N #210<br>
+                                    Irvine, CA 92614
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: flex-start;">
+                            <div style="width: 60px; height: 60px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: var(--space-lg);">
+                                <i class="fas fa-clock" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-xs);">Business Hours</h4>
+                                <p style="margin: 0; font-size: 1.125rem;">
+                                    Monday - Friday: 8:30 AM - 5:30 PM<br>
+                                    Saturday & Sunday: By Appointment
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 style="margin-bottom: var(--space-md);">Follow Us</h4>
+                        <div class="social-links" style="margin-top: 0;">
+                            <a href="https://www.instagram.com/hamidfinancials" class="social-link" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.yelp.com/biz/hamid-financials-irvine-2" class="social-link" target="_blank">
+                                <i class="fab fa-yelp"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/hamid-financials-llp" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="card loading">
+                    <div class="card-body">
+                        <h2 style="margin-bottom: var(--space-lg);">Send Us a Message</h2>
+                        <form action="https://formspree.io/f/mldrkowj" method="POST" id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service" class="form-label">Service Interest</label>
+                                <select id="service" name="service" class="form-input">
+                                    <option value="">Select a service</option>
+                                    <option value="tax-strategy">Tax Strategy</option>
+                                    <option value="tax-preparation">Tax Preparation</option>
+                                    <option value="international-tax">International Tax</option>
+                                    <option value="accounting">Accounting Services</option>
+                                    <option value="tax-resolution">Tax Resolution</option>
+                                    <option value="representation">Representation</option>
+                                    <option value="consultation">General Consultation</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" 
+                                          placeholder="Tell us about your needs and how we can help you..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section" style="background: var(--gray-50); padding-top: 0;">
+        <div class="container">
+            <div class="card loading">
+                <div style="height: 400px; border-radius: var(--radius-lg); overflow: hidden;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.8234567890123!2d-117.8234567890123!3d33.6789012345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdec16dbaaab5%3A0xb3c836a7cf8f2b84!2s17702%20Mitchell%20N%20%23210%2C%20Irvine%2C%20CA%2092614!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-subtitle">
+                Schedule your free consultation today and take the first step toward financial success.
+            </p>
+            <a href="tel:+16575135388" class="btn btn-accent">
+                <i class="fas fa-phone"></i>
+                Call Now for Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 17702 Mitchell N #210<br>Irvine, CA 92614</p>
+                    <p><i class="fas fa-phone"></i> (657) 513-5388</p>
+                    <p><i class="fas fa-envelope"></i> info@hamidfinancials.com</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/hamidfinancials" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.yelp.com/biz/hamid-financials-irvine-2" class="social-link" target="_blank">
+                            <i class="fab fa-yelp"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/hamid-financials-llp" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@hamidfinancials.cpa" class="social-link" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="tax-strategy.html">Tax Strategy</a>
+                    <a href="fed-tax.html">Federal & State Tax</a>
+                    <a href="int-tax.html">International Tax</a>
+                    <a href="accservices.html">Accounting Services</a>
+                    <a href="tax-res.html">Tax Resolution</a>
+                    <a href="represent.html">Representation</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">All Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="https://www.clientaxcess.com/#/user/login" target="_blank">Client Portal</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday<br>8:30 AM - 5:30 PM</p>
+                    <p>Saturday & Sunday<br>By Appointment</p>
+                </div>
+            </div>
             
-            <a href="https://www.google.com/maps/place/17702+Mitchell+N+%23210,+Irvine,+CA+92614/data=!4m2!3m1!1s0x80dcdec16dbaaab5:0xb3c836a7cf8f2b84?sa=X&ved=1t:242&ictx=111" target="https://www.google.com/maps/place/17702+Mitchell+N+%23210,+Irvine,+CA+92614/data=!4m2!3m1!1s0x80dcdec16dbaaab5:0xb3c836a7cf8f2b84?sa=X&ved=1t:242&ictx=111" class="directions-btn">Get Directions</a>
-        </div>
-        <div id="map">
-            <iframe 
-            src="https://www.google.com/maps/place/17702+Mitchell+N+%23210,+Irvine,+CA+92614/data=!4m2!3m1!1s0x80dcdec16dbaaab5:0xb3c836a7cf8f2b84?sa=X&ved=1t:242&ictx=111"
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-         </iframe>
-        </div>
-    </div>
-</section>
-
-
-
-
-    <footer>
-        <div class="footer-content">
-            <h4>Find Us On Social Media</h4>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/hamidfinancials" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.yelp.com/biz/hamid-financials-irvine-2" target="_blank" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
-                <a href="https://www.linkedin.com/company/hamid-financials-llp" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hamid Financials. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        function showMenu() {
-            document.getElementById('navLinks').classList.add('show');
-        }
-        function hideMenu() {
-            document.getElementById('navLinks').classList.remove('show');
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const dropdowns = document.querySelectorAll('.dropdown > a');
-            
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener('click', function(e) {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        this.nextElementSibling.style.display = 
-                            this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
-                    }
-                });
-            });
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script>
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            if (!validateForm(this)) {
+                e.preventDefault();
+            }
         });
     </script>
 </body>
 </html>
-
