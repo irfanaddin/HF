@@ -1,5 +1,3 @@
-// Modern JavaScript for Hamid Financials Website
-
 document.addEventListener("DOMContentLoaded", () => {
     // Initialize all components
     initMobileMenu()
