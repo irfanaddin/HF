@@ -460,7 +460,7 @@ body.menu-open {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(94, 80, 128, 0.1), rgba(111, 94, 151, 0.1)), url(images/sec8bkg.png);
+    background: linear-gradient(rgba(94, 80, 128, 0.1), rgba(111, 94, 151, 0.1)), url(images/indexbkg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
