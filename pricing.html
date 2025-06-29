@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Hamid Financials</title>
+    <meta name="description" content="Transparent pricing for our bookkeeping and tax services. Choose from our Essential, Core, or Advanced plans to fit your business needs.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/fadeinlogo.png" type="image/png">
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="tel:+16575135388">
+                        <i class="fas fa-phone"></i> (657) 513-5388
+                    </a>
+                    <a href="mailto:info@hamidfinancials.com">
+                        <i class="fas fa-envelope"></i> info@hamidfinancials.com
+                    </a>
+                </div>
+                <div class="top-bar-links">
+                    <a href="https://www.clientaxcess.com/#/user/login" target="_blank">
+                        <i class="fas fa-user"></i> Client Portal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/newlogo_no-bkg.png" alt="Hamid Financials">
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="services.html" class="nav-link">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tax-strategy.html">Tax Strategy</a></li>
+                            <li><a href="fed-tax.html">Federal & State Tax</a></li>
+                            <li><a href="int-tax.html">International Tax</a></li>
+                            <li><a href="accservices.html">Accounting Services</a></li>
+                            <li><a href="tax-res.html">Tax Resolution</a></li>
+                            <li><a href="represent.html">Representation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pricing.html" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </li>
+                </ul>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <img src="images/newlogo_no-bkg.png" alt="Hamid Financials" style="height: 40px;">
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="about.html" class="mobile-nav-link">About</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="services.html" class="mobile-nav-link">Services</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Transparent Pricing</h1>
+            <p class="page-subtitle">
+                Choose the perfect plan for your business needs. All plans include expert support and transparent pricing with no hidden fees.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Toggle Section -->
+    <section class="section" style="padding-top: var(--space-2xl);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--space-3xl);">
+    <div class="pricing-toggle-container">
+        <div class="pricing-toggle-wrapper">
+            <input type="radio" id="bookkeeping" name="pricing-toggle" value="bookkeeping" checked>
+            <input type="radio" id="bookkeeping-plus" name="pricing-toggle" value="bookkeeping-plus">
+            <div class="toggle-slider"></div>
+            <label for="bookkeeping" class="toggle-label">Bookkeeping Focused</label>
+            <label for="bookkeeping-plus" class="toggle-label">Bookkeeping Plus Tax</label>
+        </div>
+    </div>
+    <p style="margin-top: var(--space-lg); color: var(--gray-600); max-width: 600px; margin-left: auto; margin-right: auto;">
+        <span id="plan-description"></span>
+    </p>
+</div>
+
+            <!-- Bookkeeping Focused Plans -->
+            <div id="bookkeeping-plans" class="pricing-plans">
+                <div class="grid grid-3">
+                    <div class="card pricing-card loading">
+                        <div class="card-body">
+                            <div class="plan-header">
+                                <h3 class="plan-name">Essential</h3>
+                                <div class="plan-price">
+                                    <span class="price">$249</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <p class="plan-description">For small businesses with simple accounting needs, looking for tax-ready financials.</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> Up to 50 transactions monthly</li>
+                                <li><i class="fas fa-check"></i> Dedicated, expert bookkeeper</li>
+                                <li><i class="fas fa-check"></i> Monthly Reconciliation of Books</li>
+                                <li><i class="fas fa-check"></i> Quarterly Financial Reporting</li>
+                                <li><i class="fas fa-check"></i> Unlimited communication with your bookkeeping team</li>
+                                <li><i class="fas fa-check"></i> 24/7 Cloud Access to Documents</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-secondary plan-btn">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="card pricing-card featured loading">
+    <div class="featured-banner">
+        <span>Most Popular</span>
+    </div>
+    <div class="card-body">
+        <div class="plan-header">
+            <h3 class="plan-name">Core</h3>
+            <div class="plan-price">
+                <span class="price">$349</span>
+                <span class="period">/month</span>
+            </div>
+            <p class="plan-description">For businesses with a wider range of accounting needs—looking for a flexible solution to grow with them.</p>
+        </div>
+        <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Up to 100 transactions monthly</li>
+            <li><i class="fas fa-check"></i> Dedicated, expert bookkeeper</li>
+            <li><i class="fas fa-check"></i> Monthly Reconciliation of Books</li>
+            <li><i class="fas fa-check"></i> Monthly Financial Reporting</li>
+            <li><i class="fas fa-check"></i> Priority communication with your bookkeeping team</li>
+            <li><i class="fas fa-check"></i> 24/7 Cloud Access to Documents</li>
+            <li><i class="fas fa-check"></i> Sales Tax Filing (One state)</li>
+            <li><i class="fas fa-check"></i> 1099 Filing (Up to 5)</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary plan-btn">Get Started</a>
+    </div>
+</div>
+
+                    <div class="card pricing-card loading">
+                        <div class="card-body">
+                            <div class="plan-header">
+                                <h3 class="plan-name">Advanced</h3>
+                                <div class="plan-price">
+                                    <span class="price">$449</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <p class="plan-description">For businesses that need in-depth financial operations custom built for their business.</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> 100+ transactions monthly</li>
+                                <li><i class="fas fa-check"></i> Dedicated, expert bookkeeper</li>
+                                <li><i class="fas fa-check"></i> Monthly Reconciliation of Books</li>
+                                <li><i class="fas fa-check"></i> Monthly Financial Reporting</li>
+                                <li><i class="fas fa-check"></i> 1099 Filing (Up to 10)</li>
+                                <li><i class="fas fa-check"></i> Priority communication with your bookkeeping team</li>
+                                <li><i class="fas fa-check"></i> 24/7 Cloud Access to Documents</li>
+                                <li><i class="fas fa-check"></i> Sales Tax Filing (One state)</li>
+                                <li><i class="fas fa-check"></i> Payroll Services</li>
+                                <li><i class="fas fa-check"></i> Bill Pay Services</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-secondary plan-btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bookkeeping Plus Tax Plans -->
+            <div id="bookkeeping-plus-plans" class="pricing-plans" style="display: none;">
+                <div class="grid grid-3">
+                    <div class="card pricing-card loading">
+                        <div class="card-body">
+                            <div class="plan-header">
+                                <h3 class="plan-name">Essential</h3>
+                                <div class="plan-price">
+                                    <span class="price">$399</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <p class="plan-description">For small businesses with simple accounting and tax needs, looking for tax-ready financials.</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> Up to 50 transactions monthly</li>
+                                <li><i class="fas fa-check"></i> Dedicated, expert bookkeeper</li>
+                                <li><i class="fas fa-check"></i> Annual Business Income Tax Preparation</li>
+                                <li><i class="fas fa-check"></i> Monthly Reconciliation of Books</li>
+                                <li><i class="fas fa-check"></i> Quarterly Financial Reporting</li>
+                                <li><i class="fas fa-check"></i> IRS Notice Response</li>
+                                <li><i class="fas fa-check"></i> 1099 Filing (Up to 5)</li>
+                                <li><i class="fas fa-check"></i> Unlimited communication with your bookkeeping team</li>
+                                <li><i class="fas fa-check"></i> 24/7 Cloud Access to Tax Returns & Documents</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-secondary plan-btn">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="card pricing-card featured loading">
+    <div class="featured-banner">
+        <span>Most Popular</span>
+    </div>
+    <div class="card-body">
+        <div class="plan-header">
+            <h3 class="plan-name">Core</h3>
+            <div class="plan-price">
+                <span class="price">$499</span>
+                <span class="period">/month</span>
+            </div>
+            <p class="plan-description">For businesses with a wider range of accounting and tax needs—looking for a flexible solution to grow with them.</p>
+        </div>
+        <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Up to 100 transactions monthly</li>
+            <li><i class="fas fa-check"></i> Dedicated, expert bookkeeper</li>
+            <li><i class="fas fa-check"></i> Annual Business Income Tax Preparation</li>
+            <li><i class="fas fa-check"></i> Monthly Reconciliation of Books</li>
+            <li><i class="fas fa-check"></i> Monthly Financial Reporting</li>
+            <li><i class="fas fa-check"></i> IRS Notice Response</li>
+            <li><i class="fas fa-check"></i> 1099 Filing (Up to 10)</li>
+            <li><i class="fas fa-check"></i> Priority communication with your bookkeeping team</li>
+            <li><i class="fas fa-check"></i> 24/7 Cloud Access to Tax Returns & Documents</li>
+            <li><i class="fas fa-check"></i> Annual Tax Reduction Strategy</li>
+            <li><i class="fas fa-check"></i> Annual Tax Planning Meetings</li>
+            <li><i class="fas fa-check"></i> Sales Tax Filing (One state)</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary plan-btn">Get Started</a>
+    </div>
+</div>
+
+                    <div class="card pricing-card loading">
+                        <div class="card-body">
+                            <div class="plan-header">
+                                <h3 class="plan-name">Advanced</h3>
+                                <div class="plan-price">
+                                    <span class="price">$599</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <p class="plan-description">For businesses that need in-depth financial operations custom built for their business.</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> 100+ transactions monthly</li>
+                                <li><i class="fas fa-check"></i> Dedicated, expert bookkeeper</li>
+                                <li><i class="fas fa-check"></i> Annual Business Income Tax Preparation</li>
+                                <li><i class="fas fa-check"></i> Monthly Reconciliation of Books</li>
+                                <li><i class="fas fa-check"></i> Monthly Financial Reporting</li>
+                                <li><i class="fas fa-check"></i> IRS Notice Response</li>
+                                <li><i class="fas fa-check"></i> 1099 Filing (Up to 15)</li>
+                                <li><i class="fas fa-check"></i> Priority communication with your bookkeeping team</li>
+                                <li><i class="fas fa-check"></i> 24/7 Cloud Access to Tax Returns & Documents</li>
+                                <li><i class="fas fa-check"></i> Annual Tax Reduction Strategy</li>
+                                <li><i class="fas fa-check"></i> Tax Planning Meetings: 2x Per Year</li>
+                                <li><i class="fas fa-check"></i> Sales Tax Filing (One state)</li>
+                                <li><i class="fas fa-check"></i> Payroll Services</li>
+                                <li><i class="fas fa-check"></i> Bill Pay Services</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-secondary plan-btn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Information Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center;">
+                <div class="loading">
+                    <h2>Why Choose Our Pricing?</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: var(--space-md); display: flex; align-items: flex-start;">
+                            <div style="width: 40px; height: 40px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: var(--space-md); flex-shrink: 0;">
+                                <i class="fas fa-dollar-sign" style="color: white;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-xs);">Transparent Pricing</h4>
+                                <p style="margin: 0; color: var(--gray-600);">No hidden fees or surprise charges. What you see is what you pay.</p>
+                            </div>
+                        </li>
+                        <li style="margin-bottom: var(--space-md); display: flex; align-items: flex-start;">
+                            <div style="width: 40px; height: 40px; background: var(--secondary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: var(--space-md); flex-shrink: 0;">
+                                <i class="fas fa-chart-line" style="color: white;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-xs);">Scalable Solutions</h4>
+                                <p style="margin: 0; color: var(--gray-600);">Plans that grow with your business, from startup to enterprise.</p>
+                            </div>
+                        </li>
+                        <li style="margin-bottom: var(--space-md); display: flex; align-items: flex-start;">
+                            <div style="width: 40px; height: 40px; background: var(--accent-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: var(--space-md); flex-shrink: 0;">
+                                <i class="fas fa-handshake" style="color: white;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-xs);">Dedicated Support</h4>
+                                <p style="margin: 0; color: var(--gray-600);">Every plan includes access to our expert team and priority support.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="loading text-center">
+                    <img src="images/fadeinlogo.png" alt="Hamid Financials" 
+                         style="width: 100%; max-width: 400px; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-subtitle">
+                Schedule your free consultation today to find the perfect plan for your business needs.
+            </p>
+            <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-accent">
+                    <i class="fas fa-calendar-plus"></i>
+                    Free Consultation
+                </a>
+                <a href="tel:+16575135388" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 17702 Mitchell N #210<br>Irvine, CA 92614</p>
+                    <p><i class="fas fa-phone"></i> (657) 513-5388</p>
+                    <p><i class="fas fa-envelope"></i> info@hamidfinancials.com</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/hamidfinancials" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.yelp.com/biz/hamid-financials-irvine-2" class="social-link" target="_blank">
+                            <i class="fab fa-yelp"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/hamid-financials-llp" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@hamidfinancials.cpa" class="social-link" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="tax-strategy.html">Tax Strategy</a>
+                    <a href="fed-tax.html">Federal & State Tax</a>
+                    <a href="int-tax.html">International Tax</a>
+                    <a href="accservices.html">Accounting Services</a>
+                    <a href="tax-res.html">Tax Resolution</a>
+                    <a href="represent.html">Representation</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">All Services</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="https://www.clientaxcess.com/#/user/login" target="_blank">Client Portal</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday<br>8:30 AM - 5:30 PM</p>
+                    <p>Saturday & Sunday<br>By Appointment</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hamid Financials. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script>
+        // Pricing toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleInputs = document.querySelectorAll('input[name="pricing-toggle"]');
+    const bookkeepingPlans = document.getElementById('bookkeeping-plans');
+    const bookkeepingPlusPlans = document.getElementById('bookkeeping-plus-plans');
+    const planDescription = document.getElementById('plan-description');
+
+    const descriptions = {
+        'bookkeeping': '',
+        'bookkeeping-plus': ''
+    };
+
+    toggleInputs.forEach(input => {
+        input.addEventListener('change', function() {
+            if (this.checked) {
+                const planType = this.value;
+                
+                // Update description
+                planDescription.textContent = descriptions[planType];
+                
+                // Show/hide appropriate plans
+                if (planType === 'bookkeeping') {
+                    bookkeepingPlans.style.display = 'block';
+                    bookkeepingPlusPlans.style.display = 'none';
+                } else {
+                    bookkeepingPlans.style.display = 'none';
+                    bookkeepingPlusPlans.style.display = 'block';
+                }
+            }
+        });
+    });
+});
+    </script>
+</body>
+</html>
