@@ -459,7 +459,7 @@ body.menu-open {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(94, 80, 128, 0.1), rgba(111, 94, 151, 0.1)),
-    url(file:///Users/irfanhamid/Desktop/HF/images/sec8bkg.png);
+    url(indexbkg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -491,7 +491,7 @@ body.menu-open {
 @media (max-width: 768px) {
   .hero {
     background: linear-gradient(rgba(94, 80, 128, 0.1), rgba(111, 94, 151, 0.1)),
-      url(file:///Users/irfanhamid/Desktop/HF/images/sec8bkgmob.png);
+      url(indexbkgmob.png);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
