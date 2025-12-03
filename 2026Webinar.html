@@ -130,40 +130,11 @@
       filter: drop-shadow(0 10px 25px rgba(15, 23, 42, 0.28));
     }
 
-    .left-tagline {
-      font-size: 0.86rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 600;
-      opacity: 0.9;
-    }
-
-    .left-points {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      font-size: 0.9rem;
-      opacity: 0.96;
-    }
-
-    .left-point-row {
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-    }
-
-    .left-point-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.9);
-    }
-
     .glass-card {
       background: rgba(255, 255, 255, 0.14);
       border-radius: 22px;
       padding: 1.4rem 1.6rem;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.16);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
       backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.4);
       position: relative;
@@ -239,13 +210,6 @@
 
     .event-title span.green {
       color: var(--hf-green);
-    }
-
-    .event-subtitle {
-      font-size: 1.04rem;
-      font-weight: 600;
-      color: #4e4b9f;
-      margin-top: 0.2rem;
     }
 
     .event-subtext {
@@ -388,7 +352,7 @@
       font-weight: 600;
       font-size: 0.96rem;
       cursor: pointer;
-      box-shadow: 0 14px 28px rgba(155,93,229,0.35);
+      box-shadow: 0 14px 28px rgba(155, 93, 229, 0.35);
       text-decoration: none;
       transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, opacity 0.1s;
       position: relative;
@@ -405,7 +369,7 @@
     .register-button:hover {
       opacity: 0.96;
       transform: translateY(-1px);
-      box-shadow: 0 16px 32px rgba(155,93,229,0.44);
+      box-shadow: 0 16px 32px rgba(155, 93, 229, 0.44);
     }
 
     .register-button:hover::after {
@@ -415,13 +379,6 @@
     .register-note {
       font-size: 0.8rem;
       color: var(--hf-text-muted);
-    }
-
-    footer {
-      margin-top: 1.5rem;
-      font-size: 0.8rem;
-      color: var(--hf-text-muted);
-      text-align: center;
     }
 
     /* MODAL */
@@ -453,7 +410,7 @@
       position: absolute;
       inset: 0;
       border-radius: inherit;
-      background: linear-gradient(135deg, rgba(113,200,74,0.06), rgba(155,93,229,0.08));
+      background: linear-gradient(135deg, rgba(113, 200, 74, 0.06), rgba(155, 93, 229, 0.08));
       mix-blend-mode: soft-light;
       pointer-events: none;
     }
@@ -545,7 +502,7 @@
     textarea:focus {
       outline: none;
       border-color: var(--hf-purple);
-      box-shadow: 0 0 0 1px rgba(155,93,229,0.75);
+      box-shadow: 0 0 0 1px rgba(155, 93, 229, 0.75);
       background: #ffffff;
     }
 
@@ -729,9 +686,6 @@
       .event-title {
         font-size: 1.38rem;
       }
-      .event-subtitle {
-        font-size: 0.98rem;
-      }
       .event-subtext {
         font-size: 0.9rem;
       }
@@ -787,7 +741,7 @@
           Live · Free Webinar · 1 Hour
         </div>
         <h1 class="event-title">
-          Preparing Your Business for the <span class="green">2025 Tax Season</span> : Key Insights from a CPA
+          Preparing Your Business for the <span class="green">2025 Tax Season</span>: Key Insights from a CPA
         </h1>
         <p class="event-subtext">
           Hamid Financials LLP (HF) will be hosting a webinar,
@@ -932,21 +886,19 @@
         <a id="gcalLink" class="calendar-link" target="_blank" rel="noopener">
           Google Calendar
         </a>
+
+        <a id="icsLink" class="calendar-link" download="hamid-financials-tax-webinar-2025.ics">
+          Apple Calendar (.ics)
+        </a>
+
         <a id="outlookLink" class="calendar-link" target="_blank" rel="noopener">
           Outlook.com
         </a>
-        <a id="icsLink" class="calendar-link" download="hamid-financials-tax-webinar-2025.ics">
-          Download .ics (Apple / Outlook)
-        </a>
       </div>
-      <div class="calendar-note">
-        The calendar event includes <strong>two reminders</strong>: one day before and one hour before the webinar.
-      </div>
+      <p class="calendar-note">
+        <strong>Don't forget to add the event to your calendar!</strong>
+      </p>
     </div>
-
-    <p class="calendar-note" style="margin-top:0.8rem;">
-      <strong>Don't forget to add the event to your calendar!</strong>
-    </p>
   </div>
 </div>
 
