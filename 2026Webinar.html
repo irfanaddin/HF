@@ -76,6 +76,8 @@
       color: #ffffff;
       position: relative;
       overflow: hidden;
+      background-size: 180% 180%;
+      animation: gradientShift 12s ease-in-out infinite alternate;
     }
 
     .event-left::before {
@@ -100,12 +102,6 @@
       opacity: 0.35;
       bottom: -70px;
       left: -60px;
-    }
-
-    /* subtle animated gradient shift */
-    .event-left {
-      background-size: 180% 180%;
-      animation: gradientShift 12s ease-in-out infinite alternate;
     }
 
     @keyframes gradientShift {
@@ -610,6 +606,26 @@
       color: #c62828;
     }
 
+    /* SUCCESS STATE (replaces form visually) */
+    .success-message-state {
+      display: none;
+      margin-top: 0.75rem;
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      background: #ecfdf3;
+      border: 1px solid #bbf7d0;
+      font-size: 0.92rem;
+      color: #166534;
+      position: relative;
+      z-index: 1;
+    }
+
+    .success-message-state strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.96rem;
+    }
+
     .calendar-section {
       margin-top: 1rem;
       border-top: 1px dashed #dadce8;
@@ -905,6 +921,11 @@
       </div>
     </form>
 
+    <!-- SUCCESS STATE (shown after successful submission, in place of form) -->
+    <div id="successMessage" class="success-message-state">
+      <!-- Filled dynamically via JS -->
+    </div>
+
     <div id="calendarSection" class="calendar-section">
       <div class="calendar-section-title">Add this event to your calendar:</div>
       <div class="calendar-links">
@@ -924,7 +945,7 @@
     </div>
 
     <p class="calendar-note" style="margin-top:0.8rem;">
-      <strong>Note for me:</strong>
+      <strong>Don't forget to add the event to your calendar!</strong>
     </p>
   </div>
 </div>
@@ -952,10 +973,33 @@
   const gcalLink = document.getElementById("gcalLink");
   const outlookLink = document.getElementById("outlookLink");
   const icsLink = document.getElementById("icsLink");
+  const successMessage = document.getElementById("successMessage");
+  const modalTitleEl = document.getElementById("modalTitle");
+  const modalIntroEl = document.querySelector(".modal-intro");
 
   function openModal() {
+    // Reset to initial state each time modal opens
     modalBackdrop.style.display = "flex";
     modalBackdrop.setAttribute("aria-hidden", "false");
+
+    form.style.display = "grid";
+    if (successMessage) {
+      successMessage.style.display = "none";
+      successMessage.innerHTML = "";
+    }
+    calendarSection.style.display = "none";
+
+    if (modalTitleEl) {
+      modalTitleEl.textContent = "Reserve Your Spot";
+    }
+    if (modalIntroEl) {
+      modalIntroEl.textContent =
+        "Enter your details below to sign up. After submitting, you can add the webinar directly to your calendar.";
+    }
+
+    formStatus.textContent = "";
+    formStatus.className = "status-message";
+
     document.getElementById("name").focus();
   }
 
@@ -1006,8 +1050,8 @@
       });
 
       if (response.ok) {
-        showSuccess(name);
         form.reset();
+        showSuccess(name);
       } else {
         formStatus.textContent = "Something went wrong. Please try again.";
         formStatus.className = "status-message status-error";
@@ -1022,10 +1066,31 @@
   });
 
   function showSuccess(name) {
-    formStatus.textContent =
-      "Thank you, " + name + "! Your spot is reserved. A confirmation email will be sent to the address you provided.";
-    formStatus.className = "status-message status-success";
+    // Clear inline status and switch to a full-screen success state
+    formStatus.textContent = "";
+    formStatus.className = "status-message";
 
+    if (modalTitleEl) {
+      modalTitleEl.textContent = "You're Registered!";
+    }
+    if (modalIntroEl) {
+      modalIntroEl.textContent =
+        "You’re all set. We’ve emailed your confirmation and Zoom link.";
+    }
+
+    // Hide the form itself
+    form.style.display = "none";
+
+    // Show a clear success message where the form was
+    if (successMessage) {
+      successMessage.innerHTML =
+        "<strong>Thank you, " + name + "!</strong>" +
+        " Your spot is reserved. A confirmation email with your Zoom link is on its way. " +
+        "Use the options below to add this webinar to your calendar.";
+      successMessage.style.display = "block";
+    }
+
+    // Show calendar options directly under the success text
     calendarSection.style.display = "block";
     generateCalendarLinks();
   }
@@ -1035,7 +1100,7 @@
     const textParam = encodeURIComponent(EVENT_TITLE);
     const datesParam = EVENT_START_UTC + "/" + EVENT_END_UTC;
     const detailsLines = EVENT_DESCRIPTION +
-      "\n\nSpeakers: Ihsan Hamid, Imran Hamid, Cody Paningsoro, Michael Hurley\nBrought to you by Hamid Financials (HF).";
+      "\n\nSpeakers: Ihsan Hamid, Imran Hamid, Cody Paningsoro, Mike\nBrought to you by Hamid Financials (HF).";
     const detailsParam = encodeURIComponent(detailsLines);
     const locationParam = encodeURIComponent(EVENT_LOCATION);
 
@@ -1080,7 +1145,7 @@
 
     const description =
       EVENT_DESCRIPTION +
-      "\n\nSpeakers: Ihsan Hamid, Imran Hamid, Cody Paningsoro, Michael Hurley" +
+      "\n\nSpeakers: Ihsan Hamid, Imran Hamid, Cody Paningsoro, Mike" +
       "\nBrought to you by Hamid Financials (HF).";
 
     const lines = [
