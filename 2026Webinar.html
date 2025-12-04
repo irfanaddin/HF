@@ -1,1144 +1,789 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Preparing Your Business for the 2025 Tax Season | Hamid Financials Webinar</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preparing Your Business for the 2025 Tax Season | Hamid Financials</title>
   <style>
     :root {
-      --hf-green: #71c84a;
-      --hf-purple: #9b5de5;
-      --hf-bg: #f3f5fb;
-      --hf-card-bg: #ffffff;
-      --hf-text-main: #222222;
-      --hf-text-muted: #6f6f75;
-      --hf-deep-navy: #111827;
+      --page-bg: linear-gradient(115deg, #f7c3df 0%, #f0b7ff 35%, #e8f6ec 100%);
+      --card-bg: #ffffff;
+      --card-bg-soft: #f7f9ff;
+      --card-border: #dde3f0;
+      --card-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+
+      --accent-green: #36c75a;
+      --accent-green-soft: #e6f9ec;
+      --accent-purple: #7b61ff;
+      --accent-purple-soft: #f1edff;
+
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --text-soft: #9ca3af;
+
+      --pill-bg: #f5f3ff;
+      --pill-border: #ddd6fe;
+
+      --max-width: 1100px;
+      --radius-lg: 18px;
+      --radius-xl: 26px;
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(155, 93, 229, 0.16), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(113, 200, 74, 0.18), transparent 55%),
-        var(--hf-bg);
-      color: var(--hf-text-main);
+      background: var(--page-bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     .page-wrapper {
-      min-height: 100vh;
-      padding: 1.75rem 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3.5rem;
+    }
+
+    /* Header */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.6),
+        transparent
+      );
+      border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+    }
+
+    .nav-inner {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .event-shell {
-      max-width: 1120px;
+    .brand-logo img {
       width: 100%;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(245, 246, 255, 0.98));
-      border-radius: 32px;
-      box-shadow:
-        0 22px 50px rgba(15, 23, 42, 0.16),
-        0 0 0 1px rgba(148, 163, 184, 0.12);
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1.1fr 1.4fr;
-      margin: 0 auto;
-      position: relative;
-      isolation: isolate;
-    }
-
-    .event-shell::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      pointer-events: none;
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      mix-blend-mode: screen;
-      opacity: 0.75;
-    }
-
-    /* LEFT SIDE - gradient */
-    .event-left {
-      background:
-        radial-gradient(circle at top left, #c9ffbf 0%, #ffafbd 40%, #9b5de5 100%);
-      padding: 2.2rem 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.6rem;
-      color: #ffffff;
-      position: relative;
-      overflow: hidden;
-      background-size: 180% 180%;
-      animation: gradientShift 12s ease-in-out infinite alternate;
-    }
-
-    .event-left::before {
-      content: "";
-      position: absolute;
-      width: 280px;
-      height: 280px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      opacity: 0.55;
-      top: -80px;
-      right: -60px;
-    }
-
-    .event-left::after {
-      content: "";
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      border-radius: 999px;
-      border: 1px dashed rgba(255, 255, 255, 0.35);
-      opacity: 0.35;
-      bottom: -70px;
-      left: -60px;
-    }
-
-    @keyframes gradientShift {
-      0% {
-        background-position: 0% 0%;
-      }
-      100% {
-        background-position: 100% 100%;
-      }
-    }
-
-    /* LOGO AREA */
-    .hf-logo-wrap {
-      width: 100%;
-      max-width: 260px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hf-logo-img {
-      display: block;
-      width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: contain;
-      background: none;
-      filter: drop-shadow(0 10px 25px rgba(15, 23, 42, 0.28));
+      display: block;
     }
 
-    .glass-card {
-      background: rgba(255, 255, 255, 0.14);
-      border-radius: 22px;
-      padding: 1.4rem 1.6rem;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .brand-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #111827;
+    }
+
+    .brand-tagline {
+      font-size: 0.75rem;
+      color: var(--text-soft);
+    }
+
+    .event-meta-top {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.15rem;
+      font-size: 0.75rem;
+      color: var(--text-soft);
+      text-align: right;
+    }
+
+    .event-meta-top span.highlight {
+      color: var(--accent-green);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #ecfdf3;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #bbf7d0;
+    }
+
+    /* Hero Layout */
+
+    .hero {
+      margin-top: 1.75rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.6fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .hero-main {
+      background: var(--card-bg);
+      border-radius: var(--radius-xl);
+      padding: 1.9rem 1.8rem 1.8rem;
+      border: 1px solid var(--card-border);
+      box-shadow: var(--card-shadow);
       position: relative;
       overflow: hidden;
     }
 
-    .glass-card::before {
+    .hero-main::before {
       content: "";
       position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.25), transparent 60%);
-      opacity: 0.9;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(251, 207, 232, 0.7), transparent 55%),
+        radial-gradient(circle at 80% 0%, rgba(199, 210, 254, 0.7), transparent 55%);
+      opacity: 0.6;
       pointer-events: none;
+      z-index: -1;
     }
 
-    .glass-heading {
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 0.8rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .glass-text,
-    .glass-date {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* RIGHT SIDE - title & speakers */
-    .event-right {
-      padding: 2.4rem 2.2rem 2rem;
-      background: #ffffff;
-      display: flex;
-      flex-direction: column;
-      gap: 1.6rem;
-      position: relative;
-    }
-
-    .event-meta-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      background: linear-gradient(135deg, rgba(113, 200, 74, 0.1), rgba(155, 93, 229, 0.14));
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-      color: #4b5563;
-      margin-bottom: 0.8rem;
-    }
-
-    .event-meta-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--hf-green);
-      box-shadow: 0 0 0 4px rgba(113, 200, 74, 0.24);
-    }
-
-    .event-title {
-      font-size: 1.82rem;
-      line-height: 1.22;
-      font-weight: 800;
-      color: #1f2933;
-      letter-spacing: -0.02em;
-    }
-
-    .event-title span.green {
-      color: var(--hf-green);
-    }
-
-    .event-subtext {
-      font-size: 0.93rem;
-      color: var(--hf-text-muted);
-      max-width: 34rem;
-      margin-top: 0.4rem;
-    }
-
-    .event-tags {
-      margin-top: 0.75rem;
+    .hero-pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
+      gap: 0.5rem;
+      margin-bottom: 1.1rem;
     }
 
-    .event-tag-pill {
-      font-size: 0.78rem;
-      padding: 0.35rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.65);
-      background: #f9fafb;
-      color: #4b5563;
+    .pill {
       display: inline-flex;
       align-items: center;
-      gap: 0.25rem;
-    }
-
-    .event-tag-dot {
-      width: 6px;
-      height: 6px;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
       border-radius: 999px;
-      background: rgba(155, 93, 229, 0.9);
-    }
-
-    .takeaways {
-      margin-top: 0.9rem;
-      padding: 0.85rem 0.9rem 0.5rem;
-      border-radius: 14px;
-      background: #f3f4ff;
-      border: 1px dashed rgba(148, 163, 184, 0.6);
-    }
-
-    .takeaways-title {
-      font-size: 0.78rem;
-      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #4e4b9f;
-      margin-bottom: 0.4rem;
+      border: 1px solid var(--pill-border);
+      background: var(--pill-bg);
+      color: var(--text-soft);
     }
 
-    .takeaways-list {
-      margin: 0;
-      padding-left: 1.1rem;
-      font-size: 0.86rem;
+    .pill span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent-green);
+      box-shadow: 0 0 0 3px rgba(134, 239, 172, 0.9);
+    }
+
+    .pill strong {
       color: #4b5563;
+      font-weight: 600;
     }
 
-    .takeaways-list li {
+    .hero-title {
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      line-height: 1.15;
+      margin-bottom: 0.4rem;
+      color: #111827;
+    }
+
+    .hero-title span.accent-green {
+      color: var(--accent-green);
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 34rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-highlight-box {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.1rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-highlight {
+      background: var(--card-bg-soft);
+      border-radius: 1rem;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid #e5e7eb;
+    }
+
+    .hero-highlight-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-soft);
       margin-bottom: 0.2rem;
     }
 
-    .speakers-section-title {
-      font-size: 0.88rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #9ca3af;
-      margin-bottom: 0.4rem;
-    }
-
-    .speakers-grid {
-      display: grid;
-      gap: 0.9rem;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .speaker-card {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      background: radial-gradient(circle at top left, #f7f6ff 0%, #f9fafb 55%);
-      border-radius: 18px;
-      padding: 0.85rem 1rem;
-      border: 1px solid rgba(226, 232, 240, 0.9);
-      box-shadow: 0 3px 8px rgba(15, 23, 42, 0.05);
-      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, border-color 0.12s;
-    }
-
-    .speaker-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 18px rgba(15, 23, 42, 0.09);
-      border-color: rgba(155, 93, 229, 0.6);
-    }
-
-    .speaker-avatar {
-      width: 52px;
-      height: 52px;
-      border-radius: 999px;
-      border: 3px solid var(--hf-purple);
-      background: linear-gradient(135deg, #e5deff, #f5f3ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #4a3b8f;
-      box-shadow: 0 6px 12px rgba(55, 65, 81, 0.25);
-    }
-
-    .speaker-info-title {
-      font-size: 0.98rem;
+    .hero-highlight-value {
+      font-size: 0.95rem;
       font-weight: 600;
       color: #111827;
     }
 
-    .speaker-info-role {
-      font-size: 0.82rem;
-      color: var(--hf-text-muted);
+    .hero-highlight-extra {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
     }
 
-    .register-row {
-      margin-top: 0.6rem;
+    .hero-bullets {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 0.75rem 1.4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-bullets li {
+      list-style: none;
       display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
+      align-items: flex-start;
+      gap: 0.45rem;
     }
 
-    .register-button {
+    .hero-bullets .check {
+      margin-top: 0.12rem;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid #e0e7ff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--accent-purple);
+      background: #f5f3ff;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .btn-primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      padding: 0.9rem 2.4rem;
+      padding: 0.75rem 1.6rem;
       border-radius: 999px;
       border: none;
-      background: linear-gradient(135deg, var(--hf-green), var(--hf-purple));
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 0.96rem;
       cursor: pointer;
-      box-shadow: 0 14px 28px rgba(155, 93, 229, 0.35);
-      text-decoration: none;
-      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, opacity 0.1s;
-      position: relative;
-      overflow: hidden;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, var(--accent-green) 0%, var(--accent-purple) 100%);
+      color: #ffffff;
+      box-shadow: 0 14px 30px rgba(129, 140, 248, 0.5);
+      transition: transform 0.14s ease-out, box-shadow 0.14s ease-out, filter 0.14s ease-out;
     }
 
-    .register-button::after {
-      content: "→";
+    .btn-primary span.icon {
       font-size: 1rem;
-      transform: translateX(2px);
-      transition: transform 0.12s ease-out;
+      margin-left: 0.1rem;
     }
 
-    .register-button:hover {
-      opacity: 0.96;
+    .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 16px 32px rgba(155, 93, 229, 0.44);
+      filter: brightness(1.03);
+      box-shadow: 0 16px 34px rgba(129, 140, 248, 0.6);
     }
 
-    .register-button:hover::after {
-      transform: translateX(5px);
+    .btn-primary:active {
+      transform: translateY(0);
+      filter: brightness(0.98);
+      box-shadow: 0 10px 22px rgba(148, 163, 184, 0.7);
     }
 
-    .register-note {
+    .hero-cta-helper {
       font-size: 0.8rem;
-      color: var(--hf-text-muted);
+      color: var(--text-muted);
     }
 
-    /* MODAL */
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.52);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      z-index: 100;
-      backdrop-filter: blur(4px);
-    }
-
-    .modal-content {
-      max-width: 520px;
-      width: 100%;
-      background: #ffffff;
-      border-radius: 24px;
-      padding: 1.9rem 1.7rem 1.5rem;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.6);
-      position: relative;
-      border: 1px solid rgba(209, 213, 219, 0.8);
-    }
-
-    .modal-content::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: linear-gradient(135deg, rgba(113, 200, 74, 0.06), rgba(155, 93, 229, 0.08));
-      mix-blend-mode: soft-light;
-      pointer-events: none;
-    }
-
-    .modal-header-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 0.7rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .modal-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--hf-deep-navy);
-    }
-
-    .modal-close-btn {
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      font-size: 1.25rem;
-      line-height: 1;
-      color: #6b7280;
-      border-radius: 999px;
-      padding: 0.15rem 0.35rem;
-      transition: background 0.12s ease-out, color 0.12s ease-out;
-    }
-
-    .modal-close-btn:hover {
-      background: #f3f4f6;
-      color: #111827;
-    }
-
-    .modal-intro {
-      font-size: 0.9rem;
-      color: var(--hf-text-muted);
-      margin-bottom: 0.7rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem 0.8rem;
-      margin-top: 0.5rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .form-full-width {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      display: block;
-      font-size: 0.85rem;
-      margin-bottom: 0.2rem;
+    .hero-cta-helper span {
+      color: var(--accent-purple);
       font-weight: 500;
-      color: #374151;
     }
 
-    .required {
-      color: #d32f2f;
-      margin-left: 2px;
-    }
+    /* Side info card */
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea {
-      width: 100%;
-      padding: 0.48rem 0.55rem;
-      border-radius: 8px;
-      border: 1px solid #d4d6e3;
-      font-size: 0.9rem;
-      font-family: inherit;
-      background: #f9fafb;
-      transition: border-color 0.12s ease-out, box-shadow 0.12s ease-out, background 0.12s;
-    }
-
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="tel"]:focus,
-    textarea:focus {
-      outline: none;
-      border-color: var(--hf-purple);
-      box-shadow: 0 0 0 1px rgba(155, 93, 229, 0.75);
-      background: #ffffff;
-    }
-
-    textarea {
-      min-height: 80px;
-      resize: vertical;
-    }
-
-    .helper-text {
-      font-size: 0.78rem;
-      color: var(--hf-text-muted);
-      margin-top: 0.15rem;
-    }
-
-    .form-actions {
-      grid-column: 1 / -1;
-      margin-top: 0.5rem;
+    .hero-side {
       display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 1.25rem;
     }
 
-    .primary-btn-small {
-      padding: 0.68rem 1.45rem;
-      border-radius: 999px;
-      border: none;
-      background: linear-gradient(135deg, var(--hf-green), var(--hf-purple));
-      color: #ffffff;
-      font-weight: 600;
+    .info-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: var(--radius-xl);
+      padding: 1.3rem 1.2rem;
+      border: 1px solid var(--card-border);
+      box-shadow: var(--card-shadow);
+    }
+
+    .info-heading {
       font-size: 0.9rem;
-      cursor: pointer;
-      box-shadow: 0 10px 20px rgba(55, 65, 81, 0.25);
-      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, opacity 0.1s;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-purple);
+      margin-bottom: 0.5rem;
     }
 
-    .primary-btn-small:hover:not(:disabled) {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 22px rgba(55, 65, 81, 0.3);
-      opacity: 0.96;
-    }
-
-    .primary-btn-small:disabled {
-      opacity: 0.6;
-      cursor: default;
-      box-shadow: none;
-    }
-
-    .status-message {
-      font-size: 0.86rem;
-    }
-
-    .status-success {
-      color: #1b5e20;
-    }
-
-    .status-error {
-      color: #c62828;
-    }
-
-    /* SUCCESS STATE (replaces form visually) */
-    .success-message-state {
-      display: none;
-      margin-top: 0.75rem;
-      padding: 0.9rem 1rem;
-      border-radius: 16px;
-      background: #ecfdf3;
-      border: 1px solid #bbf7d0;
-      font-size: 0.92rem;
-      color: #166534;
-      position: relative;
-      z-index: 1;
-    }
-
-    .success-message-state strong {
-      display: block;
-      margin-bottom: 0.25rem;
-      font-size: 0.96rem;
-    }
-
-    .calendar-section {
-      margin-top: 1rem;
-      border-top: 1px dashed #dadce8;
-      padding-top: 0.8rem;
-      display: none;
-      position: relative;
-      z-index: 1;
-    }
-
-    .calendar-section-title {
-      font-size: 0.9rem;
+    .info-title {
+      font-size: 1.05rem;
       font-weight: 600;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.4rem;
       color: #111827;
     }
 
-    .calendar-links {
+    .info-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .info-list {
+      list-style: none;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: grid;
+      gap: 0.35rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .info-list li {
       display: flex;
-      flex-wrap: wrap;
       gap: 0.4rem;
     }
 
-    .calendar-link {
-      font-size: 0.82rem;
-      padding: 0.4rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid #d4d6e3;
-      text-decoration: none;
-      color: #4e4b9f;
-      background: #f9fafb;
-      transition: background 0.1s ease-out, border-color 0.1s ease-out, transform 0.1s;
+    .info-list span.bullet {
+      font-size: 0.9rem;
+      margin-top: -0.04rem;
     }
 
-    .calendar-link:hover {
-      background: #eef1ff;
-      border-color: var(--hf-purple);
-      transform: translateY(-1px);
-    }
-
-    .calendar-note {
+    .info-note {
       font-size: 0.78rem;
-      color: var(--hf-text-muted);
-      margin-top: 0.3rem;
+      color: var(--text-muted);
+      border-top: 1px dashed #e5e7eb;
+      padding-top: 0.5rem;
+      margin-top: 0.4rem;
     }
 
-    /* --- RESPONSIVE TWEAKS --- */
+    .info-note strong {
+      color: #111827;
+      font-weight: 500;
+    }
+
+    /* Speakers */
+
+    .speakers-section {
+      margin-top: 2.5rem;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-purple);
+      margin-bottom: 0.35rem;
+    }
+
+    .section-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      max-width: 26rem;
+    }
+
+    .speaker-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .speaker-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 14px 30px rgba(148, 163, 184, 0.2);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .speaker-photo-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 1rem;
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+      border: 2px solid #e0e7ff;
+      background: #f5f3ff;
+    }
+
+    .speaker-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .speaker-name {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+      color: #111827;
+    }
+
+    .speaker-role {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      margin-bottom: 0.5rem;
+    }
+
+    .speaker-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+
+    .speaker-tag {
+      margin-top: auto;
+      align-self: flex-start;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #e0e7ff;
+      color: var(--accent-purple);
+      background: #f3f4ff;
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid rgba(229, 231, 235, 0.9);
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1.4rem 1.25rem 1.6rem;
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+
+    .footer-inner span.strong {
+      color: #111827;
+      font-weight: 500;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .footer-links a {
+      color: var(--text-soft);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-purple);
+    }
+
+    /* Responsive */
+
     @media (max-width: 900px) {
-      .event-shell {
-        grid-template-columns: 1fr;
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
       }
-      .event-left {
-        border-radius: 32px 32px 0 0;
+
+      .hero-side {
+        order: -1;
+      }
+
+      .hero-main {
+        padding: 1.5rem 1.3rem 1.4rem;
+      }
+
+      .hero-highlight-box {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-bullets {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .speaker-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 768px) {
-      .page-wrapper {
-        align-items: stretch;
-        justify-content: flex-start;
-        padding: 1.2rem 0.75rem;
+    @media (max-width: 640px) {
+      .nav-inner {
+        flex-direction: row;
+        align-items: center;
       }
-      .event-shell {
-        border-radius: 24px;
-      }
-      .event-right {
-        padding: 1.9rem 1.5rem 1.5rem;
-      }
-      .event-title {
-        font-size: 1.55rem;
-      }
-      .speakers-grid {
-        grid-template-columns: 1fr;
-      }
-      .register-button {
-        width: 100%;
-        justify-content: center;
-      }
-      .event-tags {
-        gap: 0.35rem;
-      }
-      .takeaways {
-        margin-top: 0.8rem;
-      }
-    }
 
-    @media (max-width: 480px) {
-      .event-left {
-        padding: 1.6rem 1.25rem 1.4rem;
-        gap: 1.1rem;
+      .event-meta-top {
+        align-items: flex-end;
       }
-      .hf-logo-wrap {
-        max-width: 220px;
-        margin-inline: auto;
+
+      .hero {
+        margin-top: 1.25rem;
       }
-      .event-right {
-        padding: 1.6rem 1.2rem 1.25rem;
+
+      .section-title-row {
+        align-items: flex-start;
+        flex-direction: column;
       }
-      .event-meta-pill {
-        font-size: 0.72rem;
+
+      .speaker-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
-      .event-title {
-        font-size: 1.38rem;
-      }
-      .event-subtext {
-        font-size: 0.9rem;
-      }
-      form {
-        grid-template-columns: 1fr;
-      }
-      .modal-content {
-        padding: 1.5rem 1.25rem 1.25rem;
+
+      .hero-cta-row {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
-
-<div class="page-wrapper">
-  <!-- MAIN EVENT CARD -->
-  <section class="event-shell">
-    <!-- Left gradient area -->
-    <div class="event-left">
-      <!-- LOGO -->
-      <div class="hf-logo-wrap">
-        <img src="images/newlogo_no-bkg.png"
-             alt="Hamid Financials LLP Logo"
-             class="hf-logo-img">
-      </div>
-
-      <div class="glass-card">
-        <div class="glass-heading">Join Us On</div>
-        <div class="glass-date" style="font-size:1.05rem;font-weight:600;">
-          <strong style="font-size:1.2rem;">December 9, 2025</strong><br>
-          <span style="color:#fff; font-weight:700;">6:30 PM – 7:30 PM PST</span><br>
-          <span style="opacity:0.9; font-size:0.9rem;">Online · Zoom Webinar</span>
-        </div>
-      </div>
-
-      <div class="glass-card">
-        <div class="glass-heading">About</div>
-        <p class="glass-text">
-          In this Webinar, we'll break down exactly what your business needs to prepare for the 2025 tax year,
-          ensuring you don't miss out on any valuable tax credits or deductions before year-end. We'll also briefly
-          cover the One Big Beautiful Bill Act (OBBA) and discuss some of the major changes and how they will impact
-          you and your business in 2025.
-        </p>
-      </div>
-
-    </div>
-
-    <!-- Right white area -->
-    <div class="event-right">
-      <div>
-        <div class="event-meta-pill">
-          <span class="event-meta-dot"></span>
-          Live · Free Webinar · 1 Hour
-        </div>
-        <h1 class="event-title">
-          Preparing Your Business for the <span class="green">2025 Tax Season</span>: Key Insights from a CPA
-        </h1>
-        <p class="event-subtext">
-          Hamid Financials LLP (HF) will be hosting a webinar,
-          designed to help you and your business get ready for the upcoming tax year.
-        </p>
-
-        <div class="event-tags">
-          <div class="event-tag-pill">
-            <span class="event-tag-dot"></span>
-            Business Owners
+  <div class="page-wrapper">
+    <header>
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-logo">
+            <img src="images/newlogo_no-bkg.png" alt="Hamid Financials Logo" />
           </div>
-          <div class="event-tag-pill">
-            Year-End Tax Planning
-          </div>
-          <div class="event-tag-pill">
-            OBBA Changes
-          </div>
-          <div class="event-tag-pill">
-            Live Q&amp;A
+          <div class="brand-text">
+            <div class="brand-name">Hamid Financials</div>
+            <div class="brand-tagline">Tax, Advisory &amp; Accounting</div>
           </div>
         </div>
-        <div class="takeaways">
-          <div class="takeaways-title">You’ll walk away with</div>
-          <ul class="takeaways-list">
-            <li>Pitfalls to avoid entering the 2025 tax season.</li>
-            <li>Key updates from the One Big Beautiful Bill Act (OBBA) and its impacts.</li>
-            <li>Ways to maximize year-end deductions and credits.</li>
-          </ul>
+        <div class="event-meta-top">
+          <span>December 9, 2025 · 6:30 – 7:30 PM PT</span>
+          <span>Online · Zoom Webinar</span>
         </div>
       </div>
-      <div>
-        <div class="speakers-section-title">Speaker lineup</div>
-        <div class="speakers-grid">
-          <div class="speaker-card">
-            <div class="speaker-avatar">IH</div>
-            <div>
-              <div class="speaker-info-title">Ihsan Hamid</div>
-              <div class="speaker-info-role">CPA, Tax Planning Expert</div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <!-- Left: Main hero content -->
+        <div class="hero-main">
+          <div class="hero-pill-row">
+            <div class="pill">
+              <span class="dot"></span>
+              <span> Live · Free Webinar · 1 Hour </span>
+            </div>
+            <div class="pill">
+              <span>For</span>
+              <strong>Small Business Owners</strong>
             </div>
           </div>
 
-          <div class="speaker-card">
-            <div class="speaker-avatar">IM</div>
-            <div>
-              <div class="speaker-info-title">Imran Hamid</div>
-              <div class="speaker-info-role">Senior Tax Accountant</div>
+          <h1 class="hero-title">
+            Preparing Your Business for the
+            <span class="accent-green">2025 Tax Season</span>: Key Insights from a CPA
+          </h1>
+
+          <p class="hero-subtitle">
+            Hamid Financials LLP (HF) will be hosting a webinar, designed to help you and your business get ready for the upcoming tax year. 
+          </p>
+
+          <div class="hero-highlight-box">
+            <div class="hero-highlight">
+              <div class="hero-highlight-label">Date &amp; Time</div>
+              <div class="hero-highlight-value">Tuesday, December 9th, 2025 <br> 6:30 – 7:30 PM PT</div>
+              <div class="hero-highlight-extra">Join us live on Zoom from anywhere.</div>
+            </div>
+            <div class="hero-highlight">
+              <div class="hero-highlight-label">How to Join</div>
+              <div class="hero-highlight-value">Register to receive your Zoom link</div>
+              <div class="hero-highlight-extra">
+                After you register, your calendar invite will include the access link.
+              </div>
             </div>
           </div>
 
-          <div class="speaker-card">
-            <div class="speaker-avatar">CP</div>
-            <div>
-              <div class="speaker-info-title">Cody Paningsoro</div>
-              <div class="speaker-info-role">Analyst</div>
-            </div>
-          </div>
-
-          <div class="speaker-card">
-            <div class="speaker-avatar">MH</div>
-            <div>
-              <div class="speaker-info-title">Mike</div>
-              <div class="speaker-info-role">Guest Speaker</div>
+          <div class="hero-cta-row">
+            <!-- Register button: goes directly to external registration link -->
+            <a
+              href="https://events.teams.microsoft.com/event/80899e98-4a44-4a5e-8a3b-27eef7bb9a36@98c44f88-5e2b-4534-a8b3-ea4a6838a1a8"
+              target="_blank"
+              rel="noopener"
+              class="btn-primary"
+            >
+              <span>Register Now</span>
+              <span class="icon">→</span>
+            </a>
+            <div class="hero-cta-helper">
+              Secure your spot, space is limited.
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="register-row">
-        <button class="register-button" id="openFormButton">
-          Register Now
-        </button>
-        <div class="register-note">
-          Register to receive the Zoom webinar link. Calendar invite will include the access link.
+        <!-- Right: Info side card -->
+        <aside class="hero-side">
+          <div class="info-card">
+            <div class="info-heading">About This Webinar</div>
+            <p class="info-text">
+                In this Webinar, we'll break down exactly what your business needs to prepare for the 2025 tax year, ensuring 
+                you don't miss out on any valuable tax credits or deductions before year-end. We'll also briefly cover the One 
+                Big Beautiful Bill Act (OBBA) and discuss some of the major changes and how they will impact you and your business 
+                in 2025. 
+            </p>
+            <ul class="info-list">
+              <li>
+
+                <span class="bullet">•</span>
+                <span>Pitfalls to avoid entering the 2025 tax season.</span>
+              </li>
+              <li>
+                <span class="bullet">•</span>
+                <span>Key updates from the One Big Beautiful Bill Act (OBBA) and its impacts.</span>
+              </li>
+              <li>
+                <span class="bullet">•</span>
+                <span>Ways to maximize year-end deductions and credits.</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Speakers -->
+      <section class="speakers-section">
+        <div class="section-label">Speaker Lineup</div>
+        <div class="section-title-row">
+          <h2 class="section-title">Meet Your Webinar Speakers</h2>
+        </div>
+
+        <div class="speaker-grid">
+          <!-- Ihsan -->
+          <article class="speaker-card">
+            <div class="speaker-photo-wrap">
+              <img src="images/ihsan.jpg" alt="Photo of Ihsan" />
+            </div>
+            <h3 class="speaker-name">Ihsan</h3>
+            <p class="speaker-role">Managing Partner, CPA · Hamid Financials</p>
+            
+            <span class="speaker-tag">CPA Insight</span>
+          </article>
+
+          <!-- Imran -->
+          <article class="speaker-card">
+            <div class="speaker-photo-wrap">
+              <img src="images/imran.jpg" alt="Photo of Imran" />
+            </div>
+            <h3 class="speaker-name">Imran</h3>
+            <p class="speaker-role">Senior Tax Accountant · Hamid Financials</p>
+            
+            <span class="speaker-tag">Moderator</span>
+          </article>
+
+          <!-- Bill Boehm -->
+          <article class="speaker-card">
+            <div class="speaker-photo-wrap">
+              <img src="images/bill.jpg" alt="Photo of Bill Boehm" />
+            </div>
+            <h3 class="speaker-name">Bill Boehm</h3>
+            <p class="speaker-role">Vice President · Senior Relationship Manager</p>
+            
+            <span class="speaker-tag">Banking Perspective</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <span class="strong">Hamid Financials</span> · Professional tax &amp; accounting services for small businesses.
+        </div>
+        <div class="footer-links">
+          <span>&copy; 2025 Hamid Financials. All rights reserved.</span>
+          <a href="https://hamidfinancials.com/">www.hamidfinancials.com</a>
         </div>
       </div>
-    </div>
-  </section>
-</div>
-
-<!-- MODAL: REGISTRATION FORM -->
-<div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
-  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-header-row">
-      <div class="modal-title" id="modalTitle">Reserve Your Spot</div>
-      <button class="modal-close-btn" id="closeFormButton" aria-label="Close registration form">&times;</button>
-    </div>
-    <div class="modal-intro">
-      Enter your details below to sign up. After submitting, you can add the webinar directly to your calendar.
-    </div>
-
-    <!-- FORMSPREE-POWERED FORM -->
-    <form id="registrationForm"
-          action="https://formspree.io/f/xvggvlyv"
-          method="POST">
-
-      <div class="form-full-width">
-        <label for="name">Full Name<span class="required">*</span></label>
-        <input type="text" id="name" name="name" required>
-      </div>
-
-      <div class="form-full-width">
-        <label for="email">Email Address<span class="required">*</span></label>
-        <input type="email" id="email" name="email" required>
-        <div class="helper-text">We’ll send your confirmation, Zoom link, and reminders here.</div>
-      </div>
-
-      <div>
-        <label for="phone">Phone (optional)</label>
-        <input type="tel" id="phone" name="phone">
-      </div>
-
-      <div>
-        <label for="business">Business Name (optional)</label>
-        <input type="text" id="business" name="business">
-      </div>
-
-      <div class="form-full-width">
-        <label for="questions">What would you like us to cover? (optional)</label>
-        <textarea id="questions" name="questions" placeholder="Share any questions about 2025 taxes or OBBA."></textarea>
-      </div>
-
-      <!-- Hidden fields for Formspree / internal tagging -->
-      <input type="hidden" name="_subject" value="New Webinar Registration - Hamid Financials">
-      <input type="hidden" name="form_name" value="2025 Tax Season Webinar">
-
-      <div class="form-actions">
-        <button type="submit" class="primary-btn-small" id="submitButton">
-          Sign Up for the Webinar
-        </button>
-        <span id="formStatus" class="status-message"></span>
-      </div>
-    </form>
-
-    <!-- SUCCESS STATE (shown after successful submission, in place of form) -->
-    <div id="successMessage" class="success-message-state">
-      <!-- Filled dynamically via JS -->
-    </div>
-
-    <div id="calendarSection" class="calendar-section">
-      <div class="calendar-section-title">Add this event to your calendar:</div>
-      <div class="calendar-links">
-        <a id="gcalLink" class="calendar-link" target="_blank" rel="noopener">
-          Google Calendar
-        </a>
-
-        <a id="icsLink" class="calendar-link" download="hamid-financials-tax-webinar-2025.ics">
-          Apple Calendar (.ics)
-        </a>
-
-        <a id="outlookLink" class="calendar-link" target="_blank" rel="noopener">
-          Outlook.com
-        </a>
-      </div>
-      <p class="calendar-note">
-        <strong>Don't forget to add the event to your calendar!</strong>
-      </p>
-    </div>
+    </footer>
   </div>
-</div>
-
-<script>
-  // EVENT INFO
-  const EVENT_TITLE = "Preparing Your Business for the 2025 Tax Season: Key Insights from a CPA";
-  const EVENT_DESCRIPTION =
-    "Hamid Financials (HF) is hosting a webinar on December 9, 2025, from 6:30 PM to 7:30 PM Pacific Time to help small business owners prepare for the 2025 tax year, avoid missing valuable credits and deductions, and understand major changes under the One Big Beautiful Bill Act (OBBA).";
-  const EVENT_LOCATION = "Zoom Webinar (link in confirmation email and calendar invite)";
-  // 6:30–7:30 PM Pacific (UTC-8) => 02:30–03:30 on Dec 10, 2025 UTC
-  const EVENT_START_UTC = "20251210T023000Z";
-  const EVENT_END_UTC   = "20251210T033000Z";
-  const EVENT_START_LOCAL_ISO = "2025-12-09T18:30:00";
-  const EVENT_END_LOCAL_ISO   = "2025-12-09T19:30:00";
-
-  const openFormButton = document.getElementById("openFormButton");
-  const closeFormButton = document.getElementById("closeFormButton");
-  const modalBackdrop = document.getElementById("modalBackdrop");
-
-  const form = document.getElementById("registrationForm");
-  const formStatus = document.getElementById("formStatus");
-  const submitButton = document.getElementById("submitButton");
-  const calendarSection = document.getElementById("calendarSection");
-  const gcalLink = document.getElementById("gcalLink");
-  const outlookLink = document.getElementById("outlookLink");
-  const icsLink = document.getElementById("icsLink");
-  const successMessage = document.getElementById("successMessage");
-  const modalTitleEl = document.getElementById("modalTitle");
-  const modalIntroEl = document.querySelector(".modal-intro");
-
-  function openModal() {
-    // Reset to initial state each time modal opens
-    modalBackdrop.style.display = "flex";
-    modalBackdrop.setAttribute("aria-hidden", "false");
-
-    form.style.display = "grid";
-    if (successMessage) {
-      successMessage.style.display = "none";
-      successMessage.innerHTML = "";
-    }
-    calendarSection.style.display = "none";
-
-    if (modalTitleEl) {
-      modalTitleEl.textContent = "Reserve Your Spot";
-    }
-    if (modalIntroEl) {
-      modalIntroEl.textContent =
-        "Enter your details below to sign up. After submitting, you can add the webinar directly to your calendar.";
-    }
-
-    formStatus.textContent = "";
-    formStatus.className = "status-message";
-
-    document.getElementById("name").focus();
-  }
-
-  function closeModal() {
-    modalBackdrop.style.display = "none";
-    modalBackdrop.setAttribute("aria-hidden", "true");
-  }
-
-  openFormButton.addEventListener("click", openModal);
-  closeFormButton.addEventListener("click", closeModal);
-  modalBackdrop.addEventListener("click", function (e) {
-    if (e.target === modalBackdrop) {
-      closeModal();
-    }
-  });
-
-  // FORMSPREE SUBMISSION HANDLER
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-
-    const name = (nameInput.value || "").trim();
-    const email = (emailInput.value || "").trim();
-
-    if (!name || !email) {
-      formStatus.textContent = "Please enter your name and email to register.";
-      formStatus.className = "status-message status-error";
-      return;
-    }
-
-    formStatus.textContent = "Processing your registration...";
-    formStatus.className = "status-message";
-    submitButton.disabled = true;
-    const originalButtonText = submitButton.textContent;
-    submitButton.textContent = "Submitting...";
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          "Accept": "application/json"
-        }
-      });
-
-      if (response.ok) {
-        form.reset();
-        showSuccess(name);
-      } else {
-        formStatus.textContent = "Something went wrong. Please try again.";
-        formStatus.className = "status-message status-error";
-      }
-    } catch (err) {
-      formStatus.textContent = "Network error. Please try again.";
-      formStatus.className = "status-message status-error";
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = originalButtonText;
-    }
-  });
-
-  function showSuccess(name) {
-    // Clear inline status and switch to a full-screen success state
-    formStatus.textContent = "";
-    formStatus.className = "status-message";
-
-    if (modalTitleEl) {
-      modalTitleEl.textContent = "You're Registered!";
-    }
-    if (modalIntroEl) {
-      modalIntroEl.textContent =
-        "You’re all set. We’ve emailed your confirmation and Zoom link.";
-    }
-
-    // Hide the form itself
-    form.style.display = "none";
-
-    // Show a clear success message where the form was
-    if (successMessage) {
-      successMessage.innerHTML =
-        "<strong>Thank you, " + name + "!</strong>" +
-        " Your spot is reserved. A confirmation email with your Zoom link is on its way. " +
-        "Use the options below to add this webinar to your calendar.";
-      successMessage.style.display = "block";
-    }
-
-    // Show calendar options directly under the success text
-    calendarSection.style.display = "block";
-    generateCalendarLinks();
-  }
-
-  function generateCalendarLinks() {
-    const baseGcal = "https://www.google.com/calendar/render?action=TEMPLATE";
-    const textParam = encodeURIComponent(EVENT_TITLE);
-    const datesParam = EVENT_START_UTC + "/" + EVENT_END_UTC;
-    const detailsLines = EVENT_DESCRIPTION +
-      "\n\nSpeakers: Ihsan Hamid, Imran Hamid, Cody Paningsoro, Mike\nBrought to you by Hamid Financials (HF).";
-    const detailsParam = encodeURIComponent(detailsLines);
-    const locationParam = encodeURIComponent(EVENT_LOCATION);
-
-    const gcalUrl =
-      baseGcal +
-      "&text=" + textParam +
-      "&dates=" + datesParam +
-      "&details=" + detailsParam +
-      "&location=" + locationParam +
-      "&sf=true&output=xml";
-
-    gcalLink.href = gcalUrl;
-
-    const baseOutlook =
-      "https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent";
-    const outlookSubject = encodeURIComponent(EVENT_TITLE);
-    const outlookBody = encodeURIComponent(detailsLines);
-    const outlookStart = encodeURIComponent(EVENT_START_LOCAL_ISO);
-    const outlookEnd = encodeURIComponent(EVENT_END_LOCAL_ISO);
-    const outlookLocation = encodeURIComponent(EVENT_LOCATION);
-
-    const outlookUrl =
-      baseOutlook +
-      "&subject=" + outlookSubject +
-      "&body=" + outlookBody +
-      "&startdt=" + outlookStart +
-      "&enddt=" + outlookEnd +
-      "&location=" + outlookLocation;
-
-    outlookLink.href = outlookUrl;
-
-    const icsContent = generateICSContent();
-    const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
-    const icsUrl = URL.createObjectURL(blob);
-    icsLink.href = icsUrl;
-  }
-
-  function generateICSContent() {
-    const now = new Date();
-    const dtStamp = now.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
-    const uid = "hf-webinar-2025-" + now.getTime() + "@hamidfinancials.com";
-
-    const description =
-      EVENT_DESCRIPTION +
-      "\n\nSpeakers: Ihsan Hamid, Imran Hamid, Cody Paningsoro, Mike" +
-      "\nBrought to you by Hamid Financials (HF).";
-
-    const lines = [
-      "BEGIN:VCALENDAR",
-      "VERSION:2.0",
-      "PRODID:-//Hamid Financials//Webinar//EN",
-      "CALSCALE:GREGORIAN",
-      "METHOD:PUBLISH",
-      "BEGIN:VEVENT",
-      "UID:" + uid,
-      "DTSTAMP:" + dtStamp,
-      "DTSTART:" + EVENT_START_UTC,
-      "DTEND:" + EVENT_END_UTC,
-      "SUMMARY:" + escapeICSLine(EVENT_TITLE),
-      "DESCRIPTION:" + escapeICSLine(description),
-      "LOCATION:" + escapeICSLine(EVENT_LOCATION),
-      "BEGIN:VALARM",
-      "TRIGGER:-P1D",
-      "ACTION:DISPLAY",
-      "DESCRIPTION:Reminder: Hamid Financials 2025 tax webinar is tomorrow.",
-      "END:VALARM",
-      "BEGIN:VALARM",
-      "TRIGGER:-PT1H",
-      "ACTION:DISPLAY",
-      "DESCRIPTION:Reminder: Hamid Financials 2025 tax webinar starts in 1 hour.",
-      "END:VALARM",
-      "END:VEVENT",
-      "END:VCALENDAR"
-    ];
-
-    return lines.join("\r\n");
-  }
-
-  function escapeICSLine(text) {
-    return text
-      .replace(/\\/g, "\\\\")
-      .replace(/\n/g, "\\n")
-      .replace(/,/g, "\\,")
-      .replace(/;/g, "\\;");
-  }
-</script>
-
 </body>
 </html>
